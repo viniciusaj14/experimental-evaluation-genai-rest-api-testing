@@ -1,18 +1,22 @@
-# Manual Development Condition
+# Condição de Desenvolvimento Manual
 
-## Rule
+## Regra de preservação de idioma
 
-Develop the assigned REST API tests without generative AI assistance. Permitted documentation, search, IDE features, libraries, and human assistance must be defined before data collection and applied consistently.
+Todo enunciado, instrução ou material textual utilizado nesta condição deve ser preservado no idioma exato em que foi apresentado durante o experimento. Não traduzir registros experimentais posteriormente.
 
-## Record
+## Regra da condição
 
-- run identifier;
-- task materials;
-- start and stop timestamps;
-- permitted tools and versions;
-- consulted resources;
-- manual interventions;
-- resulting artifact commit;
-- deviations from the protocol.
+Desenvolver os cinco cenários de testes de API REST sem assistência de IA generativa. Documentação, pesquisa, recursos da IDE e outras formas de auxílio permitidas devem ser definidas antes da execução e aplicadas conforme o protocolo.
 
-No task, API endpoint, or implementation prompt has been assigned yet.
+## Registro
+
+- identificador da execução;
+- materiais dos cinco cenários;
+- horários de início, pausas, retomadas e término;
+- ferramentas e versões efetivamente observadas;
+- recursos consultados;
+- ciclos de retrabalho e intervenções manuais;
+- commit dos artefatos produzidos;
+- desvios do protocolo.
+
+A API, os endpoints e o texto final das tarefas ainda não estão registrados neste arquivo.

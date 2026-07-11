@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the archived release. No DOI has been issued yet."
-title: "Experimental Evaluation of Generative AI for REST API Testing"
+message: "If you use this repository, please cite it using this metadata. No DOI has been issued yet."
+title: "Experimental Evaluation of Generative Artificial Intelligence for REST API Test Automation Using Behavior-Driven Development (BDD)"
 type: software
 authors:
-  - name: "viniciusaj14"
+  - given-names: "Vinícius Alves"
+    family-names: "Jerônimo"
 repository-code: "https://github.com/viniciusaj14/experimental-evaluation-genai-rest-api-testing"
 license: MIT
