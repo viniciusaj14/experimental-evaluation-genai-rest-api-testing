@@ -31,7 +31,7 @@ The authoritative wording is maintained in Brazilian Portuguese in [`docs/pt-BR/
 
 The same requirements, five scenarios, fifty planned validation checks, environment, and completion criteria apply across the three approaches. The planned difference is the development approach itself. Source artifacts, prompts and permitted interactions, timing records, rework records, validation evidence, and deviations provide traceability.
 
-The API name and endpoints remain pending in the public repository documentation until formally recorded. They must not be inferred or replaced with realistic-looking placeholders.
+The selected study API is **Swagger Petstore - OpenAPI 3.0**. Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
 
 Detailed scientific documentation is maintained in Brazilian Portuguese, consistently with the USP/ESALQ capstone text:
 
@@ -40,6 +40,14 @@ Detailed scientific documentation is maintained in Brazilian Portuguese, consist
 - [Metrics](docs/pt-BR/Metricas.md);
 - [Research questions](docs/pt-BR/Questoes_de_Pesquisa.md);
 - [Threats to validity](docs/pt-BR/Ameacas_a_Validade.md).
+
+API and experimental-design artifacts:
+
+- [API selection](docs/pt-BR/Selecao_da_API.md);
+- [candidate endpoint inventory](docs/pt-BR/Inventario_de_Endpoints.md);
+- [five-scenario matrix](docs/pt-BR/Matriz_de_Cenarios.md);
+- [fifty-check validation matrix](docs/pt-BR/Matriz_de_Validacoes.md);
+- [research traceability matrix](docs/pt-BR/Matriz_de_Rastreabilidade.md).
 
 Full English translations will be created only after the protocol is frozen. See [`docs/en/README.md`](docs/en/README.md).
 
@@ -75,7 +83,8 @@ The Maven project is configured in [`pom.xml`](pom.xml). Exact versions or ident
 .
 ├── docs/
 │   ├── pt-BR/                 # Authoritative scientific documentation and instrument templates
-│   └── en/                    # English translation status
+│   ├── en/                    # English translation status
+│   └── api-specification/     # Preserved official Swagger Petstore contract and provenance
 ├── prompts/                   # Language-preserving records for each approach
 ├── manual/                    # Manual-development artifacts
 ├── github-copilot/            # GitHub Copilot artifacts

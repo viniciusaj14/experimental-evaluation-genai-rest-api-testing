@@ -22,4 +22,4 @@ Ferramentas assistidas por IA podem mudar e produzir respostas diferentes. Devem
 
 ## Decisões pendentes
 
-O nome da API, seus endpoints e os instrumentos finais de pontuação de reúso de código, aderência ao BDD e qualidade estrutural permanecem pendentes até sua definição formal. Esses itens devem ser congelados antes da coleta correspondente.
+A Swagger Petstore - OpenAPI 3.0 está selecionada e seu contrato foi preservado localmente. Permanecem pendentes de revisão final o subconjunto de operações, o congelamento dos cinco cenários e cinquenta checks, a interpretação do valor de retrabalho e os instrumentos finais de pontuação de reúso de código, aderência ao BDD e qualidade estrutural. Esses itens devem ser confirmados a partir do desenho e dos registros reais, sem reconstrução por suposição.

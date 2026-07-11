@@ -12,9 +12,15 @@ Não são pressupostos múltiplos participantes, avaliadores cegos, randomizaç�
 
 As implementações utilizam Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA. As versões ou identificadores não confirmados não devem ser inferidos. O ambiente observado durante a execução deve ser registrado no log experimental.
 
+## Objeto de estudo
+
+A API selecionada é a Swagger Petstore - OpenAPI 3.0, uma aplicação de demonstração oficial do ecossistema Swagger e não desenvolvida por esta pesquisa. A [seleção](Selecao_da_API.md) e o [inventário de endpoints](Inventario_de_Endpoints.md) são fundamentados na [especificação oficial preservada](../api-specification/swagger-petstore-openapi.json). A cópia local fixa o contrato metodológico, mas não elimina mudanças, resets ou interferência de dados no ambiente público.
+
 ## Equivalência das abordagens
 
 Os cinco cenários, as cinquenta verificações, os requisitos, os materiais de apoio e os critérios de conclusão devem ser equivalentes. A diferença planejada é a abordagem de desenvolvimento: sem IA generativa, com GitHub Copilot ou com ChatGPT. Intervenções manuais e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
+
+Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez checks por cenário na [matriz de validações](Matriz_de_Validacoes.md). O subconjunto final ainda deve ser congelado após revisão crítica de equivalência, independência, complexidade, determinismo, limpeza e interferência pública.
 
 ## Coleta de dados
 

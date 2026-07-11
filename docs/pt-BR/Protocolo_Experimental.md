@@ -7,12 +7,13 @@ Orientar uma comparação controlada e auditável entre três abordagens de dese
 ## Escopo confirmado
 
 - três abordagens: manual, GitHub Copilot e ChatGPT;
+- Swagger Petstore - OpenAPI 3.0 como API selecionada, conforme [contrato preservado](../api-specification/swagger-petstore-openapi.json);
 - cinco cenários de teste equivalentes em cada abordagem;
 - cinquenta verificações de validação em cada abordagem;
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
 - métricas de tempo de desenvolvimento, retrabalho, cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
 
-O nome da API e seus endpoints permanecem pendentes enquanto não forem formalmente definidos. Nenhuma API ou endpoint deve ser inferido.
+O objeto do estudo é a Swagger Petstore - OpenAPI 3.0. O subconjunto final de endpoints e os detalhes executáveis dos cinco cenários ainda dependem da revisão das matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md).
 
 ## Unidade de comparação
 
@@ -28,9 +29,9 @@ Cada abordagem deve produzir uma implementação dos mesmos cinco cenários e se
 
 Antes da execução, devem ser registrados:
 
-- a API e os endpoints efetivamente selecionados;
-- a especificação dos cinco cenários equivalentes;
-- a lista fixa das cinquenta verificações e seus critérios de aprovação;
+- a integridade da especificação local e sua correspondência com a [seleção da API](Selecao_da_API.md);
+- a aprovação do subconjunto final de endpoints e dos cinco cenários candidatos;
+- a revisão e o congelamento das cinquenta verificações planejadas e de seus critérios;
 - as regras de início, pausa e término da medição de tempo;
 - os instrumentos de avaliação de reúso de código, aderência ao BDD e qualidade estrutural;
 - as versões e identificadores de ferramentas efetivamente observados;
@@ -49,10 +50,12 @@ Decisões ainda pendentes devem permanecer identificadas como pendentes e ser re
 7. Armazenar os registros originais em `datasets/raw/`, sem sobrescrita.
 8. Documentar correções, exclusões, impedimentos e qualquer desvio do protocolo em `EXPERIMENT_LOG.md`.
 
+A [matriz de rastreabilidade](Matriz_de_Rastreabilidade.md) conecta objetivo, questões, API, cenários, validações, métricas e futuros resultados.
+
 ## Tratamento dos dados
 
 Transformações documentadas podem gerar arquivos em `datasets/processed/`. Tabelas, gráficos, relatórios e análises devem ser derivados desses registros sem alterar os dados brutos. A comparação prevista é descritiva e deve apresentar os valores das seis métricas para as três abordagens. Este protocolo não pressupõe testes estatísticos inferenciais.
 
 ## Status dos resultados e artefatos
 
-O estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório e, portanto, nenhum valor deve ser reproduzido, estimado ou inventado neste documento. Essa condição é distinta das decisões de protocolo ainda pendentes, como a identificação pública da API, dos endpoints e a consolidação dos instrumentos de avaliação.
+O estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório e, portanto, nenhum valor deve ser reproduzido, estimado ou inventado neste documento. Essa condição é distinta das decisões ainda pendentes: revisão final do subconjunto de operações, congelamento das matrizes de cenários e validações, confirmação da interpretação de retrabalho e consolidação dos instrumentos de avaliação.

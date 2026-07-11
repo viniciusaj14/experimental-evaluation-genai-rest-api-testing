@@ -21,7 +21,7 @@ Avaliar experimentalmente a produtividade e a qualidade da automação de testes
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
 - métricas de tempo de desenvolvimento, retrabalho, cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
 
-O nome da API e seus endpoints permanecem pendentes enquanto não forem formalmente definidos. Nenhuma API, endpoint, versão de modelo ou resultado deve ser inferido.
+A API selecionada é a **Swagger Petstore - OpenAPI 3.0**. O contrato JSON oficial está preservado em [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), com origem, data de obtenção, versões declaradas e checksum em [`docs/api-specification/README.md`](docs/api-specification/README.md). O subconjunto final de endpoints e os detalhes executáveis dos cenários permanecem em revisão metodológica.
 
 ## Questões de pesquisa
 
@@ -44,6 +44,14 @@ Documentos metodológicos oficiais:
 - [`Questoes_de_Pesquisa.md`](docs/pt-BR/Questoes_de_Pesquisa.md);
 - [`Ameacas_a_Validade.md`](docs/pt-BR/Ameacas_a_Validade.md).
 
+Documentos de seleção e planejamento experimental:
+
+- [`Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md);
+- [`Inventario_de_Endpoints.md`](docs/pt-BR/Inventario_de_Endpoints.md);
+- [`Matriz_de_Cenarios.md`](docs/pt-BR/Matriz_de_Cenarios.md);
+- [`Matriz_de_Validacoes.md`](docs/pt-BR/Matriz_de_Validacoes.md);
+- [`Matriz_de_Rastreabilidade.md`](docs/pt-BR/Matriz_de_Rastreabilidade.md).
+
 Os templates dos instrumentos de avaliação estão em [`docs/pt-BR/instrumentos/`](docs/pt-BR/instrumentos/). Eles ainda não contêm critérios nem pontuações finais e deverão ser completados conforme os instrumentos efetivamente utilizados.
 
 As traduções integrais para inglês serão produzidas somente após o congelamento do protocolo, conforme [`docs/en/README.md`](docs/en/README.md).
@@ -54,7 +62,8 @@ As traduções integrais para inglês serão produzidas somente após o congelam
 .
 ├── docs/
 │   ├── pt-BR/                 # Documentação científica oficial
-│   └── en/                    # Status das futuras traduções
+│   ├── en/                    # Status das futuras traduções
+│   └── api-specification/     # Contrato oficial preservado e proveniência
 ├── prompts/                   # Regras e registros das três abordagens
 ├── manual/                    # Artefatos do desenvolvimento manual
 ├── github-copilot/            # Artefatos da abordagem GitHub Copilot
