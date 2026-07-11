@@ -1,5 +1,7 @@
 # Experimental Evaluation of Generative AI for REST API Testing
 
+[English](README.md) | [Português (Brasil)](README.pt-BR.md)
+
 Scientific repository for an MBA capstone project at USP/ESALQ.
 
 ## Research objective
@@ -18,23 +20,23 @@ Each condition has a dedicated directory for its test artifacts and a prompt rec
 
 ## Experimental design
 
-The experiment uses a controlled, repeated procedure for the three development conditions. Inputs, prompts, generated or manually written artifacts, execution logs, and measurements are retained separately. Raw observations are preserved before processing, and derived results are generated from those observations. The detailed design is maintained in [docs/Experimental_Protocol.md](docs/Experimental_Protocol.md) and [docs/Methodology.md](docs/Methodology.md).
+The experiment compares implementations of five equivalent BDD test scenarios under the three development conditions. Each implementation is assessed with the same fifty validation checks. Inputs, prompts, artifacts, logs, and measurements are retained separately. The detailed design is maintained in [docs/pt-BR/Protocolo_Experimental.md](docs/pt-BR/Protocolo_Experimental.md) and [docs/pt-BR/Metodologia.md](docs/pt-BR/Metodologia.md).
 
-No experimental results or target API endpoints are included at this initialization stage.
+No experimental results are included at this stage. The API name and endpoints remain pending and must not be inferred.
 
 ## Metrics
 
-Planned metric families include functional correctness, test effectiveness, code quality and maintainability, development effort, and execution characteristics. Operational definitions, units, aggregation rules, and treatment of missing data must be finalized before data collection. See [docs/Metrics.md](docs/Metrics.md).
+The confirmed metrics are development time, rework, validation coverage, code reuse, BDD adherence, and structural quality. See [docs/pt-BR/Metricas.md](docs/pt-BR/Metricas.md).
 
 ## Technology
 
-The test project uses Java 21, Maven, REST Assured, Cucumber, and JUnit 5. Dependency coordinates are pinned in `pom.xml` using versions verified from Maven Central when this repository was initialized.
+The test project uses Java 21, Maven, REST Assured, Cucumber, JUnit 5, and IntelliJ IDEA. Dependency coordinates are pinned in `pom.xml`; observed environment and tool identifiers must be recorded without inference.
 
 ## Repository structure
 
 ```text
 .
-├── docs/                    # Protocol, methodology, metrics, questions, and validity threats
+├── docs/                    # Authoritative pt-BR documents and English translation status
 ├── prompts/                 # Prompt and interaction protocols for each condition
 ├── manual/                  # Artifacts from manual development
 ├── github-copilot/          # Artifacts from the GitHub Copilot condition

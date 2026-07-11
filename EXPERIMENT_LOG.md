@@ -1,21 +1,23 @@
-# Experiment Log
+# Registro do Experimento
 
-Use one section per execution or protocol event. Do not delete failed runs or deviations.
+Utilize uma seção para cada execução ou evento de protocolo. Falhas, impedimentos e desvios não devem ser apagados.
 
-## Entry template
+## Modelo de registro
 
-- **Run/event ID:**
-- **Date and time (including time zone):**
-- **Researcher:**
+- **Identificador da execução/evento:**
+- **Data, horário e fuso:**
+- **Abordagem:** manual / GitHub Copilot / ChatGPT / protocolo
 - **Commit:**
-- **Condition:** manual / GitHub Copilot / ChatGPT / protocol
-- **Environment:**
-- **Tool and dependency versions:**
-- **Input identifiers:**
-- **Procedure:**
-- **Output identifiers:**
-- **Status:** planned / completed / failed / excluded
-- **Deviations or interventions:**
-- **Notes:**
+- **Ambiente:** Java 21, Maven, REST Assured, Cucumber, JUnit 5, IntelliJ IDEA e sistema operacional observados
+- **Versões ou identificadores efetivamente observados:**
+- **Identificadores dos cinco cenários:**
+- **Início, pausas, retomadas e término:**
+- **Ciclos de retrabalho:**
+- **Registro das cinquenta verificações:**
+- **Artefatos de reúso, aderência ao BDD e qualidade estrutural:**
+- **Entradas e saídas:**
+- **Status:** planejado / concluído / impedido / excluído
+- **Correções, intervenções ou desvios:**
+- **Observações:**
 
-No experimental runs have been recorded yet.
+Nenhuma execução experimental foi registrada até o momento.
