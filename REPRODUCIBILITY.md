@@ -41,4 +41,4 @@ The API name, endpoints, and experimental execution command remain pending. Add 
 
 ## Expected outputs
 
-The final reproduction package should identify the input dataset, processed dataset, analysis artifacts, generated tables and graphs, and a report connecting each output to its generating procedure. These artifacts do not exist at repository initialization.
+The study has preliminary results, but its experimental data and consolidated results are not yet published in this repository. A future reproduction package should identify the input dataset, processed dataset, analysis artifacts, generated tables and graphs, and a report connecting each published output to its generating procedure. Pending protocol decisions must be documented separately from existing but unpublished artifacts.

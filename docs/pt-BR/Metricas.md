@@ -14,22 +14,23 @@ Este estudo utiliza exatamente seis métricas. As mesmas regras devem ser aplica
 
 ## 2. Retrabalho
 
-- **Definição operacional:** quantidade de ciclos corretivos realizados após uma implementação ter sido submetida a uma verificação e ter exigido alteração para corrigir reprovação, não conformidade BDD ou problema estrutural.
-- **Unidade:** número de ciclos de retrabalho.
-- **Regra de coleta:** registrar cada ciclo com o motivo, artefatos alterados e verificação que motivou a correção. Alterações contínuas destinadas ao mesmo problema antes de nova verificação compõem um único ciclo.
-- **Fórmula:** `retrabalho = soma dos ciclos corretivos registrados`.
-- **Inclusão:** correções motivadas por uma das cinquenta verificações, por não conformidade com o instrumento BDD ou pelo instrumento de qualidade estrutural.
-- **Exclusão:** desenvolvimento inicial anterior à primeira verificação, mudanças puramente cosméticas que não respondam a uma reprovação e alterações causadas exclusivamente por fatores externos documentados.
-- **Relação:** indicador de produtividade e consistência do processo; menos ciclos sugerem menor esforço corretivo, sem substituir a avaliação de qualidade.
+> **TODO — confirmação obrigatória nos registros preliminares:** antes de consolidar esta métrica, verificar nos registros já coletados se o valor representa (a) ciclos corretivos, (b) ajustes manuais individuais ou (c) uma taxa de retrabalho. A definição, a unidade, a fórmula e os critérios abaixo não podem ser fixados retroativamente sem essa conferência.
+
+- **Definição operacional:** pendente de confirmação com base no significado efetivamente usado durante a coleta preliminar.
+- **Unidade:** pendente; poderá ser contagem de ciclos, contagem de ajustes individuais ou taxa, conforme os registros originais.
+- **Regra de coleta:** preservar os valores e rótulos originais e documentar como foram produzidos. Não converter entre as três interpretações sem evidência rastreável.
+- **Fórmula:** pendente de confirmação. Se o registro representar uma taxa, seu numerador e denominador deverão ser identificados nos artefatos originais; se representar contagem, não deverá ser transformado em taxa por suposição.
+- **Inclusão e exclusão:** devem reproduzir a regra efetivamente aplicada na coleta preliminar, a ser documentada após a conferência dos registros.
+- **Relação:** indicador de produtividade associado ao esforço corretivo, cuja interpretação comparativa depende da confirmação da unidade coletada.
 
 ## 3. Cobertura de validação
 
 - **Definição operacional:** proporção das cinquenta verificações predefinidas que são atendidas pela implementação de cada abordagem.
 - **Unidade:** quantidade de verificações atendidas e percentual.
-- **Regra de coleta:** executar e registrar individualmente as mesmas cinquenta verificações para cada abordagem, com resultado atendida ou não atendida e evidência correspondente.
-- **Fórmula:** `cobertura de validação (%) = (verificações atendidas ÷ 50) × 100`.
+- **Regra de coleta:** registrar individualmente as mesmas cinquenta verificações planejadas para cada abordagem. Cada verificação deve ser classificada como atendida, não atendida ou impedida, com evidência ou justificativa correspondente.
+- **Fórmula:** `cobertura de validação (%) = (verificações atendidas ÷ 50) × 100`. O denominador planejado permanece 50. A quantidade de verificações impedidas deve ser apresentada separadamente para tornar transparente a parcela que não pôde ser avaliada.
 - **Inclusão:** todas as cinquenta verificações fixadas antes da avaliação.
-- **Exclusão:** nenhuma verificação pode ser retirada silenciosamente do denominador. Uma verificação tecnicamente impedida deve permanecer identificada como não avaliada, com justificativa, sem ser convertida em resultado atendido.
+- **Exclusão:** nenhuma das cinquenta verificações pode ser retirada silenciosamente do estudo ou do denominador planejado. Uma verificação impedida deve ser reportada separadamente, com justificativa, e nunca pode ser contada como atendida.
 - **Relação:** indicador de qualidade funcional em relação ao conjunto de validação confirmado; maior percentual indica atendimento mais amplo aos critérios definidos.
 
 ## 4. Reúso de código
@@ -64,4 +65,4 @@ Este estudo utiliza exatamente seis métricas. As mesmas regras devem ser aplica
 
 ## Registro de dados ausentes ou impedidos
 
-Dados ausentes, verificações impedidas e itens não aplicáveis devem ser registrados explicitamente com justificativa. Eles não podem ser estimados, substituídos por valores inventados ou removidos de modo a favorecer uma abordagem.
+Dados ausentes, verificações impedidas e itens não aplicáveis devem ser registrados explicitamente com justificativa. O relatório deve apresentar, para cada abordagem, as contagens de verificações atendidas, não atendidas e impedidas, mantendo visível o total planejado de cinquenta. Esses registros não podem ser estimados, substituídos por valores inventados, removidos silenciosamente ou convertidos em aprovação.

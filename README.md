@@ -22,7 +22,7 @@ Each condition has a dedicated directory for its test artifacts and a prompt rec
 
 The experiment compares implementations of five equivalent BDD test scenarios under the three development conditions. Each implementation is assessed with the same fifty validation checks. Inputs, prompts, artifacts, logs, and measurements are retained separately. The detailed design is maintained in [docs/pt-BR/Protocolo_Experimental.md](docs/pt-BR/Protocolo_Experimental.md) and [docs/pt-BR/Metodologia.md](docs/pt-BR/Metodologia.md).
 
-No experimental results are included at this stage. The API name and endpoints remain pending and must not be inferred.
+The study has preliminary results, but experimental data and consolidated results are not yet published in this repository. No result may be inferred or invented. The API name and endpoints remain pending in the public documentation and must not be inferred.
 
 ## Metrics
 
@@ -60,7 +60,7 @@ Use Java 21 and Maven, retain raw data unchanged, record every experimental run 
 
 ## Data availability
 
-No experimental dataset has been collected or published yet. When data become available, raw and processed data will be documented under `datasets/`, subject to legal, ethical, licensing, privacy, and repository-size constraints. Any unavailable material and the reason for its restriction will be documented explicitly.
+Experimental data and consolidated results are not yet published in this repository. Their future availability under `datasets/` and `results/` will be documented subject to legal, ethical, licensing, privacy, and repository-size constraints. Any unavailable material and the reason for its restriction will be documented explicitly.
 
 ## Citation and DOI status
 

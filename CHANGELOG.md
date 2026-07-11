@@ -18,3 +18,5 @@ The format is based on Keep a Changelog, and the project intends to use semantic
 
 - Aligned the study documentation with five equivalent scenarios, fifty validation checks, and the six confirmed metrics.
 - Corrected citation metadata, author attribution, and the full study title.
+- Distinguished existing preliminary results from artifacts not yet published in the repository.
+- Added structured templates for the code reuse, BDD adherence, and structural quality evaluation instruments.

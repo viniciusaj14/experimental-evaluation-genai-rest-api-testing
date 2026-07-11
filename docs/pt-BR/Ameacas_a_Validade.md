@@ -10,7 +10,7 @@ Diferenças de entrada, configuração ou aplicação das verificações podem a
 
 ## Validade externa
 
-Os resultados estarão vinculados à API selecionada, aos cinco cenários, às cinquenta verificações, às ferramentas e ao contexto do TCC. Não se deve generalizar automaticamente para outras APIs, tarefas, IDEs, Large Language Models (LLMs) ou contextos profissionais.
+Os resultados preliminares e os resultados consolidados estarão vinculados à API selecionada, aos cinco cenários, às cinquenta verificações, às ferramentas e ao contexto do TCC. Não se deve generalizar automaticamente para outras APIs, tarefas, IDEs, Large Language Models (LLMs) ou contextos profissionais.
 
 ## Validade de conclusão
 

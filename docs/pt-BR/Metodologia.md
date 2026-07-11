@@ -1,5 +1,7 @@
 # Metodologia
 
+> **Nota sobre a evolução deste documento:** este arquivo é um registro metodológico em evolução. Ele deverá ser revisado para refletir exclusivamente os procedimentos efetivamente realizados no estudo. A versão final da seção de Metodologia do TCC USP/ESALQ será redigida de forma impessoal e no tempo passado. Formulações prospectivas ou itens pendentes presentes aqui não devem ser interpretados como procedimentos já executados.
+
 ## Delineamento do estudo
 
 O estudo realiza uma comparação experimental entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários de teste e será avaliada pelas mesmas cinquenta verificações.
@@ -31,7 +33,7 @@ Os registros originais devem ser armazenados em `datasets/raw/` e não podem ser
 
 ## Métricas
 
-As seis métricas confirmadas e suas regras operacionais estão em `Metricas.md`. Os instrumentos de pontuação de reúso, aderência ao BDD e qualidade estrutural devem ser fixados antes da avaliação, para que os mesmos critérios sejam aplicados às três abordagens.
+As seis métricas confirmadas e suas regras operacionais estão em `Metricas.md`. Os templates dos instrumentos de [reúso de código](instrumentos/Rubrica_Reuso_de_Codigo.md), [aderência ao BDD](instrumentos/Rubrica_Aderencia_BDD.md) e [qualidade estrutural](instrumentos/Rubrica_Qualidade_Estrutural.md) devem ser completados somente após conferência dos critérios efetivamente utilizados. A consolidação deve aplicar a mesma regra às três abordagens sem inventar critérios ou pontuações.
 
 ## Análise
 
@@ -40,3 +42,5 @@ A análise comparará descritivamente os valores observados nas três abordagens
 ## Relato
 
 O relato deve apresentar todos os valores coletados, registros indisponíveis, impedimentos, correções e desvios relevantes. Nenhum resultado, versão, API, endpoint ou procedimento deve ser reconstruído por suposição.
+
+O estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório; essa ausência de publicação não significa ausência de execução. Decisões de protocolo ainda pendentes devem permanecer identificadas separadamente.

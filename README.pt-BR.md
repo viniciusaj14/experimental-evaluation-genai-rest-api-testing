@@ -1,10 +1,10 @@
-# Avaliação Experimental de Inteligência Artificial Generativa para Automação de Testes de API REST Utilizando Behavior-Driven Development (BDD)
+# Avaliação Experimental da Inteligência Artificial Generativa na Automação de Testes de APIs REST com Behavior-Driven Development (BDD)
 
 [English](README.md) | [Português (Brasil)](README.pt-BR.md)
 
 Repositório científico do Trabalho de Conclusão de Curso do MBA USP/ESALQ.
 
-> **Status da pesquisa:** o protocolo e os instrumentos estão em preparação. Não há resultados experimentais nem DOI emitido. Resultados não devem ser inventados.
+> **Status da pesquisa:** o estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório. Nenhum resultado deve ser divulgado por inferência ou invenção. Nenhum DOI foi emitido.
 
 ## Objetivo
 
@@ -44,6 +44,8 @@ Documentos metodológicos oficiais:
 - [`Questoes_de_Pesquisa.md`](docs/pt-BR/Questoes_de_Pesquisa.md);
 - [`Ameacas_a_Validade.md`](docs/pt-BR/Ameacas_a_Validade.md).
 
+Os templates dos instrumentos de avaliação estão em [`docs/pt-BR/instrumentos/`](docs/pt-BR/instrumentos/). Eles ainda não contêm critérios nem pontuações finais e deverão ser completados conforme os instrumentos efetivamente utilizados.
+
 As traduções integrais para inglês serão produzidas somente após o congelamento do protocolo, conforme [`docs/en/README.md`](docs/en/README.md).
 
 ## Estrutura do repositório
@@ -72,7 +74,7 @@ Prompts, instruções, contexto, respostas e históricos devem permanecer no idi
 
 ## Reprodutibilidade e dados
 
-O procedimento de reprodução está em [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md). Os dados brutos não devem ser sobrescritos, e toda transformação deve manter vínculo com sua origem. Nenhum conjunto de dados experimental foi publicado até o momento.
+O procedimento de reprodução está em [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md). Os dados brutos não devem ser sobrescritos, e toda transformação deve manter vínculo com sua origem. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório.
 
 ## Citação e DOI
 
