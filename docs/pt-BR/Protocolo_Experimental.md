@@ -42,7 +42,7 @@ Decisões ainda pendentes devem permanecer identificadas como pendentes e ser re
 
 1. Registrar a abordagem, o commit, o ambiente e os materiais de entrada.
 2. Implementar os cinco cenários conforme as regras da abordagem.
-3. Registrar o tempo de desenvolvimento e cada ocorrência de retrabalho de acordo com `Metricas.md`.
+3. Registrar o tempo de desenvolvimento e o retrabalho de acordo com os registros originais e com a definição que ainda será confirmada em `Metricas.md`.
 4. Preservar os prompts e as interações permitidas no idioma exato em que ocorreram.
 5. Aplicar as mesmas cinquenta verificações à implementação concluída.
 6. Avaliar reúso de código, aderência ao BDD e qualidade estrutural com os instrumentos definidos previamente.
@@ -53,6 +53,6 @@ Decisões ainda pendentes devem permanecer identificadas como pendentes e ser re
 
 Transformações documentadas podem gerar arquivos em `datasets/processed/`. Tabelas, gráficos, relatórios e análises devem ser derivados desses registros sem alterar os dados brutos. A comparação prevista é descritiva e deve apresentar os valores das seis métricas para as três abordagens. Este protocolo não pressupõe testes estatísticos inferenciais.
 
-## Resultados
+## Status dos resultados e artefatos
 
-Nenhum resultado experimental está registrado neste documento. Valores somente poderão ser apresentados após a execução e a validação da coleta.
+O estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório e, portanto, nenhum valor deve ser reproduzido, estimado ou inventado neste documento. Essa condição é distinta das decisões de protocolo ainda pendentes, como a identificação pública da API, dos endpoints e a consolidação dos instrumentos de avaliação.

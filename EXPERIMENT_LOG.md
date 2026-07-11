@@ -12,7 +12,7 @@ Utilize uma seção para cada execução ou evento de protocolo. Falhas, impedim
 - **Versões ou identificadores efetivamente observados:**
 - **Identificadores dos cinco cenários:**
 - **Início, pausas, retomadas e término:**
-- **Ciclos de retrabalho:**
+- **Retrabalho (unidade conforme confirmação pendente nos registros preliminares):**
 - **Registro das cinquenta verificações:**
 - **Artefatos de reúso, aderência ao BDD e qualidade estrutural:**
 - **Entradas e saídas:**
@@ -20,4 +20,4 @@ Utilize uma seção para cada execução ou evento de protocolo. Falhas, impedim
 - **Correções, intervenções ou desvios:**
 - **Observações:**
 
-Nenhuma execução experimental foi registrada até o momento.
+O estudo possui execuções e resultados preliminares, mas os respectivos registros ainda não estão publicados neste repositório. Ao serem incorporadas, as entradas devem refletir os registros originais, sem reconstrução retrospectiva ou preenchimento por suposição.
