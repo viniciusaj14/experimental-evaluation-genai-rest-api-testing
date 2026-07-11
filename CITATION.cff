@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived release. No DOI has been issued yet."
+title: "Experimental Evaluation of Generative AI for REST API Testing"
+type: software
+authors:
+  - name: "viniciusaj14"
+repository-code: "https://github.com/viniciusaj14/experimental-evaluation-genai-rest-api-testing"
+license: MIT
