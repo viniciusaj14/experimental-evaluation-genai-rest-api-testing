@@ -1,70 +1,100 @@
 # Métricas
 
-Este estudo utiliza exatamente seis métricas. As mesmas regras devem ser aplicadas ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT. Não fazem parte da coleta medidas de estabilidade de execução, consumo de recursos, detecção de falhas, mutation testing ou outras métricas não descritas aqui.
+## Separação entre fases
 
-## 1. Tempo de desenvolvimento
+As definições históricas abaixo pertencem ao **estudo piloto preliminar da API veicular**. O futuro experimento final da Swagger Petstore ainda não foi executado. Fórmulas e instrumentos somente poderão ser reutilizados no experimento final se forem formalmente aprovados antes da execução.
 
-- **Definição operacional:** tempo ativo decorrido entre o início da implementação e a conclusão da abordagem, incluindo implementação, depuração, ajustes e retrabalho necessários para atingir o critério de conclusão.
-- **Unidade:** minutos.
-- **Regra de coleta:** registrar horário de início, pausas, retomadas e término. O cronômetro deve ser pausado durante interrupções alheias à tarefa, conforme regra definida antes da execução.
-- **Fórmula:** `tempo de desenvolvimento = horário de término − horário de início − duração das pausas excluídas`.
-- **Inclusão:** análise da tarefa durante a janela medida, escrita e edição de código, execução de testes, depuração e correções relacionadas aos cinco cenários.
-- **Exclusão:** pausas registradas por motivos externos, preparação geral do ambiente concluída antes do início comum e atividades posteriores ao critério de término.
-- **Relação:** indicador de produtividade; menor tempo representa menor esforço temporal somente quando os critérios de conclusão e qualidade são igualmente atendidos.
+Os cinquenta checks propostos para Petstore não são os mesmos checks usados no piloto. Nenhum cálculo pode combinar dados das duas fases.
+
+## 1. Tempo ativo de desenvolvimento
+
+### Piloto preliminar
+
+- **Definição operacional:** tempo de trabalho ativo dedicado ao desenvolvimento da solução em cada abordagem.
+- **Unidade:** duração na unidade preservada pelo registro original. Este documento não converte nem infere uma unidade ausente.
+- **Regra:** excluir interrupções que não integrem o trabalho ativo, conforme os registros históricos disponíveis.
+- **Relação:** indicador de produtividade.
+
+### Experimento final Petstore
+
+A regra de início, pausa, retomada, término e unidade deverá ser congelada antes da execução. O valor do piloto não pode ser reutilizado como valor final.
 
 ## 2. Retrabalho
 
-> **TODO — confirmação obrigatória nos registros preliminares:** antes de consolidar esta métrica, verificar nos registros já coletados se o valor representa (a) ciclos corretivos, (b) ajustes manuais individuais ou (c) uma taxa de retrabalho. A definição, a unidade, a fórmula e os critérios abaixo não podem ser fixados retroativamente sem essa conferência.
+### Piloto preliminar
 
-- **Definição operacional:** pendente de confirmação com base no significado efetivamente usado durante a coleta preliminar.
-- **Unidade:** pendente; poderá ser contagem de ciclos, contagem de ajustes individuais ou taxa, conforme os registros originais.
-- **Regra de coleta:** preservar os valores e rótulos originais e documentar como foram produzidos. Não converter entre as três interpretações sem evidência rastreável.
-- **Fórmula:** pendente de confirmação. Se o registro representar uma taxa, seu numerador e denominador deverão ser identificados nos artefatos originais; se representar contagem, não deverá ser transformado em taxa por suposição.
-- **Inclusão e exclusão:** devem reproduzir a regra efetivamente aplicada na coleta preliminar, a ser documentada após a conferência dos registros.
-- **Relação:** indicador de produtividade associado ao esforço corretivo, cuja interpretação comparativa depende da confirmação da unidade coletada.
+- **Definição operacional confirmada:** número de correções manuais individuais realizadas após a primeira execução.
+- **Unidade:** contagem de ajustes e média de ajustes por cenário.
+- **Total de ajustes:** soma das correções manuais individuais registradas nas cinco tarefas.
+- **Média por cenário:** `total de ajustes ÷ 5`.
+- **Fórmula de taxa usada no piloto:** `taxa de retrabalho (%) = (total de ajustes ÷ total de validações planejadas) × 100`, com cinquenta validações planejadas por abordagem.
+- **Inclusão:** ajustes manuais realizados depois da primeira execução para corrigir validações não atendidas.
+- **Exclusão:** trabalho anterior à primeira execução e intervenções não classificadas como correção manual no registro original.
+- **Relação:** indicador de produtividade associado ao esforço corretivo.
 
-## 3. Cobertura de validação
+### Experimento final Petstore
 
-> **TODO — decisão métrica pendente:** conferir nos registros preliminares qual conceito de cobertura foi efetivamente usado, quais checks integraram o numerador e o denominador e se controles experimentais ou conformidade de implementação foram tratados como cobertura. Não combinar automaticamente as três categorias da `Matriz_de_Validacoes.md` em uma única porcentagem.
+A mesma fórmula somente poderá ser preservada se for formalmente aprovada antes da execução. A aprovação deverá confirmar que “ajuste” mantém a mesma unidade operacional e que o denominador corresponde ao conjunto de validações definido para o experimento final. Não é permitido recalcular o piloto com categorias Petstore.
 
-- **Definição operacional:** pendente de confirmação contra a métrica realmente utilizada no estudo preliminar. O planejamento atual contém validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais, que possuem naturezas diferentes.
-- **Unidade:** até a confirmação, contagens separadas de `atendida`, `não atendida` e `impedida` por categoria, cenário e abordagem. O uso de percentual permanece pendente.
-- **Regra de coleta:** registrar individualmente os cinquenta checks planejados para cada abordagem, preservando sua categoria e evidência. O mesmo cenário e os mesmos checks devem ser aplicados às três abordagens.
-- **Fórmula:** pendente. Qualquer percentual futuro deverá declarar explicitamente categoria incluída, numerador, denominador e tratamento de impedidos, reproduzindo a métrica confirmada nos registros preliminares. A fórmula agregada `atendidas ÷ 50` não deve ser aplicada por padrão.
-- **Inclusão:** todos os cinquenta checks permanecem rastreados no desenho, mas sua inclusão em uma medida de cobertura depende da decisão métrica confirmada.
-- **Exclusão:** nenhum check pode ser removido silenciosamente. Checks impedidos devem ser reportados separadamente e nunca contados como aprovados. Controles de setup, limpeza, isolamento e rastreabilidade não devem ser tratados automaticamente como validação funcional.
-- **Relação:** indicador de qualidade cuja interpretação depende do escopo confirmado. Contagens de controle experimental também informam validade e reprodutibilidade, mas não equivalem necessariamente à cobertura funcional.
+## 3. Correção inicial das validações
+
+### Piloto preliminar
+
+- **Definição operacional confirmada:** proporção das validações corretas na primeira execução.
+- **Unidade:** quantidade de validações corretas inicialmente e percentual.
+- **Fórmula usada no piloto:** `correção inicial das validações (%) = (validações corretas na primeira execução ÷ 50) × 100`.
+- **Tratamento:** validações corrigidas posteriormente não integram o numerador da primeira execução; seus ajustes pertencem à métrica de retrabalho.
+- **Relação:** indicador da qualidade funcional inicial da implementação no piloto.
+
+Essa métrica **não é** cobertura de código-fonte, cobertura de branches, cobertura de requisitos ou cobertura de endpoints.
+
+### Experimento final Petstore
+
+A [matriz Petstore](Matriz_de_Validacoes.md) contém validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais. Essas categorias não devem ser agregadas automaticamente na fórmula histórica do piloto. Antes da execução final, deve-se decidir quais checks representam correção inicial, qual é o denominador e como checks impedidos serão relatados.
 
 ## 4. Reúso de código
 
-- **Definição operacional:** grau em que componentes de automação — como métodos auxiliares, configurações, steps ou abstrações — são utilizados por mais de um ponto dos cinco cenários, evitando duplicação equivalente.
-- **Unidade:** percentual de componentes reutilizáveis efetivamente reutilizados, acompanhado das contagens usadas no cálculo.
-- **Regra de coleta:** aplicar às três abordagens o mesmo inventário e a mesma regra de classificação, definidos antes da avaliação. Registrar cada componente classificado e suas referências.
-- **Fórmula:** `reúso de código (%) = (componentes reutilizáveis usados em mais de um ponto ÷ componentes reutilizáveis identificados) × 100`.
-- **Inclusão:** componentes do código de teste e do suporte à automação relacionados aos cinco cenários.
-- **Exclusão:** dependências de terceiros, código gerado pela ferramenta de build, arquivos de configuração sem lógica reutilizável e ocorrências apenas textualmente semelhantes sem função comum.
-- **Relação:** indicador de qualidade estrutural e manutenibilidade; maior reúso controlado pode reduzir duplicação e esforço de manutenção, sem premiar abstrações desnecessárias.
+### Piloto preliminar
+
+- **Registro confirmado:** percentual de código reutilizado.
+- **Unidade:** percentual.
+- **Limite documental:** o numerador, o denominador e o procedimento exato de cálculo não foram confirmados nos achados históricos fornecidos; não devem ser reconstruídos por suposição.
+- **Relação:** dimensão de qualidade e manutenibilidade.
+
+### Experimento final Petstore
+
+O cálculo dependerá da [`Rubrica_Reuso_de_Codigo.md`](instrumentos/Rubrica_Reuso_de_Codigo.md), que deverá ser congelada antes da execução. A rubrica final não pode ser aplicada retroativamente aos valores do piloto.
 
 ## 5. Aderência ao BDD
 
-- **Definição operacional:** grau de conformidade da implementação com os critérios de BDD definidos previamente para os cenários, a linguagem de comportamento e a ligação entre especificação e automação executável.
-- **Unidade:** pontos atendidos e percentual do instrumento de aderência.
-- **Regra de coleta:** avaliar cada abordagem com a mesma lista de critérios, congelada antes da análise, registrando pontuação e evidência para cada item.
-- **Fórmula:** `aderência ao BDD (%) = (pontos obtidos ÷ pontos aplicáveis do instrumento) × 100`.
-- **Inclusão:** arquivos de feature, cenários, steps e sua relação com o comportamento esperado nos cinco cenários.
-- **Exclusão:** preferências de estilo que não constem do instrumento e itens realmente não aplicáveis, que devem ser justificados e tratados da mesma forma entre as abordagens.
-- **Relação:** indicador de qualidade metodológica; maior aderência representa melhor conformidade com a abordagem BDD definida para o estudo.
+### Piloto preliminar
+
+- **Registros confirmados:** quantidade de cenários aderentes ao BDD entre os cinco e percentual de aderência.
+- **Unidades:** contagem de `0` a `5` e percentual.
+- **Fórmula:** `aderência ao BDD (%) = (cenários aderentes ao BDD ÷ 5) × 100`.
+- **Relação:** indicador de conformidade metodológica dos cenários do piloto.
+
+### Experimento final Petstore
+
+Os critérios dependerão da [`Rubrica_Aderencia_BDD.md`](instrumentos/Rubrica_Aderencia_BDD.md), congelada antes da execução final. Não se presume que a classificação histórica usou os mesmos critérios.
 
 ## 6. Qualidade estrutural
 
-- **Definição operacional:** grau de atendimento aos critérios estruturais previamente definidos para organização, separação de responsabilidades, legibilidade, nomenclatura e manutenção do código de teste.
-- **Unidade:** pontos atendidos e percentual do instrumento de qualidade estrutural.
-- **Regra de coleta:** aplicar o mesmo instrumento às três implementações e registrar a evidência de cada item. O instrumento e sua ponderação devem ser fixados antes da avaliação.
-- **Fórmula:** `qualidade estrutural (%) = (pontos obtidos ÷ pontos aplicáveis do instrumento) × 100`.
-- **Inclusão:** estrutura do projeto de testes, classes, steps, recursos e código de suporte diretamente relacionados aos cinco cenários.
-- **Exclusão:** código de dependências, artefatos gerados pelo build e critérios não previstos no instrumento; itens não aplicáveis exigem justificativa consistente entre abordagens.
-- **Relação:** indicador de qualidade interna e manutenibilidade; maior pontuação indica melhor atendimento à estrutura definida, sem representar resultado funcional por si só.
+### Piloto preliminar
 
-## Registro de dados ausentes ou impedidos
+- **Registro confirmado:** discussão qualitativa da estrutura das implementações.
+- **Unidade:** não se confirmou pontuação numérica objetiva e consolidada.
+- **Restrição:** não declarar que qualidade estrutural foi coletada quantitativamente no piloto e não produzir pontuação retrospectiva.
+- **Relação:** interpretação qualitativa de organização e manutenção, limitada ao conteúdo histórico preservado.
 
-Dados ausentes, verificações impedidas e itens não aplicáveis devem ser registrados explicitamente com justificativa. O relatório deve apresentar, para cada abordagem, as contagens de checks atendidos, não atendidos e impedidos, separadas entre validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais, mantendo visível o total planejado de cinquenta. Esses registros não podem ser estimados, substituídos por valores inventados, removidos silenciosamente ou convertidos em aprovação.
+### Experimento final Petstore
+
+A [`Rubrica_Qualidade_Estrutural.md`](instrumentos/Rubrica_Qualidade_Estrutural.md) será aplicável somente depois de seus critérios e sua regra de pontuação serem congelados antes da execução. Ela não deve ser usada para reavaliar numericamente o piloto.
+
+## Dados ausentes, impedidos e separação analítica
+
+- manter dados do piloto em `datasets/pilot/` e dados finais em `datasets/final-experiment/`;
+- não transferir valores entre as fases;
+- não reinterpretar os cinquenta checks veiculares como os cinquenta checks Petstore;
+- registrar checks Petstore impedidos separadamente, sem aprovação presumida;
+- publicar fórmulas finais somente após aprovação prévia e rastreável.

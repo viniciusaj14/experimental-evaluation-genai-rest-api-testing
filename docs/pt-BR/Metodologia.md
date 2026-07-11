@@ -2,21 +2,29 @@
 
 > **Nota sobre a evolução deste documento:** este arquivo é um registro metodológico em evolução. Ele deverá ser revisado para refletir exclusivamente os procedimentos efetivamente realizados no estudo. A versão final da seção de Metodologia do TCC USP/ESALQ será redigida de forma impessoal e no tempo passado. Formulações prospectivas ou itens pendentes presentes aqui não devem ser interpretados como procedimentos já executados.
 
-> **ALERTA DE CONSISTÊNCIA METODOLÓGICA:** a seleção da Swagger Petstore, os cinco cenários candidatos e os cinquenta checks planejados devem ser conferidos com os registros originais do experimento preliminar. Eles não podem ser apresentados como procedimentos já executados sem confirmação. Em caso de divergência material, os resultados preliminares devem ser classificados como piloto ou o experimento deve ser reexecutado sob o desenho congelado. Os registros originais devem ser preservados sem redefinição retrospectiva.
+> **ALERTA DE CONSISTÊNCIA METODOLÓGICA:** a revisão histórica confirmou que o estudo preliminar usou uma API pública não identificada do domínio veicular, e não a Swagger Petstore. Por isso, o estudo concluído é classificado como piloto. O protocolo Petstore é novo, ainda não foi executado e deverá ser executado novamente após congelamento. Os registros originais do piloto devem ser preservados sem mapeamento retrospectivo.
+
+## Fases do estudo
+
+1. **Piloto preliminar concluído:** comparação das três abordagens em cinco cenários de uma API veicular pública cuja identidade não foi preservada. Ver [`Estudo_Preliminar.md`](Estudo_Preliminar.md).
+2. **Piloto de viabilidade Petstore proposto:** verificação técnica futura de ambiente, contrato, autenticação, persistência, limpeza e filtro. Seus valores não integram o experimento final. Ver [`Piloto_de_Viabilidade.md`](Piloto_de_Viabilidade.md).
+3. **Experimento final Petstore futuro:** nova execução das três abordagens após congelamento do protocolo, ainda não realizada.
+
+A separação e sua justificativa estão formalizadas no [`Registro_de_Decisao_Piloto_e_Experimento_Final.md`](Registro_de_Decisao_Piloto_e_Experimento_Final.md).
 
 ## Delineamento do estudo
 
-O estudo realiza uma comparação experimental entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários de teste e será avaliada pelas mesmas cinquenta verificações.
+O experimento final realizará uma nova comparação entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários Petstore e será avaliada pelos mesmos cinquenta checks congelados.
 
 Não são pressupostos múltiplos participantes, avaliadores cegos, randomização, cálculo de poder estatístico ou testes estatísticos inferenciais. Caso alguma dessas decisões venha a integrar efetivamente o TCC, deverá ser documentada antes de sua aplicação; até lá, não faz parte da metodologia.
 
 ## Ambiente tecnológico
 
-As implementações utilizam Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA. As versões ou identificadores não confirmados não devem ser inferidos. O ambiente observado durante a execução deve ser registrado no log experimental.
+O protocolo final prevê Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA. O ambiente confirmado do piloto está descrito separadamente em `Estudo_Preliminar.md` e não deve receber ferramentas ou versões por inferência. O ambiente efetivamente usado na execução final deve ser registrado no log experimental.
 
 ## Objeto de estudo
 
-A API selecionada é a Swagger Petstore - OpenAPI 3.0, uma aplicação de demonstração oficial do ecossistema Swagger e não desenvolvida por esta pesquisa. A [seleção](Selecao_da_API.md) e o [inventário de endpoints](Inventario_de_Endpoints.md) são fundamentados na [especificação oficial preservada](../api-specification/swagger-petstore-openapi.json). A cópia local fixa o contrato metodológico, mas não elimina mudanças, resets ou interferência de dados no ambiente público.
+A API selecionada para o experimento final é a Swagger Petstore - OpenAPI 3.0, uma aplicação de demonstração oficial do ecossistema Swagger e não desenvolvida por esta pesquisa. A [seleção](Selecao_da_API.md) e o [inventário de endpoints](Inventario_de_Endpoints.md) são fundamentados na [especificação oficial preservada](../api-specification/swagger-petstore-openapi.json). A cópia local fixa o contrato metodológico, mas não elimina mudanças, resets ou interferência de dados no ambiente público. Ela não corresponde à API veicular usada no piloto.
 
 ## Comparabilidade entre abordagens
 
@@ -46,18 +54,18 @@ A coleta abrange:
 - código-fonte, commits, prompts e interações permitidas;
 - ambiente, versões efetivamente observadas e desvios.
 
-Os registros originais devem ser armazenados em `datasets/raw/` e não podem ser alterados. Correções ou consolidações devem gerar novos artefatos em `datasets/processed/` com rastreabilidade até a origem.
+Registros publicados do piloto devem permanecer em `datasets/pilot/raw/`, com transformações em `datasets/pilot/processed/`. O futuro experimento final deve usar `datasets/final-experiment/raw/` e `datasets/final-experiment/processed/`. As árvores não podem ser combinadas, e dados brutos não podem ser alterados.
 
 ## Métricas
 
-As seis métricas confirmadas e suas regras operacionais estão em `Metricas.md`. Os templates dos instrumentos de [reúso de código](instrumentos/Rubrica_Reuso_de_Codigo.md), [aderência ao BDD](instrumentos/Rubrica_Aderencia_BDD.md) e [qualidade estrutural](instrumentos/Rubrica_Qualidade_Estrutural.md) devem ser completados somente após conferência dos critérios efetivamente utilizados. A consolidação deve aplicar a mesma regra às três abordagens sem inventar critérios ou pontuações.
+As definições históricas do piloto e as decisões requeridas para o experimento final estão em `Metricas.md`. A qualidade estrutural foi apenas discutida qualitativamente no piloto; não há pontuação numérica objetiva consolidada confirmada. Os templates de [reúso de código](instrumentos/Rubrica_Reuso_de_Codigo.md), [aderência ao BDD](instrumentos/Rubrica_Aderencia_BDD.md) e [qualidade estrutural](instrumentos/Rubrica_Qualidade_Estrutural.md) aplicam-se ao experimento final somente após congelamento, sem reavaliação retroativa do piloto.
 
 ## Análise
 
-A análise comparará descritivamente os valores observados nas três abordagens. Tabelas e gráficos devem distinguir produtividade — tempo de desenvolvimento e retrabalho — de qualidade — cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural. Não serão introduzidas métricas não coletadas nem testes estatísticos não previstos.
+A análise do piloto e a análise do futuro experimento final devem ser apresentadas separadamente. No piloto, qualidade estrutural permanece qualitativa. No experimento final, somente fórmulas e rubricas aprovadas antes da execução poderão produzir valores. Não serão introduzidas métricas não coletadas, testes estatísticos não previstos ou comparações numéricas entre as fases.
 
 ## Relato
 
 O relato deve apresentar todos os valores coletados, registros indisponíveis, impedimentos, correções e desvios relevantes. Nenhum resultado, versão, API, endpoint ou procedimento deve ser reconstruído por suposição.
 
-O estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório; essa ausência de publicação não significa ausência de execução. Decisões de protocolo ainda pendentes devem permanecer identificadas separadamente.
+O piloto preliminar foi executado e possui resultados, mas seus dados e valores consolidados não estão publicados neste repositório. O piloto de viabilidade Petstore e o experimento final Petstore ainda não foram executados. Os relatos e datasets das três fases devem permanecer separados.

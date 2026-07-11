@@ -2,21 +2,21 @@
 
 ## Validade de constructo
 
-As seis métricas operacionalizam produtividade e qualidade, mas não esgotam esses conceitos. Tempo e retrabalho representam o esforço observado; cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural representam dimensões específicas da qualidade. A mitigação consiste em usar definições e instrumentos fixados antes da avaliação e em não extrapolar as conclusões além dessas medidas.
+As métricas do piloto operacionalizam dimensões de produtividade e qualidade, mas não esgotam esses conceitos. Tempo ativo e ajustes representam esforço; correção inicial, reúso e aderência BDD representam dimensões específicas da qualidade. Qualidade estrutural foi discutida qualitativamente, sem pontuação objetiva consolidada confirmada. No experimento final, definições e rubricas devem ser congeladas antes da execução.
 
 ## Validade interna
 
 Diferenças de entrada, configuração ou aplicação dos checks podem afetar a comparação. Embora os cinco cenários sejam funcionalmente distintos, cada cenário, seus materiais e seus critérios devem ser aplicados de forma idêntica às três abordagens. Alterações manuais, impedimentos e desvios precisam ser registrados. Variações inerentes ao GitHub Copilot e ao ChatGPT devem ser reconhecidas, sem atribuir automaticamente toda diferença observada à abordagem.
 
-Há risco adicional de redefinir retrospectivamente o experimento ao alinhar documentação nova com resultados preliminares. A API, os cenários, os checks, as categorias e as métricas devem ser confirmados nos registros originais. Em caso de divergência material, os resultados devem ser classificados como piloto ou o experimento deve ser reexecutado; os registros originais não podem ser reescritos para se adequar ao protocolo posterior.
+A revisão histórica confirmou divergência entre o piloto veicular e o protocolo Petstore. O principal risco retrospectivo é atribuir ao piloto uma API, contrato, endpoints, prompts ou artefatos que não foram preservados, ou recalcular seus valores com checks Petstore. A mitigação é classificá-lo como piloto, preservar seus registros originais e reexecutar o experimento final sob o protocolo Petstore congelado.
 
 ## Validade externa
 
-Os resultados preliminares e os resultados consolidados estarão vinculados à API selecionada, aos cinco cenários, às cinquenta verificações, às ferramentas e ao contexto do TCC. Não se deve generalizar automaticamente para outras APIs, tarefas, IDEs, Large Language Models (LLMs) ou contextos profissionais.
+Os resultados do piloto estão vinculados à API veicular não identificada e aos cinco cenários históricos. Os futuros resultados finais estarão vinculados à Swagger Petstore, aos novos cenários, checks, ferramentas e contexto do TCC. Não se deve generalizar automaticamente entre as duas fases nem para outras APIs, tarefas, IDEs, Large Language Models (LLMs) ou contextos profissionais.
 
 ## Validade de conclusão
 
-Comparações com poucas implementações e um conjunto específico de tarefas podem sustentar apenas conclusões compatíveis com os dados observados. A análise será descritiva e apresentará os valores das seis métricas. Não serão presumidos testes inferenciais, significância estatística ou poder estatístico.
+Comparações com poucas implementações e tarefas específicas sustentam apenas conclusões compatíveis com a fase observada. Piloto e experimento final devem ter análises separadas, sem combinação numérica. Não serão presumidos testes inferenciais, significância estatística ou poder estatístico.
 
 ## Reprodutibilidade
 
@@ -26,4 +26,4 @@ O ambiente público acrescenta interferência de terceiros, resets e indisponibi
 
 ## Decisões pendentes
 
-A Swagger Petstore - OpenAPI 3.0 está selecionada e seu contrato foi preservado localmente. Permanecem pendentes de revisão final o subconjunto de operações, o congelamento dos cinco cenários e cinquenta checks, a interpretação do valor de retrabalho e os instrumentos finais de pontuação de reúso de código, aderência ao BDD e qualidade estrutural. Esses itens devem ser confirmados a partir do desenho e dos registros reais, sem reconstrução por suposição.
+A Swagger Petstore - OpenAPI 3.0 está selecionada para o experimento final e seu contrato foi preservado localmente. Permanecem pendentes o ambiente, o subconjunto de operações, o congelamento dos cinco cenários e cinquenta checks e os instrumentos finais. A fórmula histórica de retrabalho foi identificada, mas sua reutilização no experimento final exige aprovação prévia. A qualidade estrutural do piloto não possui pontuação numérica consolidada confirmada.

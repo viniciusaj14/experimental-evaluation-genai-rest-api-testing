@@ -1,8 +1,8 @@
-# Protocolo Experimental
+# Protocolo do Experimento Final Petstore
 
 ## Objetivo
 
-Orientar uma comparação controlada e auditável entre três abordagens de desenvolvimento de testes automatizados de API REST com Behavior-Driven Development (BDD): desenvolvimento manual, desenvolvimento assistido pelo GitHub Copilot e desenvolvimento assistido pelo ChatGPT.
+Orientar a futura comparação controlada e auditável entre três abordagens de desenvolvimento de testes automatizados da Swagger Petstore com Behavior-Driven Development (BDD): desenvolvimento manual, desenvolvimento assistido pelo GitHub Copilot e desenvolvimento assistido pelo ChatGPT. Este protocolo ainda não foi executado.
 
 ## Escopo confirmado
 
@@ -19,7 +19,7 @@ O objeto do estudo é a Swagger Petstore - OpenAPI 3.0. O subconjunto final de e
 
 Cada abordagem deve produzir uma implementação dos mesmos cinco cenários e ser submetida às mesmas verificações planejadas para cada cenário. A comparabilidade é estabelecida entre manual, GitHub Copilot e ChatGPT dentro de cada cenário. Não se pressupõe que criação, consulta, atualização, filtro e exclusão tenham complexidade idêntica entre si. Requisitos, materiais de entrada, critérios de conclusão e ambiente devem ser iguais entre abordagens, exceto pela forma de desenvolvimento que caracteriza cada condição.
 
-> **ALERTA DE CONSISTÊNCIA METODOLÓGICA:** a API, os cenários e a matriz de validações desta proposta devem ser confrontados com os registros originais do experimento preliminar. Somente procedimentos confirmados nesses registros podem ser descritos como executados. Se houver divergência material, os resultados preliminares devem ser classificados como piloto ou o experimento deve ser reexecutado com o protocolo congelado.
+> **SEPARAÇÃO HISTÓRICA:** o estudo preliminar concluído utilizou uma API veicular pública não identificada e cinco cenários diferentes. Ele é classificado como piloto. Nenhum resultado desse piloto pode ser mapeado para a Swagger Petstore. Este protocolo define um experimento final novo que deverá ser executado após congelamento.
 
 ## Abordagens
 
@@ -50,15 +50,15 @@ Decisões ainda pendentes devem permanecer identificadas como pendentes e ser re
 4. Preservar os prompts e as interações permitidas no idioma exato em que ocorreram.
 5. Aplicar as mesmas cinquenta verificações à implementação concluída.
 6. Avaliar reúso de código, aderência ao BDD e qualidade estrutural com os instrumentos definidos previamente.
-7. Armazenar os registros originais em `datasets/raw/`, sem sobrescrita.
+7. Armazenar os registros originais em `datasets/final-experiment/raw/`, sem sobrescrita.
 8. Documentar correções, exclusões, impedimentos e qualquer desvio do protocolo em `EXPERIMENT_LOG.md`.
 
 A [matriz de rastreabilidade](Matriz_de_Rastreabilidade.md) conecta objetivo, questões, API, cenários, validações, métricas e futuros resultados.
 
 ## Tratamento dos dados
 
-Transformações documentadas podem gerar arquivos em `datasets/processed/`. Tabelas, gráficos, relatórios e análises devem ser derivados desses registros sem alterar os dados brutos. A comparação prevista é descritiva e deve apresentar os valores das seis métricas para as três abordagens. Este protocolo não pressupõe testes estatísticos inferenciais.
+Transformações documentadas podem gerar arquivos em `datasets/final-experiment/processed/`. Tabelas, gráficos, relatórios e análises devem ser derivados desses registros sem alterar os dados brutos. A comparação prevista é descritiva e deve apresentar os valores das métricas aprovadas para as três abordagens. Este protocolo não pressupõe testes estatísticos inferenciais e não admite combinação com valores do piloto veicular.
 
 ## Status dos resultados e artefatos
 
-O estudo possui resultados preliminares. Os dados experimentais e os resultados consolidados ainda não estão publicados neste repositório e, portanto, nenhum valor deve ser reproduzido, estimado ou inventado neste documento. Essa condição é distinta das decisões ainda pendentes: revisão final do subconjunto de operações, congelamento das matrizes de cenários e validações, confirmação da interpretação de retrabalho e consolidação dos instrumentos de avaliação.
+O piloto veicular possui resultados históricos e é documentado separadamente. O piloto de viabilidade Petstore e o experimento final Petstore ainda não foram executados. Permanecem pendentes: ambiente final, revisão do subconjunto de operações, congelamento das matrizes, aprovação das fórmulas e consolidação dos instrumentos de avaliação.

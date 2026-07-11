@@ -6,7 +6,7 @@ Os cinco cenários abaixo são propostas baseadas no [contrato preservado](../ap
 
 Os cenários são funcionalmente distintos e não precisam ter complexidade idêntica entre operações HTTP. A exigência metodológica é que cada mesmo cenário seja aplicado com entradas, critérios e checks idênticos ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT, permitindo comparação entre abordagens.
 
-> **ALERTA:** esta matriz deve ser comparada com os registros originais do experimento preliminar. Cenários não confirmados nesses registros não podem ser descritos como já executados. Divergência material exige classificar os resultados preliminares como piloto ou reexecutar o experimento com a matriz congelada.
+> **SEPARAÇÃO CONFIRMADA:** estes cenários Petstore não são os cinco cenários veiculares do piloto concluído. Eles pertencem somente ao futuro experimento final, que ainda não foi executado. É proibido mapear ou comparar numericamente os resultados históricos com esta matriz.
 
 Os valores entre `<...>` são marcadores de dados a serem gerados por execução; não são valores reais nem exemplos de respostas da API.
 
@@ -95,4 +95,4 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 
 ### Cenário metodologicamente mais fraco
 
-C04 é o candidato mais fraco por consultar uma coleção compartilhada. A mitigação proposta evita quantidade e ordem globais e procura apenas o recurso exclusivo dentro do conjunto compatível. Se o piloto metodológico demonstrar que nem essa presença é estável, a alternativa preferível é executar o mesmo endpoint contra uma instância controlada do projeto oficial Swagger Petstore, mantendo o contrato preservado. Se o estudo exigir exclusivamente o ambiente público, o cenário deve ser substituído ou classificado como impedido conforme regra prévia; a fragilidade não deve ser ocultada.
+C04 é o candidato mais fraco por consultar uma coleção compartilhada. A mitigação proposta evita quantidade e ordem globais e procura apenas o recurso exclusivo dentro do conjunto compatível. Se o futuro piloto de viabilidade Petstore demonstrar que nem essa presença é estável, a alternativa preferível é executar o mesmo endpoint contra uma instância controlada do projeto oficial Swagger Petstore, mantendo o contrato preservado. Se o estudo exigir exclusivamente o ambiente público, o cenário deve ser substituído ou classificado como impedido conforme regra prévia; a fragilidade não deve ser ocultada.

@@ -1,10 +1,10 @@
 # Rubrica de Qualidade Estrutural
 
-> **Status:** template estrutural. Os critérios finais e a regra de pontuação ainda devem ser confirmados com base no instrumento efetivamente utilizado no estudo. Não preencher retrospectivamente por suposição.
+> **Status:** template exclusivo do futuro experimento final Petstore. O piloto discutiu qualidade estrutural apenas qualitativamente e não possui pontuação objetiva consolidada confirmada. Os critérios e a regra de pontuação devem ser congelados antes da execução final; é proibido preencher ou aplicar esta rubrica retroativamente ao piloto.
 
 ## Finalidade
 
-Documentar de forma auditável o instrumento usado para avaliar a qualidade estrutural do código e do projeto de testes nas três abordagens.
+Documentar de forma auditável o instrumento que será usado para avaliar a qualidade estrutural do código e do projeto de testes nas três abordagens do experimento final.
 
 ## Critérios objetivos
 

@@ -15,7 +15,7 @@ Antes da execução, registrar o texto das tarefas, o contexto fornecido, o padr
 - identificador do produto ou modelo efetivamente exibido;
 - histórico de interação cuja coleta seja permitida;
 - horários de início, pausas, retomadas e término;
-- ciclos de retrabalho e intervenções manuais;
+- ajustes manuais após a primeira execução, conforme definição métrica aprovada, e demais intervenções;
 - commit dos artefatos produzidos;
 - desvios do protocolo.
 

@@ -4,7 +4,7 @@
 
 Scientific repository for the USP/ESALQ MBA capstone study comparing manual development, GitHub Copilot, and ChatGPT in REST API test automation using Behavior-Driven Development (BDD).
 
-> **Research status:** the study has preliminary results. Experimental data and consolidated results are not yet published in this repository. No result may be inferred, invented, or published from this documentation alone.
+> **Research status:** existing preliminary results belong to a completed pilot study that used a different, unidentified public vehicle-domain REST API. Swagger Petstore is selected for a new final controlled experiment, which has not yet been executed. Pilot data and consolidated results are not published in this repository, and no result may be inferred or invented.
 
 ## Research objective
 
@@ -31,9 +31,9 @@ The authoritative wording is maintained in Brazilian Portuguese in [`docs/pt-BR/
 
 The same requirements, five scenarios, fifty planned validation checks, environment, and completion criteria apply across the three approaches. The planned difference is the development approach itself. Source artifacts, prompts and permitted interactions, timing records, rework records, validation evidence, and deviations provide traceability.
 
-The selected study API is **Swagger Petstore - OpenAPI 3.0**. Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
+The selected API for the **future final experiment** is **Swagger Petstore - OpenAPI 3.0**. Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
 
-> **Methodological consistency warning:** the selected API, proposed scenarios, and validation matrix must be checked against the original preliminary experiment records. They must not be described as procedures already performed unless those records confirm them. If they differ materially, the preliminary results must be classified as a pilot or the experiment must be rerun under the frozen design.
+The historical review confirmed that the pilot used five vehicle-domain scenarios: brand query, model-by-brand query, year/model query, vehicle-detail query, and invalid-parameter query. Its official API name, URL, contract, and exact endpoint paths were not preserved and must not be inferred. The Petstore scenarios and checks are a new protocol and cannot be mapped retroactively to pilot results.
 
 Detailed scientific documentation is maintained in Brazilian Portuguese, consistently with the USP/ESALQ capstone text:
 
@@ -49,23 +49,25 @@ API and experimental-design artifacts:
 - [candidate endpoint inventory](docs/pt-BR/Inventario_de_Endpoints.md);
 - [five-scenario matrix](docs/pt-BR/Matriz_de_Cenarios.md);
 - [fifty-check validation matrix](docs/pt-BR/Matriz_de_Validacoes.md);
-- [research traceability matrix](docs/pt-BR/Matriz_de_Rastreabilidade.md).
-- [feasibility pilot protocol](docs/pt-BR/Piloto_de_Viabilidade.md).
+- [research traceability matrix](docs/pt-BR/Matriz_de_Rastreabilidade.md);
+- [feasibility pilot protocol](docs/pt-BR/Piloto_de_Viabilidade.md);
+- [confirmed preliminary-study record](docs/pt-BR/Estudo_Preliminar.md);
+- [pilot/final-experiment decision record](docs/pt-BR/Registro_de_Decisao_Piloto_e_Experimento_Final.md).
 
 Full English translations will be created only after the protocol is frozen. See [`docs/en/README.md`](docs/en/README.md).
 
-## Confirmed metrics
+## Metrics by study phase
 
 | Dimension | Metric | Study interpretation |
 | --- | --- | --- |
-| Productivity | Development time | Active minutes required under the documented timing rules |
-| Productivity | Rework | Collected rework value; its exact meaning and unit require confirmation against the preliminary records |
-| Quality | Validation coverage | Transparent outcome of the fifty planned checks, with impeded checks reported separately and never counted as passed |
-| Quality | Code reuse | Reuse assessed with the study's confirmed evaluation instrument |
-| Quality | BDD adherence | Conformance assessed with the study's confirmed BDD instrument |
-| Quality | Structural quality | Conformance assessed with the study's confirmed structural-quality instrument |
+| Productivity | Development time | Pilot: active development time; final unit and timing rules require freezing |
+| Productivity | Rework | Individual manual corrections after the first execution; the final Petstore formula requires pre-approval |
+| Quality | Initial validation correctness | Pilot: validations correct in the first execution; final Petstore scope still requires freezing |
+| Quality | Code reuse | Pilot recorded a percentage without a preserved calculation procedure; final rubric requires freezing |
+| Quality | BDD adherence | Pilot recorded adherent scenarios out of five and a percentage; final rubric requires freezing |
+| Quality | Structural quality | Pilot discussion was qualitative; an objective final score requires a pre-frozen rubric |
 
-Operational definitions, formulas, inclusion rules, exclusions, and pending confirmations are documented in [`docs/pt-BR/Metricas.md`](docs/pt-BR/Metricas.md). The rework metric must not be retroactively redefined before checking whether the preliminary records represent corrective cycles, individual manual adjustments, or a rework rate.
+Historical definitions, formulas, limitations, and decisions required for the final experiment are documented in [`docs/pt-BR/Metricas.md`](docs/pt-BR/Metricas.md). Pilot and final-experiment measurements must remain separate.
 
 Structured rubric templates are available under [`docs/pt-BR/instrumentos/`](docs/pt-BR/instrumentos/). They contain no invented final criteria or scores and must be completed from the instruments actually used in the study.
 
@@ -93,8 +95,8 @@ The Maven project is configured in [`pom.xml`](pom.xml). Exact versions or ident
 ├── github-copilot/            # GitHub Copilot artifacts
 ├── chatgpt/                   # ChatGPT artifacts
 ├── datasets/
-│   ├── raw/                   # Location reserved for original observations
-│   └── processed/             # Location reserved for documented transformations
+│   ├── pilot/                 # Reserved raw and processed pilot-data areas
+│   └── final-experiment/      # Reserved raw and processed final-data areas
 ├── results/                   # Location reserved for published result artifacts
 ├── EXPERIMENT_LOG.md          # Experiment-record structure and publication status
 ├── REPRODUCIBILITY.md         # Reproduction and provenance guidance
@@ -114,7 +116,7 @@ Follow [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), preserve original observation
 mvn test
 ```
 
-Preliminary results exist, but experimental data and consolidated results are not yet published in this repository. Future availability will be documented subject to legal, ethical, licensing, privacy, and repository-size constraints. This publication status is separate from protocol decisions that remain pending.
+Pilot results exist, but their data and consolidated values are not published in this repository. The final Petstore experiment has not yet been executed. Future data availability will be documented subject to legal, ethical, licensing, privacy, and repository-size constraints, with pilot and final artifacts kept separate.
 
 ## Citation and DOI status
 

@@ -4,6 +4,8 @@
 
 Este inventário foi extraído da [especificação OpenAPI preservada](../api-specification/swagger-petstore-openapi.json). O recorte abaixo reúne as operações candidatas do domínio `pet` capazes de sustentar criação, consulta, atualização, filtro e exclusão em cinco cenários comparáveis. A seleção final permanece pendente de revisão metodológica.
 
+Este inventário aplica-se somente ao futuro experimento final Petstore. A API veicular do piloto não teve seus endpoints preservados, e nenhum path desta lista pode ser atribuído retrospectivamente ao piloto.
+
 ## Resumo
 
 | Método | Path | `operationId` | Finalidade candidata |

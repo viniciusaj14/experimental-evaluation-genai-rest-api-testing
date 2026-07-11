@@ -1,6 +1,6 @@
 # Preserved Swagger Petstore OpenAPI specification
 
-This directory preserves the API contract selected for the experimental study.
+This directory preserves the API contract selected for the future final experiment. The completed preliminary pilot used a different, unidentified public vehicle-domain API; no pilot result is associated with this contract.
 
 | Field | Value |
 | --- | --- |

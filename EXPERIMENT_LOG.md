@@ -6,13 +6,14 @@ Utilize uma seção para cada execução ou evento de protocolo. Falhas, impedim
 
 - **Identificador da execução/evento:**
 - **Data, horário e fuso:**
+- **Fase do estudo:** piloto preliminar / piloto de viabilidade Petstore / experimento final
 - **Abordagem:** manual / GitHub Copilot / ChatGPT / protocolo
 - **Commit:**
-- **Ambiente:** Java 21, Maven, REST Assured, Cucumber, JUnit 5, IntelliJ IDEA e sistema operacional observados
+- **Ambiente efetivamente observado:** registrar somente ferramentas presentes na fase correspondente, sem preencher tecnologias por padrão
 - **Versões ou identificadores efetivamente observados:**
 - **Identificadores dos cinco cenários:**
 - **Início, pausas, retomadas e término:**
-- **Retrabalho (unidade conforme confirmação pendente nos registros preliminares):**
+- **Ajustes manuais após a primeira execução (contagem e média por cenário):**
 - **Registro das cinquenta verificações:**
 - **Artefatos de reúso, aderência ao BDD e qualidade estrutural:**
 - **Entradas e saídas:**
@@ -20,4 +21,4 @@ Utilize uma seção para cada execução ou evento de protocolo. Falhas, impedim
 - **Correções, intervenções ou desvios:**
 - **Observações:**
 
-O estudo possui execuções e resultados preliminares, mas os respectivos registros ainda não estão publicados neste repositório. Ao serem incorporadas, as entradas devem refletir os registros originais, sem reconstrução retrospectiva ou preenchimento por suposição.
+O piloto preliminar possui execuções e resultados, mas seus registros não estão publicados neste repositório. O piloto de viabilidade Petstore e o experimento final ainda não foram executados. Ao incorporar registros, identificar obrigatoriamente a fase e preservar o conteúdo original sem reconstrução retrospectiva.

@@ -1,5 +1,7 @@
 # Seleção da API
 
+> **Escopo temporal:** a Swagger Petstore foi selecionada exclusivamente para o futuro experimento final. O estudo piloto concluído utilizou outra API pública do domínio veicular, cuja identidade não foi preservada. Nenhum dado ou resultado histórico pode ser atribuído à Petstore.
+
 ## API selecionada
 
 O objeto de estudo selecionado é a **Swagger Petstore - OpenAPI 3.0**, disponibilizada pelo projeto oficial Swagger Petstore. O contrato preservado declara OpenAPI `3.0.4` e versão de documento da API `1.0.27`. A cópia JSON utilizada para as decisões metodológicas está em [`docs/api-specification/swagger-petstore-openapi.json`](../api-specification/swagger-petstore-openapi.json), com origem e checksum registrados no [`README` da especificação](../api-specification/README.md).
@@ -56,4 +58,4 @@ A escolha definitiva deve considerar o [piloto de viabilidade](Piloto_de_Viabili
 
 ## Decisões ainda pendentes
 
-A API está formalmente selecionada. O subconjunto final de operações e os detalhes dos cinco cenários permanecem em revisão metodológica nas matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md). A adoção desses candidatos não deve ser confundida com execução concluída ou publicação de resultados.
+A API está formalmente selecionada para o experimento final, que ainda não foi executado. O subconjunto final de operações e os detalhes dos cinco cenários permanecem em revisão metodológica nas matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md). A adoção desses candidatos não deve ser confundida com o piloto veicular, execução Petstore concluída ou publicação de resultados.

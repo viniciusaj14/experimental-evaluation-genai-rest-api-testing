@@ -4,6 +4,8 @@
 
 Esta matriz define **exatamente cinquenta checks planejados**, dez para cada cenário candidato. Ela não contém resultados observados. Os critérios derivam do [contrato OpenAPI preservado](../api-specification/swagger-petstore-openapi.json) e dos requisitos da [matriz de cenários](Matriz_de_Cenarios.md).
 
+> **SEPARAÇÃO CONFIRMADA:** estes cinquenta checks Petstore não são os cinquenta checks usados no piloto veicular. Esta matriz aplica-se somente ao futuro experimento final, ainda não executado. Nenhum percentual ou contagem pode combinar dados do piloto e do experimento final.
+
 Todos os cinquenta checks permanecem no estudo. Para checks que dependem do serviço público, a indisponibilidade, interferência externa ou divergência que impeça uma conclusão deve ser registrada como **impedida**, com evidência. Um check impedido nunca é removido, presumido, convertido em aprovação ou contado como atendido. O relatório deve separar atendidos, não atendidos e impedidos, mantendo denominador planejado igual a 50 no total e a 10 por cenário.
 
 Na coluna de impedimento:
@@ -17,7 +19,7 @@ Na coluna de impedimento:
 - **Conformidade de implementação/contrato:** construção da requisição, tipos, campos, schemas e limites de assertions definidos pelo contrato ou pelo desenho.
 - **Controle experimental:** setup, precondição controlada, persistência necessária, isolamento, limpeza e rastreabilidade.
 
-> **Decisão pendente sobre cobertura:** as três categorias não devem ser automaticamente somadas em uma única porcentagem de cobertura. É obrigatório conferir nos registros preliminares qual conjunto, numerador e denominador foram efetivamente usados pela métrica de cobertura de validação. Até essa confirmação, devem ser apresentadas contagens separadas por categoria, cenário e estado (`atendida`, `não atendida`, `impedida`), sem calcular um percentual agregado.
+> **Decisão pendente sobre a métrica final:** no piloto, a correção inicial foi calculada como validações corretas na primeira execução divididas por 50. As três categorias Petstore não devem ser automaticamente somadas nessa fórmula histórica. Antes do experimento final, devem ser aprovados numerador, denominador e tratamento de impedidos. Até lá, apresentar somente contagens separadas por categoria, cenário e estado (`atendida`, `não atendida`, `impedida`).
 
 ## C01 — Criação
 

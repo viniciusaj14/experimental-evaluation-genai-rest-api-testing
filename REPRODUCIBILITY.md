@@ -9,7 +9,7 @@ This document defines the minimum procedure for reproducing the experiment. Upda
 - IntelliJ IDEA
 - Access to the study materials permitted by their licenses and access policies
 
-The selected API is Swagger Petstore - OpenAPI 3.0. The study contract is preserved at `docs/api-specification/swagger-petstore-openapi.json`; verify its SHA-256 against `docs/api-specification/README.md` before using it.
+The selected API for the future final experiment is Swagger Petstore - OpenAPI 3.0. The contract is preserved at `docs/api-specification/swagger-petstore-openapi.json`; verify its SHA-256 against `docs/api-specification/README.md` before using it. The completed pilot used a different unidentified vehicle-domain API and cannot be reproduced as Petstore.
 
 Record the exact Maven, operating system, REST Assured, Cucumber, JUnit 5, IntelliJ IDEA, GitHub Copilot, and ChatGPT versions or identifiers actually observed in `EXPERIMENT_LOG.md`. Do not infer or backfill unknown versions.
 
@@ -19,8 +19,8 @@ Record the exact Maven, operating system, REST Assured, Cucumber, JUnit 5, Intel
 2. Verify that Java 21 is active with `java -version`.
 3. Record the execution environment and timestamp in `EXPERIMENT_LOG.md`.
 4. After the methodological consistency review and protocol freeze, follow `docs/pt-BR/Protocolo_Experimental.md` without changing the five scenarios, fifty planned checks, or condition-specific rules.
-5. Store untouched observations in `datasets/raw/`.
-6. Transform data only through documented procedures and place outputs in `datasets/processed/`.
+5. Store untouched final-experiment observations in `datasets/final-experiment/raw/`.
+6. Transform final data only through documented procedures and place outputs in `datasets/final-experiment/processed/`.
 7. Generate documented tables, graphs, reports, and descriptive analysis under `results/`.
 8. Record deviations, failures, exclusions, and reruns in `EXPERIMENT_LOG.md`.
 
@@ -32,7 +32,7 @@ mvn test
 
 Swagger Petstore OpenAPI 3 is formally selected. The final operation subset, frozen scenario details, and experimental execution command remain pending methodological review. Use only operations documented from the preserved contract; do not infer endpoints or live behavior.
 
-Before the final experiment, follow the feasibility-pilot definition in `docs/pt-BR/Piloto_de_Viabilidade.md`. Pilot observations must remain separate and must not contribute values to the final experiment. No local or containerized instance is configured by this repository at this stage.
+Before the final experiment, follow the proposed Petstore feasibility pilot in `docs/pt-BR/Piloto_de_Viabilidade.md`. Its observations must remain separate from both the completed vehicle pilot and final values. No local or containerized instance is configured by this repository at this stage.
 
 ## Integrity and provenance
 
@@ -46,4 +46,4 @@ Before the final experiment, follow the feasibility-pilot definition in `docs/pt
 
 ## Expected outputs
 
-The study has preliminary results, but its experimental data and consolidated results are not yet published in this repository. A future reproduction package should identify the input dataset, processed dataset, analysis artifacts, generated tables and graphs, and a report connecting each published output to its generating procedure. Pending protocol decisions must be documented separately from existing but unpublished artifacts.
+The vehicle-domain pilot has results, but its data are not published here. The final Petstore experiment has not been executed. Any future reproduction package must identify its phase and keep pilot artifacts under `datasets/pilot/` and final artifacts under `datasets/final-experiment/`, with no numerical combination across phases.

@@ -1,10 +1,10 @@
-# Piloto de Viabilidade
+# Piloto de Viabilidade Petstore — Proposto
 
 ## Natureza e objetivo
 
-Este documento define um piloto **pré-experimental** para verificar se o ambiente e as operações candidatas sustentam o desenho proposto. O piloto não mede produtividade ou qualidade das três abordagens e seus valores, tempos, ajustes, aprovações ou falhas **não podem integrar os resultados do experimento final**.
+Este documento define um piloto **pré-experimental futuro**, ainda não executado, para verificar se o ambiente Petstore e as operações candidatas sustentam o desenho proposto. Ele não é o estudo piloto veicular já concluído. O piloto de viabilidade não mede produtividade ou qualidade das três abordagens e seus valores, tempos, ajustes, aprovações ou falhas **não podem integrar os resultados do experimento final**.
 
-> **Consistência histórica:** antes de executar este piloto, conferir a API, o ambiente, os cenários e os checks nos registros originais do experimento preliminar. Se o procedimento preliminar diferir do desenho atual, seus resultados deverão ser classificados como piloto ou o experimento deverá ser reexecutado. Nenhum registro original pode ser reinterpretado retrospectivamente para coincidir com este documento.
+> **Consistência histórica:** o estudo preliminar usou uma API veicular diferente e já está classificado como piloto. Não usar seus resultados como baseline numérico do piloto Petstore, não mapear os cenários antigos para operações Petstore e não reinterpretar registros originais.
 
 ## Alternativas de ambiente
 

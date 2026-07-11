@@ -15,7 +15,7 @@ Desenvolver os cinco cenários de testes de API REST sem assistência de IA gene
 - horários de início, pausas, retomadas e término;
 - ferramentas e versões efetivamente observadas;
 - recursos consultados;
-- ciclos de retrabalho e intervenções manuais;
+- ajustes manuais após a primeira execução, conforme definição métrica aprovada, e demais intervenções;
 - commit dos artefatos produzidos;
 - desvios do protocolo.
 

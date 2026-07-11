@@ -15,7 +15,7 @@ Antes da execução, registrar o texto das tarefas, o contexto fornecido, os rec
 - identificador e versão da ferramenta efetivamente observados;
 - sugestões aceitas ou editadas, quando a coleta for permitida;
 - horários de início, pausas, retomadas e término;
-- ciclos de retrabalho e intervenções manuais;
+- ajustes manuais após a primeira execução, conforme definição métrica aprovada, e demais intervenções;
 - commit dos artefatos produzidos;
 - desvios do protocolo.
 

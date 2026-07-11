@@ -1,6 +1,6 @@
 # Rubrica de Reúso de Código
 
-> **Status:** template estrutural. Os critérios finais e a regra de pontuação ainda devem ser confirmados com base no instrumento efetivamente utilizado no estudo. Não preencher retrospectivamente por suposição.
+> **Status:** template exclusivo do futuro experimento final Petstore. O piloto registrou percentual de reúso, mas seu procedimento exato de cálculo não foi preservado nos achados confirmados. Esta rubrica deve ser congelada antes da execução final e não pode ser aplicada retroativamente ao piloto.
 
 ## Finalidade
 
