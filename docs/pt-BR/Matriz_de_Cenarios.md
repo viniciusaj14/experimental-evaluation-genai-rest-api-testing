@@ -4,6 +4,10 @@
 
 Os cinco cenários abaixo são propostas baseadas no [contrato preservado](../api-specification/swagger-petstore-openapi.json) e no [inventário de endpoints](Inventario_de_Endpoints.md). Eles ainda requerem revisão e congelamento metodológico antes da implementação das três suítes finais. Nenhum cenário desta matriz representa execução ou resultado observado.
 
+Os cenários são funcionalmente distintos e não precisam ter complexidade idêntica entre operações HTTP. A exigência metodológica é que cada mesmo cenário seja aplicado com entradas, critérios e checks idênticos ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT, permitindo comparação entre abordagens.
+
+> **ALERTA:** esta matriz deve ser comparada com os registros originais do experimento preliminar. Cenários não confirmados nesses registros não podem ser descritos como já executados. Divergência material exige classificar os resultados preliminares como piloto ou reexecutar o experimento com a matriz congelada.
+
 Os valores entre `<...>` são marcadores de dados a serem gerados por execução; não são valores reais nem exemplos de respostas da API.
 
 ## C01 — Criar um pet
@@ -18,7 +22,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** `DELETE /pet/{petId}` após coleta das evidências; registrar impedimento se a limpeza não puder ser confirmada.
 - **Dependências:** nenhuma anterior; fornece dado somente para sua própria validação e limpeza.
 - **Complexidade relativa estimada:** média, considerando payload, schema, caso negativo e limpeza.
-- **Equivalência:** uma operação principal, preparação mínima, um aspecto positivo, um negativo e dez verificações planejadas, como nos demais cenários.
+- **Comparabilidade entre abordagens:** C01 deve usar os mesmos dados parametrizados, critérios e dez checks nas três abordagens; sua complexidade não é usada como padrão obrigatório para outras operações.
 
 ## C02 — Recuperar um pet existente
 
@@ -32,7 +36,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** excluir o recurso exclusivo ao final.
 - **Dependências:** setup técnico por `POST /pet`, pertencente ao próprio cenário.
 - **Complexidade relativa estimada:** média, pois inclui setup, consulta, negativo e limpeza.
-- **Equivalência:** a preparação compensa a menor complexidade do GET e mantém volume de dados, evidências e dez verificações comparável aos demais.
+- **Comparabilidade entre abordagens:** C02 deve ter setup, consulta, negativos, limpeza e dez checks idênticos nas três abordagens; não se afirma que sua complexidade seja igual à de C01–C05.
 
 ## C03 — Atualizar um pet
 
@@ -46,7 +50,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** excluir o recurso após a validação; registrar interferência se a representação mudar externamente.
 - **Dependências:** setup técnico por `POST /pet` e, se necessário, confirmação por `GET /pet/{petId}`.
 - **Complexidade relativa estimada:** média.
-- **Equivalência:** uma ação principal com estado anterior, payload, resposta, negativo, limpeza e dez verificações, comparável ao ciclo dos outros cenários.
+- **Comparabilidade entre abordagens:** C03 deve preservar o mesmo estado inicial, alterações e checks nas três abordagens; diferenças de complexidade em relação a GET ou DELETE são esperadas.
 
 ## C04 — Recuperar pets por status
 
@@ -60,7 +64,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** excluir o recurso criado para o cenário.
 - **Dependências:** setup técnico por `POST /pet`.
 - **Complexidade relativa estimada:** média-alta devido à interferência da coleção compartilhada.
-- **Equivalência:** mantém uma ação principal, setup, negativo, limpeza e dez verificações; a complexidade adicional do ambiente deve ser controlada para não desfavorecer esta operação.
+- **Comparabilidade entre abordagens:** C04 deve usar o mesmo status, preparação e checks nas três abordagens. Sua maior sensibilidade ao ambiente deve ser controlada e relatada, não tratada como complexidade idêntica aos demais cenários.
 
 ## C05 — Excluir um pet
 
@@ -74,13 +78,13 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** a operação principal já remove o recurso; executar verificação final e registrar se limpeza adicional foi necessária ou impedida.
 - **Dependências:** setup por `POST /pet` e confirmação por GET.
 - **Complexidade relativa estimada:** média.
-- **Equivalência:** inclui preparação, ação destrutiva, confirmação, negativo e dez verificações, equilibrando a aparente simplicidade do DELETE.
+- **Comparabilidade entre abordagens:** C05 deve repetir setup, exclusão, confirmação e checks de forma idêntica nas três abordagens; não se presume equivalência de complexidade com criação, atualização ou filtro.
 
 ## Revisão crítica
 
 | Critério | Avaliação preliminar | Risco ou ajuste necessário |
 | --- | --- | --- |
-| Equivalência | Parcialmente atendida | C04 sofre mais interferência externa; o tempo de setup e limpeza deve integrar regras equivalentes. |
+| Comparabilidade entre abordagens | Atendida no desenho, pendente de conferência histórica | Cada cenário é repetido igualmente nas três abordagens; C04 sofre mais interferência, mas não precisa ter complexidade igual às outras operações. |
 | Independência | Atendida no desenho | Cada cenário deve criar seu próprio recurso; uma execução encadeada compartilhando o mesmo pet reduziria a independência. |
 | Reprodutibilidade | Parcialmente atendida | Contrato local é estável, mas o serviço público não; registrar data, disponibilidade e divergências. |
 | Complexidade comparável | Plausível, pendente de piloto/revisão | Não usar contagem bruta de chamadas como único indicador; setup e limpeza variam. |

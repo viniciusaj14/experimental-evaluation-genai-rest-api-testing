@@ -6,7 +6,9 @@ As seis métricas operacionalizam produtividade e qualidade, mas não esgotam es
 
 ## Validade interna
 
-Diferenças de entrada, configuração ou aplicação das verificações podem afetar a comparação. Os cinco cenários, as cinquenta verificações, os materiais e os critérios de conclusão devem ser equivalentes. Alterações manuais, impedimentos e desvios precisam ser registrados. Variações inerentes ao GitHub Copilot e ao ChatGPT devem ser reconhecidas, sem atribuir automaticamente toda diferença observada à abordagem.
+Diferenças de entrada, configuração ou aplicação dos checks podem afetar a comparação. Embora os cinco cenários sejam funcionalmente distintos, cada cenário, seus materiais e seus critérios devem ser aplicados de forma idêntica às três abordagens. Alterações manuais, impedimentos e desvios precisam ser registrados. Variações inerentes ao GitHub Copilot e ao ChatGPT devem ser reconhecidas, sem atribuir automaticamente toda diferença observada à abordagem.
+
+Há risco adicional de redefinir retrospectivamente o experimento ao alinhar documentação nova com resultados preliminares. A API, os cenários, os checks, as categorias e as métricas devem ser confirmados nos registros originais. Em caso de divergência material, os resultados devem ser classificados como piloto ou o experimento deve ser reexecutado; os registros originais não podem ser reescritos para se adequar ao protocolo posterior.
 
 ## Validade externa
 
@@ -19,6 +21,8 @@ Comparações com poucas implementações e um conjunto específico de tarefas p
 ## Reprodutibilidade
 
 Ferramentas assistidas por IA podem mudar e produzir respostas diferentes. Devem ser preservados, quando permitido, prompts no idioma original, interações, datas, configurações, identificadores observados, commits e artefatos. Versões desconhecidas não devem ser reconstruídas por suposição.
+
+O ambiente público acrescenta interferência de terceiros, resets e indisponibilidade. Mesmo com contrato local preservado, o runtime pode divergir em códigos, autenticação, persistência ou schemas. Uma instância local/conteinerizada controlada reduz esses riscos e é recomendada para o experimento final, sem que sua configuração esteja incluída nesta alteração.
 
 ## Decisões pendentes
 

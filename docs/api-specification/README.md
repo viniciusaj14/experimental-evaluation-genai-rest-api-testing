@@ -13,6 +13,8 @@ This directory preserves the API contract selected for the experimental study.
 | SHA-256 | `00441c05add60f28da55eb4563d3fb6bbda364ba8eb7b381e2e2c98613005c82` |
 | Local file | [`swagger-petstore-openapi.json`](swagger-petstore-openapi.json) |
 
+**Normative copy:** `swagger-petstore-openapi.json` is the original downloaded artifact and is normative for this study. It must remain byte-for-byte unchanged. Any future formatted copy must use a different filename, be marked non-normative, and be reproducibly generated from this file.
+
 ## Why a local copy is stored
 
 The local copy fixes the contract used for endpoint selection, scenario design, validation planning, and future reproducibility checks. It allows every documented decision to be traced to the same bytes even if the public demonstration service or its published contract later changes.

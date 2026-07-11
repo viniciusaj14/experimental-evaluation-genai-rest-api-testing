@@ -25,13 +25,15 @@ Este estudo utiliza exatamente seis métricas. As mesmas regras devem ser aplica
 
 ## 3. Cobertura de validação
 
-- **Definição operacional:** proporção das cinquenta verificações predefinidas que são atendidas pela implementação de cada abordagem.
-- **Unidade:** quantidade de verificações atendidas e percentual.
-- **Regra de coleta:** registrar individualmente as mesmas cinquenta verificações planejadas para cada abordagem. Cada verificação deve ser classificada como atendida, não atendida ou impedida, com evidência ou justificativa correspondente.
-- **Fórmula:** `cobertura de validação (%) = (verificações atendidas ÷ 50) × 100`. O denominador planejado permanece 50. A quantidade de verificações impedidas deve ser apresentada separadamente para tornar transparente a parcela que não pôde ser avaliada.
-- **Inclusão:** todas as cinquenta verificações fixadas antes da avaliação.
-- **Exclusão:** nenhuma das cinquenta verificações pode ser retirada silenciosamente do estudo ou do denominador planejado. Uma verificação impedida deve ser reportada separadamente, com justificativa, e nunca pode ser contada como atendida.
-- **Relação:** indicador de qualidade funcional em relação ao conjunto de validação confirmado; maior percentual indica atendimento mais amplo aos critérios definidos.
+> **TODO — decisão métrica pendente:** conferir nos registros preliminares qual conceito de cobertura foi efetivamente usado, quais checks integraram o numerador e o denominador e se controles experimentais ou conformidade de implementação foram tratados como cobertura. Não combinar automaticamente as três categorias da `Matriz_de_Validacoes.md` em uma única porcentagem.
+
+- **Definição operacional:** pendente de confirmação contra a métrica realmente utilizada no estudo preliminar. O planejamento atual contém validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais, que possuem naturezas diferentes.
+- **Unidade:** até a confirmação, contagens separadas de `atendida`, `não atendida` e `impedida` por categoria, cenário e abordagem. O uso de percentual permanece pendente.
+- **Regra de coleta:** registrar individualmente os cinquenta checks planejados para cada abordagem, preservando sua categoria e evidência. O mesmo cenário e os mesmos checks devem ser aplicados às três abordagens.
+- **Fórmula:** pendente. Qualquer percentual futuro deverá declarar explicitamente categoria incluída, numerador, denominador e tratamento de impedidos, reproduzindo a métrica confirmada nos registros preliminares. A fórmula agregada `atendidas ÷ 50` não deve ser aplicada por padrão.
+- **Inclusão:** todos os cinquenta checks permanecem rastreados no desenho, mas sua inclusão em uma medida de cobertura depende da decisão métrica confirmada.
+- **Exclusão:** nenhum check pode ser removido silenciosamente. Checks impedidos devem ser reportados separadamente e nunca contados como aprovados. Controles de setup, limpeza, isolamento e rastreabilidade não devem ser tratados automaticamente como validação funcional.
+- **Relação:** indicador de qualidade cuja interpretação depende do escopo confirmado. Contagens de controle experimental também informam validade e reprodutibilidade, mas não equivalem necessariamente à cobertura funcional.
 
 ## 4. Reúso de código
 
@@ -65,4 +67,4 @@ Este estudo utiliza exatamente seis métricas. As mesmas regras devem ser aplica
 
 ## Registro de dados ausentes ou impedidos
 
-Dados ausentes, verificações impedidas e itens não aplicáveis devem ser registrados explicitamente com justificativa. O relatório deve apresentar, para cada abordagem, as contagens de verificações atendidas, não atendidas e impedidas, mantendo visível o total planejado de cinquenta. Esses registros não podem ser estimados, substituídos por valores inventados, removidos silenciosamente ou convertidos em aprovação.
+Dados ausentes, verificações impedidas e itens não aplicáveis devem ser registrados explicitamente com justificativa. O relatório deve apresentar, para cada abordagem, as contagens de checks atendidos, não atendidos e impedidos, separadas entre validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais, mantendo visível o total planejado de cinquenta. Esses registros não podem ser estimados, substituídos por valores inventados, removidos silenciosamente ou convertidos em aprovação.

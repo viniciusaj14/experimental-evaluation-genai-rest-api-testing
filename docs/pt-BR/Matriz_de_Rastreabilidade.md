@@ -16,7 +16,7 @@ Conectar decisões e artefatos desde o objetivo da pesquisa até os futuros resu
 | Cenário C03 | Atualização de recurso | V21–V30 | Mesmas matrizes | Proposto; revisão pendente |
 | Cenário C04 | Consulta por filtro de status | V31–V40 | Mesmas matrizes | Proposto; fragilidade pública documentada |
 | Cenário C05 | Exclusão de recurso | V41–V50 | Mesmas matrizes | Proposto; revisão pendente |
-| Cinquenta checks | Dez checks por cenário, preservando impedidos no denominador planejado | Cobertura de validação e evidências por abordagem | [`Matriz_de_Validacoes.md`](Matriz_de_Validacoes.md) | Planejados; não executados por esta alteração |
+| Cinquenta checks | Dez checks por cenário em três categorias explícitas | Evidências por abordagem e decisão pendente sobre a métrica de cobertura | [`Matriz_de_Validacoes.md`](Matriz_de_Validacoes.md), [`Metricas.md`](Metricas.md) | Planejados; agregação percentual não confirmada |
 | Seis métricas | Tempo, retrabalho, cobertura, reúso, aderência BDD e qualidade estrutural | Comparação descritiva das três abordagens | [`Metricas.md`](Metricas.md) | Confirmadas; detalhes pendentes explicitados |
 | Resultados futuros | Valores consolidados, tabelas, gráficos e relato | Resposta às questões de pesquisa | `datasets/` e `results/` | Resultados preliminares existem; dados e consolidados ainda não publicados |
 
@@ -26,7 +26,7 @@ Conectar decisões e artefatos desde o objetivo da pesquisa até os futuros resu
 Objetivo da pesquisa
   → questões de pesquisa
     → Swagger Petstore OpenAPI 3 selecionada
-      → cinco cenários candidatos equivalentes
+      → cinco cenários funcionalmente distintos, aplicados igualmente às três abordagens
         → cinquenta checks planejados
           → seis métricas confirmadas
             → futuros artefatos consolidados e respostas às questões

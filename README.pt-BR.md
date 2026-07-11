@@ -16,7 +16,7 @@ Avaliar experimentalmente a produtividade e a qualidade da automação de testes
 
 ## Escopo confirmado
 
-- cinco cenários de teste equivalentes para cada abordagem;
+- cinco cenários funcionalmente distintos, cada um aplicado de forma idêntica às três abordagens;
 - cinquenta verificações de validação para cada abordagem;
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
 - métricas de tempo de desenvolvimento, retrabalho, cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
@@ -34,7 +34,9 @@ Consulte [`docs/pt-BR/Questoes_de_Pesquisa.md`](docs/pt-BR/Questoes_de_Pesquisa.
 
 ## Delineamento
 
-Cada abordagem deve implementar os mesmos cinco cenários e ser submetida às mesmas cinquenta verificações. Requisitos, materiais, ambiente e critérios de conclusão devem permanecer equivalentes, exceto pela forma de desenvolvimento que define cada abordagem. Dados brutos, transformações, intervenções e desvios devem ser registrados com rastreabilidade.
+Cada abordagem deve implementar os mesmos cinco cenários e ser submetida às mesmas verificações planejadas para cada cenário. A comparabilidade é exigida entre as três abordagens dentro de um mesmo cenário; não se presume complexidade idêntica entre operações HTTP funcionalmente diferentes. Requisitos, materiais, ambiente e critérios de conclusão devem permanecer iguais entre abordagens, exceto pela forma de desenvolvimento que define cada condição.
+
+> **Alerta de consistência metodológica:** a API selecionada, os cenários propostos e a matriz de validações devem ser conferidos com os registros originais do experimento preliminar. Não podem ser apresentados como procedimentos já executados sem confirmação documental. Se houver diferença material, os resultados preliminares deverão ser classificados como piloto ou o experimento deverá ser reexecutado com o desenho congelado.
 
 Documentos metodológicos oficiais:
 
@@ -51,6 +53,7 @@ Documentos de seleção e planejamento experimental:
 - [`Matriz_de_Cenarios.md`](docs/pt-BR/Matriz_de_Cenarios.md);
 - [`Matriz_de_Validacoes.md`](docs/pt-BR/Matriz_de_Validacoes.md);
 - [`Matriz_de_Rastreabilidade.md`](docs/pt-BR/Matriz_de_Rastreabilidade.md).
+- [`Piloto_de_Viabilidade.md`](docs/pt-BR/Piloto_de_Viabilidade.md).
 
 Os templates dos instrumentos de avaliação estão em [`docs/pt-BR/instrumentos/`](docs/pt-BR/instrumentos/). Eles ainda não contêm critérios nem pontuações finais e deverão ser completados conforme os instrumentos efetivamente utilizados.
 

@@ -14,7 +14,7 @@ The study evaluates productivity and quality across three development approaches
 2. development assisted by GitHub Copilot;
 3. development assisted by ChatGPT.
 
-Each approach implements five equivalent BDD test scenarios and is assessed with the same fifty planned validation checks. The comparison does not assume that one approach is superior.
+The five BDD scenarios are functionally distinct. Each same scenario and its planned checks are applied identically to manual development, GitHub Copilot, and ChatGPT. Comparability is required across approaches for a given scenario; identical complexity across different HTTP operations is neither assumed nor required.
 
 ## Research questions
 
@@ -33,6 +33,8 @@ The same requirements, five scenarios, fifty planned validation checks, environm
 
 The selected study API is **Swagger Petstore - OpenAPI 3.0**. Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
 
+> **Methodological consistency warning:** the selected API, proposed scenarios, and validation matrix must be checked against the original preliminary experiment records. They must not be described as procedures already performed unless those records confirm them. If they differ materially, the preliminary results must be classified as a pilot or the experiment must be rerun under the frozen design.
+
 Detailed scientific documentation is maintained in Brazilian Portuguese, consistently with the USP/ESALQ capstone text:
 
 - [Experimental protocol](docs/pt-BR/Protocolo_Experimental.md);
@@ -48,6 +50,7 @@ API and experimental-design artifacts:
 - [five-scenario matrix](docs/pt-BR/Matriz_de_Cenarios.md);
 - [fifty-check validation matrix](docs/pt-BR/Matriz_de_Validacoes.md);
 - [research traceability matrix](docs/pt-BR/Matriz_de_Rastreabilidade.md).
+- [feasibility pilot protocol](docs/pt-BR/Piloto_de_Viabilidade.md).
 
 Full English translations will be created only after the protocol is frozen. See [`docs/en/README.md`](docs/en/README.md).
 

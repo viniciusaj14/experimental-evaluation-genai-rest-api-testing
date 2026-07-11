@@ -2,6 +2,8 @@
 
 > **Nota sobre a evolução deste documento:** este arquivo é um registro metodológico em evolução. Ele deverá ser revisado para refletir exclusivamente os procedimentos efetivamente realizados no estudo. A versão final da seção de Metodologia do TCC USP/ESALQ será redigida de forma impessoal e no tempo passado. Formulações prospectivas ou itens pendentes presentes aqui não devem ser interpretados como procedimentos já executados.
 
+> **ALERTA DE CONSISTÊNCIA METODOLÓGICA:** a seleção da Swagger Petstore, os cinco cenários candidatos e os cinquenta checks planejados devem ser conferidos com os registros originais do experimento preliminar. Eles não podem ser apresentados como procedimentos já executados sem confirmação. Em caso de divergência material, os resultados preliminares devem ser classificados como piloto ou o experimento deve ser reexecutado sob o desenho congelado. Os registros originais devem ser preservados sem redefinição retrospectiva.
+
 ## Delineamento do estudo
 
 O estudo realiza uma comparação experimental entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários de teste e será avaliada pelas mesmas cinquenta verificações.
@@ -16,11 +18,20 @@ As implementações utilizam Java 21, Maven, REST Assured, Cucumber, JUnit 5 e I
 
 A API selecionada é a Swagger Petstore - OpenAPI 3.0, uma aplicação de demonstração oficial do ecossistema Swagger e não desenvolvida por esta pesquisa. A [seleção](Selecao_da_API.md) e o [inventário de endpoints](Inventario_de_Endpoints.md) são fundamentados na [especificação oficial preservada](../api-specification/swagger-petstore-openapi.json). A cópia local fixa o contrato metodológico, mas não elimina mudanças, resets ou interferência de dados no ambiente público.
 
-## Equivalência das abordagens
+## Comparabilidade entre abordagens
 
-Os cinco cenários, as cinquenta verificações, os requisitos, os materiais de apoio e os critérios de conclusão devem ser equivalentes. A diferença planejada é a abordagem de desenvolvimento: sem IA generativa, com GitHub Copilot ou com ChatGPT. Intervenções manuais e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
+Os cinco cenários são funcionalmente distintos. Cada cenário, suas entradas, checks, materiais de apoio e critérios de conclusão devem ser aplicados de forma idêntica ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT. A diferença planejada dentro de cada cenário é a abordagem de desenvolvimento. Não se exige que operações HTTP diferentes tenham complexidade idêntica; exige-se comparabilidade entre abordagens para a mesma tarefa. Intervenções manuais e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
 
-Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez checks por cenário na [matriz de validações](Matriz_de_Validacoes.md). O subconjunto final ainda deve ser congelado após revisão crítica de equivalência, independência, complexidade, determinismo, limpeza e interferência pública.
+Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez checks por cenário na [matriz de validações](Matriz_de_Validacoes.md). O subconjunto final ainda deve ser congelado após revisão crítica de comparabilidade entre abordagens, independência, complexidade relativa, determinismo, limpeza e interferência pública.
+
+## Alternativas de ambiente
+
+1. **Instância pública `petstore3.swagger.io`:** facilita acesso, mas está sujeita a dados de terceiros, resets, indisponibilidade e divergência entre contrato e runtime.
+2. **Instância local ou conteinerizada controlada do projeto oficial:** permite estado conhecido, isolamento, repetição e limpeza controlada.
+
+Para o experimento final, recomenda-se a instância controlada, porque reduz interferência externa e resets do serviço. Esta recomendação não significa que um container tenha sido configurado ou iniciado neste repositório. A decisão final deve ser confrontada com o ambiente realmente usado nos registros preliminares.
+
+Antes do experimento final, o [piloto de viabilidade](Piloto_de_Viabilidade.md) deve verificar disponibilidade, códigos de resposta, autenticação, persistência, limpeza, estabilidade do filtro e divergências do contrato. Seus valores não integram o experimento final.
 
 ## Coleta de dados
 

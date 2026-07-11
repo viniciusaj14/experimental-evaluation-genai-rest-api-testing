@@ -8,7 +8,7 @@ Orientar uma comparação controlada e auditável entre três abordagens de dese
 
 - três abordagens: manual, GitHub Copilot e ChatGPT;
 - Swagger Petstore - OpenAPI 3.0 como API selecionada, conforme [contrato preservado](../api-specification/swagger-petstore-openapi.json);
-- cinco cenários de teste equivalentes em cada abordagem;
+- cinco cenários funcionalmente distintos, cada um aplicado de forma idêntica às três abordagens;
 - cinquenta verificações de validação em cada abordagem;
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
 - métricas de tempo de desenvolvimento, retrabalho, cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
@@ -17,7 +17,9 @@ O objeto do estudo é a Swagger Petstore - OpenAPI 3.0. O subconjunto final de e
 
 ## Unidade de comparação
 
-Cada abordagem deve produzir uma implementação dos mesmos cinco cenários e ser submetida ao mesmo conjunto de cinquenta verificações. Os requisitos, materiais de entrada, critérios de conclusão e ambiente devem ser equivalentes entre as abordagens, exceto pela forma de desenvolvimento que caracteriza cada condição.
+Cada abordagem deve produzir uma implementação dos mesmos cinco cenários e ser submetida às mesmas verificações planejadas para cada cenário. A comparabilidade é estabelecida entre manual, GitHub Copilot e ChatGPT dentro de cada cenário. Não se pressupõe que criação, consulta, atualização, filtro e exclusão tenham complexidade idêntica entre si. Requisitos, materiais de entrada, critérios de conclusão e ambiente devem ser iguais entre abordagens, exceto pela forma de desenvolvimento que caracteriza cada condição.
+
+> **ALERTA DE CONSISTÊNCIA METODOLÓGICA:** a API, os cenários e a matriz de validações desta proposta devem ser confrontados com os registros originais do experimento preliminar. Somente procedimentos confirmados nesses registros podem ser descritos como executados. Se houver divergência material, os resultados preliminares devem ser classificados como piloto ou o experimento deve ser reexecutado com o protocolo congelado.
 
 ## Abordagens
 
@@ -30,6 +32,7 @@ Cada abordagem deve produzir uma implementação dos mesmos cinco cenários e se
 Antes da execução, devem ser registrados:
 
 - a integridade da especificação local e sua correspondência com a [seleção da API](Selecao_da_API.md);
+- a conclusão do [piloto de viabilidade](Piloto_de_Viabilidade.md), cujos valores não integram o experimento final;
 - a aprovação do subconjunto final de endpoints e dos cinco cenários candidatos;
 - a revisão e o congelamento das cinquenta verificações planejadas e de seus critérios;
 - as regras de início, pausa e término da medição de tempo;

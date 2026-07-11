@@ -21,3 +21,4 @@ The format is based on Keep a Changelog, and the project intends to use semantic
 - Distinguished existing preliminary results from artifacts not yet published in the repository.
 - Added structured templates for the code reuse, BDD adherence, and structural quality evaluation instruments.
 - Selected Swagger Petstore OpenAPI 3 as the study API and added its preserved contract, endpoint inventory, scenario matrix, validation matrix, and traceability matrix.
+- Added a non-contributing feasibility pilot and clarified scenario comparability, environment alternatives, and validation categories.

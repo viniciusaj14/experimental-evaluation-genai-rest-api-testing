@@ -42,6 +42,18 @@ Os principais riscos são:
 - registrar verificações impedidas separadamente, sem removê-las nem contá-las como aprovadas;
 - preservar o contrato OpenAPI local e registrar divergências observadas no ambiente público.
 
+## Alternativas de ambiente de execução
+
+### Instância pública
+
+`https://petstore3.swagger.io` permite acesso direto à demonstração oficial, porém compartilha estado com terceiros e pode sofrer resets, indisponibilidade ou mudança independente do contrato preservado.
+
+### Instância local ou conteinerizada controlada
+
+Uma instância controlada do projeto oficial permite preparar estado conhecido, isolar dados, repetir cenários e executar limpeza com menor interferência externa. Por essas razões, ela é a alternativa recomendada para o experimento final. Este repositório ainda não configura nem inicia essa instância.
+
+A escolha definitiva deve considerar o [piloto de viabilidade](Piloto_de_Viabilidade.md) e os registros do experimento preliminar. Se o ambiente preliminar não corresponder ao ambiente final, essa diferença deve ser relatada e não corrigida retroativamente.
+
 ## Decisões ainda pendentes
 
 A API está formalmente selecionada. O subconjunto final de operações e os detalhes dos cinco cenários permanecem em revisão metodológica nas matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md). A adoção desses candidatos não deve ser confundida com execução concluída ou publicação de resultados.

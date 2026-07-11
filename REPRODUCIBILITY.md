@@ -18,7 +18,7 @@ Record the exact Maven, operating system, REST Assured, Cucumber, JUnit 5, Intel
 1. Check out the exact Git commit or archived release associated with the study.
 2. Verify that Java 21 is active with `java -version`.
 3. Record the execution environment and timestamp in `EXPERIMENT_LOG.md`.
-4. Follow `docs/pt-BR/Protocolo_Experimental.md` without changing the five scenarios, fifty validation checks, or condition-specific rules.
+4. After the methodological consistency review and protocol freeze, follow `docs/pt-BR/Protocolo_Experimental.md` without changing the five scenarios, fifty planned checks, or condition-specific rules.
 5. Store untouched observations in `datasets/raw/`.
 6. Transform data only through documented procedures and place outputs in `datasets/processed/`.
 7. Generate documented tables, graphs, reports, and descriptive analysis under `results/`.
@@ -31,6 +31,8 @@ mvn test
 ```
 
 Swagger Petstore OpenAPI 3 is formally selected. The final operation subset, frozen scenario details, and experimental execution command remain pending methodological review. Use only operations documented from the preserved contract; do not infer endpoints or live behavior.
+
+Before the final experiment, follow the feasibility-pilot definition in `docs/pt-BR/Piloto_de_Viabilidade.md`. Pilot observations must remain separate and must not contribute values to the final experiment. No local or containerized instance is configured by this repository at this stage.
 
 ## Integrity and provenance
 
