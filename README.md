@@ -4,7 +4,42 @@
 
 Scientific repository for the USP/ESALQ MBA capstone study comparing manual development, GitHub Copilot, and ChatGPT in REST API test automation using Behavior-Driven Development (BDD).
 
-> **Research status:** existing preliminary results belong to a completed pilot study that used a different, unidentified public vehicle-domain REST API. Swagger Petstore is selected for a new final controlled experiment, which has not yet been executed. Pilot data and consolidated results are not published in this repository, and no result may be inferred or invented.
+## Research status
+
+The preliminary pilot study has been completed using a different public REST API in the vehicle domain.
+
+The Swagger Petstore protocol documented in this repository defines the final controlled experiment, which has not yet been executed.
+
+Experimental datasets and consolidated analyses have not yet been published.
+
+## Study phases
+
+### Phase 1 — Preliminary pilot
+
+- conducted using a different public REST API in the vehicle domain;
+- original API contract was not preserved;
+- pilot results exist;
+- used to refine metrics, protocol, and evaluation instruments;
+- results are not directly comparable with the final experiment.
+
+### Phase 2 — Final controlled experiment
+
+- adopts Swagger Petstore OpenAPI 3;
+- requires a frozen protocol before execution;
+- uses five functionally distinct BDD scenarios applied identically across the three development approaches;
+- plans fifty validation checks;
+- applies the same protocol to manual development, GitHub Copilot, and ChatGPT.
+
+All future-oriented documentation refers to Phase 2 unless explicitly identified as pilot material.
+
+## Repository status
+
+- Scientific protocol available
+- Preliminary pilot completed
+- Final controlled experiment pending
+- Experimental artifacts not yet published
+- Dataset publication pending
+- DOI pending
 
 ## Research objective
 
@@ -23,7 +58,7 @@ The main research question asks how manual development, GitHub Copilot, and Chat
 The auxiliary questions compare:
 
 - **productivity:** development time and rework;
-- **quality:** validation coverage, code reuse, BDD adherence, and structural quality.
+- **quality:** initial validation correctness, code reuse, BDD adherence, and structural quality.
 
 The authoritative wording is maintained in Brazilian Portuguese in [`docs/pt-BR/Questoes_de_Pesquisa.md`](docs/pt-BR/Questoes_de_Pesquisa.md).
 
@@ -31,7 +66,7 @@ The authoritative wording is maintained in Brazilian Portuguese in [`docs/pt-BR/
 
 The same requirements, five scenarios, fifty planned validation checks, environment, and completion criteria apply across the three approaches. The planned difference is the development approach itself. Source artifacts, prompts and permitted interactions, timing records, rework records, validation evidence, and deviations provide traceability.
 
-The selected API for the **future final experiment** is **Swagger Petstore - OpenAPI 3.0**. Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
+The final experiment adopts **Swagger Petstore OpenAPI 3**. See [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
 
 The historical review confirmed that the pilot used five vehicle-domain scenarios: brand query, model-by-brand query, year/model query, vehicle-detail query, and invalid-parameter query. Its official API name, URL, contract, and exact endpoint paths were not preserved and must not be inferred. The Petstore scenarios and checks are a new protocol and cannot be mapped retroactively to pilot results.
 
@@ -61,11 +96,11 @@ Full English translations will be created only after the protocol is frozen. See
 | Dimension | Metric | Study interpretation |
 | --- | --- | --- |
 | Productivity | Development time | Pilot: active development time; final unit and timing rules require freezing |
-| Productivity | Rework | Individual manual corrections after the first execution; the final Petstore formula requires pre-approval |
+| Productivity | Rework | Number of individual manual corrections performed after the first executable version, as defined in the pilot study |
 | Quality | Initial validation correctness | Pilot: validations correct in the first execution; final Petstore scope still requires freezing |
 | Quality | Code reuse | Pilot recorded a percentage without a preserved calculation procedure; final rubric requires freezing |
 | Quality | BDD adherence | Pilot recorded adherent scenarios out of five and a percentage; final rubric requires freezing |
-| Quality | Structural quality | Pilot discussion was qualitative; an objective final score requires a pre-frozen rubric |
+| Quality | Structural quality | Qualitatively assessed in the preliminary pilot and planned for quantitative assessment in the final experiment using the documented evaluation rubric |
 
 Historical definitions, formulas, limitations, and decisions required for the final experiment are documented in [`docs/pt-BR/Metricas.md`](docs/pt-BR/Metricas.md). Pilot and final-experiment measurements must remain separate.
 

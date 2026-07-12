@@ -11,7 +11,7 @@ Orientar a futura comparação controlada e auditável entre três abordagens de
 - cinco cenários funcionalmente distintos, cada um aplicado de forma idêntica às três abordagens;
 - cinquenta verificações de validação em cada abordagem;
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
-- métricas de tempo de desenvolvimento, retrabalho, cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
+- métricas de tempo de desenvolvimento, retrabalho, correção inicial das validações, reúso de código, aderência ao BDD e qualidade estrutural.
 
 O objeto do estudo é a Swagger Petstore - OpenAPI 3.0. O subconjunto final de endpoints e os detalhes executáveis dos cinco cenários ainda dependem da revisão das matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md).
 

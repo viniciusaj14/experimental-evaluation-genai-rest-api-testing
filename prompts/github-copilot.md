@@ -1,5 +1,7 @@
 # Condição GitHub Copilot
 
+> **Fase:** template da Fase 2, o futuro experimento final Swagger Petstore, ainda não executado. Não representa o histórico do piloto veicular.
+
 ## Regra de preservação de idioma
 
 Prompts, instruções, contexto e sugestões devem ser preservados no idioma exato em que foram utilizados ou apresentados durante o experimento. Não traduzir, normalizar ou reconstruir o conteúdo experimental.
@@ -19,4 +21,4 @@ Antes da execução, registrar o texto das tarefas, o contexto fornecido, os rec
 - commit dos artefatos produzidos;
 - desvios do protocolo.
 
-A API, os endpoints, os prompts finais e a versão da ferramenta ainda não estão registrados neste arquivo.
+A Swagger Petstore está selecionada. O subconjunto final de endpoints, os prompts finais e a versão efetivamente observada ainda devem ser congelados ou registrados antes/durante a execução da Fase 2.

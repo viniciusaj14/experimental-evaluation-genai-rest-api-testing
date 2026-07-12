@@ -4,7 +4,42 @@
 
 Repositório científico do Trabalho de Conclusão de Curso do MBA USP/ESALQ.
 
-> **Status da pesquisa:** os resultados preliminares pertencem a um estudo piloto concluído com outra API REST pública do domínio veicular, cuja identidade não foi preservada. A Swagger Petstore foi selecionada para um novo experimento final controlado, que ainda não foi executado. Os dados do piloto e os resultados consolidados não estão publicados neste repositório. Nenhum resultado deve ser inferido ou inventado.
+## Status da pesquisa
+
+O estudo piloto preliminar foi concluído utilizando uma API REST pública diferente, do domínio veicular.
+
+O protocolo Swagger Petstore documentado neste repositório define o experimento final controlado, que ainda não foi executado.
+
+Os datasets experimentais e as análises consolidadas ainda não foram publicados.
+
+## Fases do estudo
+
+### Fase 1 — Piloto preliminar
+
+- realizado com outra API REST pública do domínio veicular;
+- contrato original da API não foi preservado;
+- existem resultados do piloto;
+- utilizado para refinar métricas, protocolo e instrumentos de avaliação;
+- resultados não são diretamente comparáveis aos do experimento final.
+
+### Fase 2 — Experimento final controlado
+
+- adota Swagger Petstore OpenAPI 3;
+- exige protocolo congelado antes da execução;
+- utiliza cinco cenários BDD funcionalmente distintos, aplicados de forma idêntica às três abordagens;
+- planeja cinquenta checks de validação;
+- aplica o mesmo protocolo ao desenvolvimento manual, GitHub Copilot e ChatGPT.
+
+Toda documentação orientada ao futuro refere-se à Fase 2, salvo quando identificada explicitamente como material do piloto.
+
+## Status do repositório
+
+- Protocolo científico disponível
+- Piloto preliminar concluído
+- Experimento final controlado pendente
+- Artefatos experimentais ainda não publicados
+- Publicação do dataset pendente
+- DOI pendente
 
 ## Objetivo
 
@@ -19,18 +54,31 @@ Avaliar experimentalmente a produtividade e a qualidade da automação de testes
 - cinco cenários funcionalmente distintos, cada um aplicado de forma idêntica às três abordagens;
 - cinquenta verificações de validação para cada abordagem;
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
-- métricas de tempo de desenvolvimento, retrabalho, cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
+- métricas de tempo de desenvolvimento, retrabalho, correção inicial das validações, reúso de código, aderência ao BDD e qualidade estrutural.
 
-A API selecionada para o **futuro experimento final** é a **Swagger Petstore - OpenAPI 3.0**. O contrato JSON oficial está preservado em [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), com origem, data de obtenção, versões declaradas e checksum em [`docs/api-specification/README.md`](docs/api-specification/README.md). O subconjunto final de endpoints e os detalhes executáveis dos cenários permanecem em revisão metodológica.
+O experimento final adota a **Swagger Petstore OpenAPI 3**. Consulte [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). O contrato JSON oficial está preservado em [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), com origem, data de obtenção, versões declaradas e checksum em [`docs/api-specification/README.md`](docs/api-specification/README.md). O subconjunto final de endpoints e os detalhes executáveis dos cenários permanecem em revisão metodológica.
 
 ## Questões de pesquisa
 
 A questão principal compara produtividade e qualidade entre as três abordagens. Duas questões auxiliares tratam de:
 
 1. tempo de desenvolvimento e retrabalho;
-2. cobertura de validação, reúso de código, aderência ao BDD e qualidade estrutural.
+2. correção inicial das validações, reúso de código, aderência ao BDD e qualidade estrutural.
 
 Consulte [`docs/pt-BR/Questoes_de_Pesquisa.md`](docs/pt-BR/Questoes_de_Pesquisa.md).
+
+## Métricas por fase
+
+| Dimensão | Métrica | Interpretação |
+| --- | --- | --- |
+| Produtividade | Tempo de desenvolvimento | Piloto: tempo ativo; unidade e regras finais devem ser congeladas |
+| Produtividade | Retrabalho | Número de correções manuais individuais realizadas após a primeira versão executável, conforme definido no estudo piloto |
+| Qualidade | Correção inicial das validações | Piloto: validações corretas na primeira execução; escopo final ainda deve ser congelado |
+| Qualidade | Reúso de código | Piloto registrou percentual sem procedimento de cálculo preservado; rubrica final deve ser congelada |
+| Qualidade | Aderência ao BDD | Piloto registrou cenários aderentes entre cinco e percentual; rubrica final deve ser congelada |
+| Qualidade | Qualidade estrutural | Avaliada qualitativamente no piloto preliminar e planejada para avaliação quantitativa no experimento final com a rubrica documentada |
+
+As definições históricas e decisões para a Fase 2 estão em [`docs/pt-BR/Metricas.md`](docs/pt-BR/Metricas.md). Métricas das duas fases não podem ser combinadas.
 
 ## Delineamento
 

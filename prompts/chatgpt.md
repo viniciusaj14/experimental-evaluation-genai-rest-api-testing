@@ -1,5 +1,7 @@
 # Condição ChatGPT
 
+> **Fase:** template da Fase 2, o futuro experimento final Swagger Petstore, ainda não executado. Não representa o histórico do piloto veicular.
+
 ## Regra de preservação de idioma
 
 Prompts, contexto, respostas e histórico de interação devem ser preservados no idioma exato em que ocorreram durante o experimento. Não traduzir, normalizar ou reconstruir o conteúdo experimental.
@@ -19,4 +21,4 @@ Antes da execução, registrar o texto das tarefas, o contexto fornecido, o padr
 - commit dos artefatos produzidos;
 - desvios do protocolo.
 
-A API, os endpoints, os prompts finais e a versão do modelo ainda não estão registrados neste arquivo.
+A Swagger Petstore está selecionada. O subconjunto final de endpoints, os prompts finais e o identificador efetivamente exibido ainda devem ser congelados ou registrados antes/durante a execução da Fase 2.

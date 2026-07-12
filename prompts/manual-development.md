@@ -1,5 +1,7 @@
 # Condição de Desenvolvimento Manual
 
+> **Fase:** template da Fase 2, o futuro experimento final Swagger Petstore, ainda não executado. Não representa o histórico do piloto veicular.
+
 ## Regra de preservação de idioma
 
 Todo enunciado, instrução ou material textual utilizado nesta condição deve ser preservado no idioma exato em que foi apresentado durante o experimento. Não traduzir registros experimentais posteriormente.
@@ -19,4 +21,4 @@ Desenvolver os cinco cenários de testes de API REST sem assistência de IA gene
 - commit dos artefatos produzidos;
 - desvios do protocolo.
 
-A API, os endpoints e o texto final das tarefas ainda não estão registrados neste arquivo.
+A Swagger Petstore está selecionada. O subconjunto final de endpoints e o texto final das tarefas ainda devem ser congelados antes da execução da Fase 2.

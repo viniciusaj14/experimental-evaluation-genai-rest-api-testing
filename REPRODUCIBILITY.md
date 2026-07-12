@@ -2,6 +2,8 @@
 
 This document defines the minimum procedure for reproducing the experiment. Update it before data collection whenever the protocol changes.
 
+The preliminary pilot and the final experiment are intentionally documented as separate study phases to preserve methodological traceability.
+
 ## Prerequisites
 
 - Java 21
