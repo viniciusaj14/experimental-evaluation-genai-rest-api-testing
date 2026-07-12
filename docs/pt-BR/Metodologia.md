@@ -12,6 +12,10 @@
 
 A separação e sua justificativa estão formalizadas no [`Registro_de_Decisao_Piloto_e_Experimento_Final.md`](Registro_de_Decisao_Piloto_e_Experimento_Final.md).
 
+## Governança operacional
+
+A execução do experimento final é regida pelo [Plano de Execução](Plano_de_Execucao.md), pelo [Checklist de Execução](Checklist_Pre_Execucao.md) e pelo [Plano de Controle Experimental](Plano_de_Controle_Experimental.md). Esses documentos estabelecem, respectivamente, a sequência operacional, as verificações objetivas antes e depois de cada execução e os controles contra vieses e desvios, sem alterar o delineamento, os cenários, as validações ou as métricas definidos neste registro metodológico.
+
 ## Delineamento do estudo
 
 O experimento final realizará uma nova comparação entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários Petstore e será avaliada pelos mesmos cinquenta checks congelados.

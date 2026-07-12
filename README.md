@@ -70,6 +70,8 @@ The final experiment adopts **Swagger Petstore OpenAPI 3**. See [`docs/pt-BR/Sel
 
 The historical review confirmed that the pilot used five vehicle-domain scenarios: brand query, model-by-brand query, year/model query, vehicle-detail query, and invalid-parameter query. Its official API name, URL, contract, and exact endpoint paths were not preserved and must not be inferred. The Petstore scenarios and checks are a new protocol and cannot be mapped retroactively to pilot results.
 
+Operational execution of the final protocol is governed by the [Execution Plan](docs/pt-BR/Plano_de_Execucao.md), [Pre-execution Checklist](docs/pt-BR/Checklist_Pre_Execucao.md), and [Experimental Control Plan](docs/pt-BR/Plano_de_Controle_Experimental.md).
+
 Detailed scientific documentation is maintained in Brazilian Portuguese, consistently with the USP/ESALQ capstone text:
 
 - [Experimental protocol](docs/pt-BR/Protocolo_Experimental.md);

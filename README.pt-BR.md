@@ -86,6 +86,8 @@ Cada abordagem deve implementar os mesmos cinco cenários e ser submetida às me
 
 O estudo piloto utilizou cinco cenários veiculares confirmados: consulta de marcas, consulta de modelos por marca, consulta de ano/modelo, consulta de detalhes de veículo e consulta com parâmetro inválido. O nome oficial, URL, contrato e paths exatos da API histórica não foram preservados e não devem ser inferidos. Os cenários e checks Petstore constituem um protocolo novo e não podem ser associados retroativamente aos resultados do piloto.
 
+A execução operacional do protocolo final é regida pelo [Plano de Execução](docs/pt-BR/Plano_de_Execucao.md), pelo [Checklist de Execução](docs/pt-BR/Checklist_Pre_Execucao.md) e pelo [Plano de Controle Experimental](docs/pt-BR/Plano_de_Controle_Experimental.md).
+
 Documentos metodológicos oficiais:
 
 - [`Protocolo_Experimental.md`](docs/pt-BR/Protocolo_Experimental.md);
