@@ -8,7 +8,7 @@ Scientific repository for the USP/ESALQ MBA capstone study comparing manual deve
 
 The preliminary pilot study has been completed using a different public REST API in the vehicle domain.
 
-The Swagger Petstore protocol documented in this repository defines the final controlled experiment, which has not yet been executed.
+The Swagger Petstore protocol documented in this repository defines the final controlled experiment, which has not yet been executed. Experimental design version 1.0 is formally frozen in [`docs/pt-BR/Protocolo_Congelado_v1.0.md`](docs/pt-BR/Protocolo_Congelado_v1.0.md).
 
 Experimental datasets and consolidated analyses have not yet been published.
 
@@ -25,7 +25,7 @@ Experimental datasets and consolidated analyses have not yet been published.
 ### Phase 2 — Final controlled experiment
 
 - adopts Swagger Petstore OpenAPI 3;
-- requires a frozen protocol before execution;
+- uses the formally frozen protocol version 1.0;
 - uses five functionally distinct BDD scenarios applied identically across the three development approaches;
 - plans fifty validation checks;
 - applies the same protocol to manual development, GitHub Copilot, and ChatGPT.
@@ -34,7 +34,7 @@ All future-oriented documentation refers to Phase 2 unless explicitly identified
 
 ## Repository status
 
-- Scientific protocol available
+- Scientific protocol version 1.0 frozen
 - Preliminary pilot completed
 - Final controlled experiment pending
 - Experimental artifacts not yet published
@@ -66,7 +66,7 @@ The authoritative wording is maintained in Brazilian Portuguese in [`docs/pt-BR/
 
 The same requirements, five scenarios, fifty planned validation checks, environment, and completion criteria apply across the three approaches. The planned difference is the development approach itself. Source artifacts, prompts and permitted interactions, timing records, rework records, validation evidence, and deviations provide traceability.
 
-The final experiment adopts **Swagger Petstore OpenAPI 3**. See [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The final endpoint subset and executable scenario details remain under methodological review.
+The final experiment adopts **Swagger Petstore OpenAPI 3**. See [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The endpoint subset and executable scenario details are frozen by protocol version 1.0.
 
 The historical review confirmed that the pilot used five vehicle-domain scenarios: brand query, model-by-brand query, year/model query, vehicle-detail query, and invalid-parameter query. Its official API name, URL, contract, and exact endpoint paths were not preserved and must not be inferred. The Petstore scenarios and checks are a new protocol and cannot be mapped retroactively to pilot results.
 
@@ -97,9 +97,9 @@ Full English translations will be created only after the protocol is frozen. See
 
 | Dimension | Metric | Study interpretation |
 | --- | --- | --- |
-| Productivity | Development time | Pilot: active development time; final unit and timing rules require freezing |
+| Productivity | Development time | Pilot: active development time; final unit and timing rules frozen in protocol v1.0 |
 | Productivity | Rework | Number of individual manual corrections performed after the first executable version, as defined in the pilot study |
-| Quality | Initial validation correctness | Pilot: validations correct in the first execution; final Petstore scope still requires freezing |
+| Quality | Initial validation correctness | Pilot: validations correct in the first execution; final Petstore scope frozen in protocol v1.0 |
 | Quality | Code reuse | Pilot recorded a percentage without a preserved calculation procedure; final rubric requires freezing |
 | Quality | BDD adherence | Pilot recorded adherent scenarios out of five and a percentage; final rubric requires freezing |
 | Quality | Structural quality | Qualitatively assessed in the preliminary pilot and planned for quantitative assessment in the final experiment using the documented evaluation rubric |

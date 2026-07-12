@@ -8,7 +8,7 @@ Repositório científico do Trabalho de Conclusão de Curso do MBA USP/ESALQ.
 
 O estudo piloto preliminar foi concluído utilizando uma API REST pública diferente, do domínio veicular.
 
-O protocolo Swagger Petstore documentado neste repositório define o experimento final controlado, que ainda não foi executado.
+O protocolo Swagger Petstore documentado neste repositório define o experimento final controlado, que ainda não foi executado. O delineamento experimental versão 1.0 está formalmente congelado em [`docs/pt-BR/Protocolo_Congelado_v1.0.md`](docs/pt-BR/Protocolo_Congelado_v1.0.md).
 
 Os datasets experimentais e as análises consolidadas ainda não foram publicados.
 
@@ -25,7 +25,7 @@ Os datasets experimentais e as análises consolidadas ainda não foram publicado
 ### Fase 2 — Experimento final controlado
 
 - adota Swagger Petstore OpenAPI 3;
-- exige protocolo congelado antes da execução;
+- utiliza o protocolo versão 1.0 formalmente congelado;
 - utiliza cinco cenários BDD funcionalmente distintos, aplicados de forma idêntica às três abordagens;
 - planeja cinquenta verificações de validação;
 - aplica o mesmo protocolo ao desenvolvimento manual, GitHub Copilot e ChatGPT.
@@ -34,7 +34,7 @@ Toda documentação orientada ao futuro refere-se à Fase 2, salvo quando identi
 
 ## Status do repositório
 
-- Protocolo científico disponível
+- Protocolo científico versão 1.0 congelado
 - Piloto preliminar concluído
 - Experimento final controlado pendente
 - Artefatos experimentais ainda não publicados
@@ -56,7 +56,7 @@ Avaliar experimentalmente a produtividade e a qualidade da automação de testes
 - Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA;
 - métricas de tempo de desenvolvimento, retrabalho, correção inicial das validações, reúso de código, aderência ao BDD e qualidade estrutural.
 
-O experimento final adota a **Swagger Petstore OpenAPI 3**. Consulte [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). O contrato JSON oficial está preservado em [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), com origem, data de obtenção, versões declaradas e checksum em [`docs/api-specification/README.md`](docs/api-specification/README.md). O subconjunto final de endpoints e os detalhes executáveis dos cenários permanecem em revisão metodológica.
+O experimento final adota a **Swagger Petstore OpenAPI 3**. Consulte [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). O contrato JSON oficial está preservado em [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), com origem, data de obtenção, versões declaradas e checksum em [`docs/api-specification/README.md`](docs/api-specification/README.md). O subconjunto de endpoints e os detalhes executáveis dos cenários estão congelados no protocolo versão 1.0.
 
 ## Questões de pesquisa
 
@@ -71,9 +71,9 @@ Consulte [`docs/pt-BR/Questoes_de_Pesquisa.md`](docs/pt-BR/Questoes_de_Pesquisa.
 
 | Dimensão | Métrica | Interpretação |
 | --- | --- | --- |
-| Produtividade | Tempo de desenvolvimento | Piloto: tempo ativo; unidade e regras finais devem ser congeladas |
+| Produtividade | Tempo de desenvolvimento | Piloto: tempo ativo; unidade e regras finais congeladas no protocolo v1.0 |
 | Produtividade | Retrabalho | Número de correções manuais individuais realizadas após a primeira versão executável, conforme definido no estudo piloto |
-| Qualidade | Correção inicial das validações | Piloto: validações corretas na primeira execução; escopo final ainda deve ser congelado |
+| Qualidade | Correção inicial das validações | Piloto: validações corretas na primeira execução; escopo final congelado no protocolo v1.0 |
 | Qualidade | Reúso de código | Piloto registrou percentual sem procedimento de cálculo preservado; rubrica final deve ser congelada |
 | Qualidade | Aderência ao BDD | Piloto registrou cenários aderentes entre cinco e percentual; rubrica final deve ser congelada |
 | Qualidade | Qualidade estrutural | Avaliada qualitativamente no piloto preliminar e planejada para avaliação quantitativa no experimento final com a rubrica documentada |

@@ -16,6 +16,8 @@ A separação e sua justificativa estão formalizadas no [`Registro_de_Decisao_P
 
 A execução do experimento final é regida pelo [Plano de Execução](Plano_de_Execucao.md), pelo [Checklist de Execução](Checklist_Pre_Execucao.md) e pelo [Plano de Controle Experimental](Plano_de_Controle_Experimental.md). Esses documentos estabelecem, respectivamente, a sequência operacional, as verificações objetivas antes e depois de cada execução e os controles contra vieses e desvios, sem alterar o delineamento, os cenários, as validações ou as métricas definidos neste registro metodológico.
 
+O delineamento e seus artefatos normativos foram formalmente congelados, antes da execução, no [`Protocolo_Congelado_v1.0.md`](Protocolo_Congelado_v1.0.md).
+
 ## Delineamento do estudo
 
 O experimento final realizará uma nova comparação entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários Petstore e será avaliada pelas mesmas cinquenta verificações congeladas.
@@ -44,14 +46,14 @@ A API selecionada para o experimento final é a Swagger Petstore - OpenAPI 3.0, 
 
 Os cinco cenários são funcionalmente distintos. Cada cenário, suas entradas, verificações, materiais de apoio e critérios de conclusão devem ser aplicados de forma idêntica ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT. A diferença planejada dentro de cada cenário é a abordagem de desenvolvimento. Não se exige que operações HTTP diferentes tenham complexidade idêntica; exige-se comparabilidade entre abordagens para a mesma tarefa. Intervenções corretivas e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
 
-Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez verificações por cenário na [matriz de validações](Matriz_de_Validacoes.md). O subconjunto final ainda deve ser congelado após revisão crítica de comparabilidade entre abordagens, independência, complexidade relativa, determinismo, limpeza e interferência pública.
+Os cinco cenários estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez verificações por cenário na [matriz de validações](Matriz_de_Validacoes.md), e foram congelados na versão 1.0 após revisão de comparabilidade entre abordagens, independência, complexidade relativa, determinismo, limpeza e interferência pública.
 
 ## Alternativas de ambiente
 
 1. **Instância pública `petstore3.swagger.io`:** facilita acesso, mas está sujeita a dados de terceiros, resets, indisponibilidade e divergência entre contrato e runtime.
 2. **Instância local ou conteinerizada controlada do projeto oficial:** permite estado conhecido, isolamento, repetição e limpeza controlada.
 
-O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) avaliou as duas alternativas e fundamenta a recomendação pela instância controlada: o ciclo funcional foi observado nos dois ambientes, enquanto a instância fixada por digest permite isolamento e reduz interferência externa. Antes do congelamento, devem ser aceitos a emulação da imagem `linux/amd64` no host ARM e os riscos residuais. Não se exige comparação com o ambiente histórico da API veicular.
+O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) avaliou as duas alternativas e fundamentou a seleção da instância controlada: o ciclo funcional foi observado nos dois ambientes, enquanto a instância fixada por digest permite isolamento e reduz interferência externa. O protocolo versão 1.0 congela a imagem `linux/amd64` no host ARM com os riscos residuais documentados. Não se exige comparação com o ambiente histórico da API veicular.
 
 O piloto observou disponibilidade, códigos de resposta, autenticação permissiva, persistência na janela de coleta, limpeza, duas amostras estáveis do filtro e igualdade entre os contratos servidos e a cópia normativa. Essas observações não integram métricas do experimento final.
 

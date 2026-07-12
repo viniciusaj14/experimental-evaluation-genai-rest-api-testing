@@ -43,6 +43,7 @@
 - `docs/pt-BR/Checklist_Pre_Execucao.md`
 - `docs/pt-BR/Piloto_de_Viabilidade.md`
 - `docs/pt-BR/Protocolo_Experimental.md`
+- `docs/pt-BR/Protocolo_Congelado_v1.0.md`
 - `docs/pt-BR/Questoes_de_Pesquisa.md`
 - `docs/pt-BR/Registro_de_Decisao_Piloto_e_Experimento_Final.md`
 - `docs/pt-BR/Relatorio_do_Piloto_de_Viabilidade.md`
@@ -102,22 +103,16 @@
 - confirmados, nas janelas observadas, criação, leitura, atualização, filtro por identidade, limpeza, códigos negativos `400/404` e igualdade byte a byte dos contratos servidos;
 - rejeitados autenticação e segundo `DELETE` como oráculos do protocolo final;
 - recomendada a instância controlada com base nas evidências, sujeita à aceitação dos riscos antes do congelamento.
+- concluída a fase de planejamento e formalizado o congelamento do protocolo versão 1.0 antes de qualquer unidade do experimento final;
+- congelados objetivo, questões, contrato, ambiente, imagem, cenários, verificações, métricas, templates das rubricas, planos, checklist, políticas de prompts e evidências e rastreabilidade;
+- executada e preservada a pré-randomização das condições assistidas, resultando na ordem manual → GitHub Copilot → ChatGPT;
+- registrada `protocol-v1.0` somente como proposta de tag, sem criação automática.
 
-## Decisões ainda pendentes
+## Situação após a conclusão do planejamento
 
-- aceitação formal da recomendação pelo ambiente controlado e de sua configuração fixada por digest;
-- decisão sobre a emulação `linux/amd64` no host ARM ou adoção de host compatível;
-- congelamento do subconjunto de endpoints e dos cinco cenários;
-- congelamento das cinquenta verificações e do tratamento de impedidos;
-- aprovação da fórmula de retrabalho para a Fase 2;
-- definição do numerador e denominador da correção inicial/validação final;
-- congelamento das rubricas de reúso, aderência ao BDD e qualidade estrutural;
-- congelamento dos textos das tarefas, prompts e regras de interação;
-- registro das versões e identificadores efetivamente observados durante a futura execução.
-- execução e preservação, antes do congelamento, da pré-randomização da ordem entre GitHub Copilot e ChatGPT;
-- aprovação de regra explícita para qualquer consolidação que venha a relacionar métricas de unidade de execução e de abordagem completa;
-- decisão explícita de excluir autenticação e segundo `DELETE` dos oráculos finais;
-- avaliação sobre necessidade de uma janela adicional de estabilidade do filtro ou teste de reinicialização antes do congelamento.
+A fase de planejamento foi concluída com o protocolo versão 1.0 congelado. Durante a execução permanecem obrigatórios apenas registros observacionais previstos, como versões efetivamente exibidas, timestamps, commits, evidências, impedimentos e desvios; esses registros não constituem autorização para redefinir o protocolo. Qualquer necessidade de alteração metodológica exige interromper a versão 1.0 e declarar uma nova versão, sem combinar automaticamente os dados.
+
+A tag `protocol-v1.0` é uma proposta registrada, não uma tag criada por esta alteração.
 
 ## Confirmação de integridade científica
 
