@@ -52,9 +52,9 @@ Os principais riscos são:
 
 ### Instância local ou conteinerizada controlada
 
-Uma instância controlada do projeto oficial permite preparar estado conhecido, isolar dados, repetir cenários e executar limpeza com menor interferência externa. Por essas razões, ela é a alternativa recomendada para o experimento final. Este repositório ainda não configura nem inicia essa instância.
+Uma instância controlada do projeto oficial permite preparar estado conhecido, isolar dados, repetir cenários e executar limpeza com menor interferência externa. O [piloto de viabilidade executado](Relatorio_do_Piloto_de_Viabilidade.md) confirmou o ciclo funcional e a limpeza na imagem oficial `1.0.27` fixada por digest; por isso, esta é a alternativa recomendada para o experimento final. O container do piloto foi removido após a coleta.
 
-A escolha definitiva entre o ambiente Petstore público e o controlado deve ser baseada no [piloto de viabilidade](Piloto_de_Viabilidade.md). O ambiente histórico da API veicular não é critério de seleção para a Fase 2 e não deve ser reconstruído ou comparado por inferência.
+A recomendação pelo ambiente controlado baseia-se exclusivamente no [piloto de viabilidade](Piloto_de_Viabilidade.md). Antes do congelamento, ainda devem ser formalmente aceitos a configuração fixada por digest, a emulação `linux/amd64` no host ARM e os riscos documentados. O ambiente histórico da API veicular não é critério de seleção para a Fase 2.
 
 ## Decisões ainda pendentes
 

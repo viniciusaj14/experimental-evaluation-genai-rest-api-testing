@@ -1,0 +1,8 @@
+services:
+  petstore:
+    image: swaggerapi/petstore3:1.0.27@sha256:749432676c31cd05256f0d9e878302164debb94daa1c1223e193747e1b34e7d1
+    platform: linux/amd64
+    container_name: tcc-petstore-feasibility-pilot
+    ports:
+      - "127.0.0.1:18080:8080"
+    restart: "no"

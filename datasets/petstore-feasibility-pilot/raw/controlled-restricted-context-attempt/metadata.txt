@@ -1,0 +1,8 @@
+environment=controlled
+base_url=http://127.0.0.1:18080/api/v3
+pilot_id=912071200002
+started_at=2026-07-12T14:47:34-0300
+timezone=-03 -0300
+git_commit=92edd05d36e8a1a3b13d7e5257d8354cb1e7cb7e
+openapi_sha256=00441c05add60f28da55eb4563d3fb6bbda364ba8eb7b381e2e2c98613005c82
+finished_at=2026-07-12T14:47:36-0300

@@ -73,4 +73,4 @@ Transformações documentadas podem gerar arquivos em `datasets/final-experiment
 
 ## Status dos resultados e artefatos
 
-O piloto veicular possui resultados históricos e é documentado separadamente. O piloto de viabilidade Petstore e o experimento final Petstore ainda não foram executados. Permanecem pendentes: ambiente final, revisão do subconjunto de operações, congelamento das matrizes, aprovação das fórmulas e consolidação dos instrumentos de avaliação.
+O piloto veicular possui resultados históricos e é documentado separadamente. O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) foi concluído e recomenda o ambiente controlado; o experimento final Petstore ainda não foi executado. Permanecem pendentes: aceitação formal da configuração controlada e de seus riscos, revisão do subconjunto de operações, congelamento das matrizes, aprovação das fórmulas e consolidação dos instrumentos de avaliação.

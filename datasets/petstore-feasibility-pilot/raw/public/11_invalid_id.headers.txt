@@ -1,0 +1,10 @@
+HTTP/2 400 
+date: Sun, 12 Jul 2026 17:46:26 GMT
+content-type: application/json
+content-length: 102
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, DELETE, PUT
+access-control-allow-headers: Content-Type, api_key, Authorization
+access-control-expose-headers: Content-Disposition
+server: Jetty(9.4.53.v20231009)
+

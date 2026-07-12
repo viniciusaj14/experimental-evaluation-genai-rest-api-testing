@@ -7,7 +7,7 @@
 ## Fases do estudo
 
 1. **Piloto preliminar concluído:** comparação das três abordagens em cinco cenários de uma API veicular pública cuja identidade não foi preservada. Ver [`Estudo_Preliminar.md`](Estudo_Preliminar.md).
-2. **Piloto de viabilidade Petstore proposto:** verificação técnica futura de ambiente, contrato, autenticação, persistência, limpeza e filtro. Seus valores não integram o experimento final. Ver [`Piloto_de_Viabilidade.md`](Piloto_de_Viabilidade.md).
+2. **Piloto de viabilidade Petstore concluído:** verificação técnica dos ambientes público e controlado, contrato, autenticação, persistência, limpeza e filtro, executada em 12 de julho de 2026. Suas observações não integram o experimento final. Ver [`Relatorio_do_Piloto_de_Viabilidade.md`](Relatorio_do_Piloto_de_Viabilidade.md).
 3. **Experimento final Petstore futuro:** nova execução das três abordagens após congelamento do protocolo, ainda não realizada.
 
 A separação e sua justificativa estão formalizadas no [`Registro_de_Decisao_Piloto_e_Experimento_Final.md`](Registro_de_Decisao_Piloto_e_Experimento_Final.md).
@@ -51,9 +51,9 @@ Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md
 1. **Instância pública `petstore3.swagger.io`:** facilita acesso, mas está sujeita a dados de terceiros, resets, indisponibilidade e divergência entre contrato e runtime.
 2. **Instância local ou conteinerizada controlada do projeto oficial:** permite estado conhecido, isolamento, repetição e limpeza controlada.
 
-Para o experimento final, recomenda-se a instância controlada, porque reduz interferência externa e resets do serviço. Esta recomendação não significa que um container tenha sido configurado ou iniciado neste repositório. A escolha definitiva entre a instância pública e a instância controlada deve ser tomada exclusivamente com base nas evidências do [piloto de viabilidade Petstore](Piloto_de_Viabilidade.md), sem exigir comparação com o ambiente histórico da API veicular.
+O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) avaliou as duas alternativas e fundamenta a recomendação pela instância controlada: o ciclo funcional foi observado nos dois ambientes, enquanto a instância fixada por digest permite isolamento e reduz interferência externa. Antes do congelamento, devem ser aceitos a emulação da imagem `linux/amd64` no host ARM e os riscos residuais. Não se exige comparação com o ambiente histórico da API veicular.
 
-Antes do experimento final, o [piloto de viabilidade](Piloto_de_Viabilidade.md) deve verificar disponibilidade, códigos de resposta, autenticação, persistência, limpeza, estabilidade do filtro e divergências do contrato. Seus valores não integram o experimento final.
+O piloto observou disponibilidade, códigos de resposta, autenticação permissiva, persistência na janela de coleta, limpeza, duas amostras estáveis do filtro e igualdade entre os contratos servidos e a cópia normativa. Essas observações não integram métricas do experimento final.
 
 ## Coleta de dados
 
@@ -82,4 +82,4 @@ A análise do piloto e a análise do futuro experimento final devem ser apresent
 
 O relato deve apresentar todos os valores coletados, registros indisponíveis, impedimentos, correções e desvios relevantes. Nenhum resultado, versão, API, endpoint ou procedimento deve ser reconstruído por suposição.
 
-O piloto preliminar foi executado e possui resultados, mas seus dados e valores consolidados não estão publicados neste repositório. O piloto de viabilidade Petstore e o experimento final Petstore ainda não foram executados. Os relatos e datasets das três fases devem permanecer separados.
+O piloto preliminar foi executado e possui resultados, mas seus dados e valores consolidados não estão publicados neste repositório. O piloto de viabilidade Petstore foi concluído e documentado; o experimento final Petstore ainda não foi executado. Os relatos e datasets das três fases permanecem separados.

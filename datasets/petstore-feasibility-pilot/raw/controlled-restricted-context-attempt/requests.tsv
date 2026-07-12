@@ -1,0 +1,15 @@
+sequence	observed_at	environment	method	endpoint	auth_mode	http_status
+1	2026-07-12T14:47:34-0300	controlled	GET	/openapi.json	none	000
+2	2026-07-12T14:47:34-0300	controlled	GET	/pet/9120712000029	none	000
+3	2026-07-12T14:47:34-0300	controlled	GET	/pet/9120712000029	invalid-api-key	000
+4	2026-07-12T14:47:34-0300	controlled	POST	/pet	none	000
+5	2026-07-12T14:47:34-0300	controlled	GET	/pet/912071200002	none	000
+6	2026-07-12T14:47:34-0300	controlled	PUT	/pet	none	000
+7	2026-07-12T14:47:34-0300	controlled	GET	/pet/912071200002	none	000
+8	2026-07-12T14:47:34-0300	controlled	GET	/pet/findByStatus?status=pending	none	000
+9	2026-07-12T14:47:36-0300	controlled	GET	/pet/findByStatus?status=pending	none	000
+10	2026-07-12T14:47:36-0300	controlled	GET	/pet/findByStatus?status=pilot-invalid-status	none	000
+11	2026-07-12T14:47:36-0300	controlled	GET	/pet/not-an-integer	none	000
+12	2026-07-12T14:47:36-0300	controlled	DELETE	/pet/912071200002	none	000
+13	2026-07-12T14:47:36-0300	controlled	GET	/pet/912071200002	none	000
+14	2026-07-12T14:47:36-0300	controlled	DELETE	/pet/912071200002	none	000

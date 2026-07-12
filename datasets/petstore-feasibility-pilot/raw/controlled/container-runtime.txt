@@ -1,0 +1,13 @@
+collected_at=2026-07-12T14:48:56-0300
+docker_client=29.4.0
+docker_server=29.4.0
+image=swaggerapi/petstore3:1.0.27@sha256:749432676c31cd05256f0d9e878302164debb94daa1c1223e193747e1b34e7d1
+repo_digest=swaggerapi/petstore3@sha256:749432676c31cd05256f0d9e878302164debb94daa1c1223e193747e1b34e7d1
+image_id=sha256:749432676c31cd05256f0d9e878302164debb94daa1c1223e193747e1b34e7d1
+image_os_arch=linux/amd64
+host_detected_platform=linux/arm64/v8
+container_started_at=2026-07-12T17:47:25.218958424Z
+container_status_at_collection=running
+port_binding=127.0.0.1:18080:8080
+restart_policy=no
+command=docker compose -f datasets/petstore-feasibility-pilot/config/docker-compose.yml up -d --force-recreate

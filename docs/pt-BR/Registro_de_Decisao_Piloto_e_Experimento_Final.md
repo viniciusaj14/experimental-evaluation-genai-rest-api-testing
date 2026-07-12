@@ -5,7 +5,7 @@
 Separar formalmente:
 
 1. o **estudo piloto preliminar concluído**, realizado com uma API pública de dados abertos do domínio veicular não identificada nos registros preservados;
-2. o **piloto de viabilidade Petstore proposto**, destinado apenas a validar ambiente e contrato;
+2. o **piloto de viabilidade Petstore concluído**, destinado apenas a validar ambiente e contrato, sem produzir métricas do experimento final;
 3. o **experimento final Petstore futuro**, ainda não executado.
 
 ## Por que os resultados preliminares são classificados como piloto

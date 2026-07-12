@@ -4,7 +4,7 @@
 
 - **Data da auditoria:** 2026-07-12
 - **Escopo:** consistência documental entre o piloto preliminar veicular e o futuro experimento final Swagger Petstore
-- **Natureza:** auditoria científica de documentação; nenhuma execução experimental foi realizada
+- **Natureza:** auditoria científica com incorporação de evidências do piloto técnico de viabilidade; nenhuma unidade do experimento final foi executada
 
 ## Arquivos revisados
 
@@ -22,6 +22,10 @@
 - `docs/en/README.md`
 - `docs/api-specification/README.md`
 - `docs/api-specification/swagger-petstore-openapi.json` — integridade e referências, sem modificação
+- `datasets/petstore-feasibility-pilot/config/`
+- `datasets/petstore-feasibility-pilot/raw/`
+- `datasets/petstore-feasibility-pilot/processed/observations.csv`
+- `results/petstore-feasibility-pilot/README.md`
 
 ### Documentação científica autoritativa
 
@@ -41,6 +45,7 @@
 - `docs/pt-BR/Protocolo_Experimental.md`
 - `docs/pt-BR/Questoes_de_Pesquisa.md`
 - `docs/pt-BR/Registro_de_Decisao_Piloto_e_Experimento_Final.md`
+- `docs/pt-BR/Relatorio_do_Piloto_de_Viabilidade.md`
 - `docs/pt-BR/Selecao_da_API.md`
 - `docs/pt-BR/instrumentos/Rubrica_Reuso_de_Codigo.md`
 - `docs/pt-BR/instrumentos/Rubrica_Aderencia_BDD.md`
@@ -69,6 +74,9 @@
 13. A ordem fixa GitHub Copilot seguida de ChatGPT confundia condição de ferramenta com posição, aprendizagem e fadiga.
 14. A seleção do ambiente Petstore ainda mencionava comparação desnecessária com o ambiente histórico veicular não preservado.
 15. Permaneciam termos ingleses para “verificação” em documentos científicos em português fora de comandos ou artefatos exatos.
+16. O piloto de viabilidade ainda estava descrito como futuro, embora esta revisão tenha produzido evidência observacional dos ambientes público e controlado.
+17. A autenticação declarada no contrato não foi exigida por nenhum dos runtimes observados.
+18. A exclusão repetida retornou `200`, impedindo seu uso como prova de ausência.
 
 ## Correções realizadas
 
@@ -89,10 +97,16 @@
 - mantida a condição manual em primeiro lugar e adotada pré-randomização de GitHub Copilot e ChatGPT antes do congelamento, com preservação do registro e proibição de sorteio após resultados;
 - vinculada a escolha entre ambiente Petstore público e controlado exclusivamente ao piloto de viabilidade Petstore;
 - padronizado o uso de “verificação/verificações” nos documentos científicos em português, preservando comandos e artefatos exatos.
+- executado e documentado o piloto de viabilidade em diretórios separados do experimento final, sem calcular métricas de produtividade ou qualidade;
+- preservados imagem, tag, digest, plataforma, configuração, requisições, respostas, timestamps e tentativa de acesso restrito;
+- confirmados, nas janelas observadas, criação, leitura, atualização, filtro por identidade, limpeza, códigos negativos `400/404` e igualdade byte a byte dos contratos servidos;
+- rejeitados autenticação e segundo `DELETE` como oráculos do protocolo final;
+- recomendada a instância controlada com base nas evidências, sujeita à aceitação dos riscos antes do congelamento.
 
 ## Decisões ainda pendentes
 
-- escolha final entre ambiente Petstore público e instância controlada;
+- aceitação formal da recomendação pelo ambiente controlado e de sua configuração fixada por digest;
+- decisão sobre a emulação `linux/amd64` no host ARM ou adoção de host compatível;
 - congelamento do subconjunto de endpoints e dos cinco cenários;
 - congelamento das cinquenta verificações e do tratamento de impedidos;
 - aprovação da fórmula de retrabalho para a Fase 2;
@@ -102,10 +116,12 @@
 - registro das versões e identificadores efetivamente observados durante a futura execução.
 - execução e preservação, antes do congelamento, da pré-randomização da ordem entre GitHub Copilot e ChatGPT;
 - aprovação de regra explícita para qualquer consolidação que venha a relacionar métricas de unidade de execução e de abordagem completa;
+- decisão explícita de excluir autenticação e segundo `DELETE` dos oráculos finais;
+- avaliação sobre necessidade de uma janela adicional de estabilidade do filtro ou teste de reinicialização antes do congelamento.
 
 ## Confirmação de integridade científica
 
-Esta auditoria não acrescentou resultado experimental, valor observado, DOI, identidade da API veicular histórica, endpoint histórico, contrato histórico, prompt histórico, código-fonte histórico ou versão de ferramenta não preservada. A Swagger Petstore e seu contrato permanecem associados exclusivamente ao futuro experimento final.
+Esta auditoria acrescentou somente observações técnicas do piloto de viabilidade, com evidências publicadas e separadas. Não acrescentou resultado do experimento final, valor de suas seis métricas, DOI, identidade da API veicular histórica, endpoint histórico, contrato histórico, prompt histórico ou código-fonte histórico. A Swagger Petstore permanece o objeto do futuro experimento final, que não foi iniciado.
 
 ## Validações
 
@@ -121,4 +137,4 @@ Esta auditoria não acrescentou resultado experimental, valor observado, DOI, id
 | Expressão proibida de equivalência dos cenários | Ausente |
 | Ambiguidade sobre seleção da API | Ausente |
 
-**Advertências:** nenhuma advertência foi emitida pelos comandos de validação. O ambiente não possui um validador CFF ou OpenAPI dedicado registrado nesta auditoria; foram validados YAML/JSON, campos essenciais, referências internas e checksum com as ferramentas locais disponíveis.
+**Advertências:** os comandos de validação do repositório não emitiram advertências. Durante o piloto controlado, Docker informou incompatibilidade entre a imagem `linux/amd64` e o host `linux/arm64/v8` antes de a plataforma ser explicitada; o runtime registrou ausência de binding SLF4J e depreciação do `jetty-runner`; e a primeira tentativa no contexto restrito retornou status de transporte `000`. Essas ocorrências estão preservadas no relatório e nas evidências. O ambiente não possui um validador CFF ou OpenAPI dedicado registrado nesta auditoria; foram validados YAML/JSON, campos essenciais, referências internas e checksum com as ferramentas locais disponíveis.
