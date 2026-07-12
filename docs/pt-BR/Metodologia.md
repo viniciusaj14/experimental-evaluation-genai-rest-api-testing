@@ -18,9 +18,19 @@ A execução do experimento final é regida pelo [Plano de Execução](Plano_de_
 
 ## Delineamento do estudo
 
-O experimento final realizará uma nova comparação entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários Petstore e será avaliada pelos mesmos cinquenta checks congelados.
+O experimento final realizará uma nova comparação entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários Petstore e será avaliada pelas mesmas cinquenta verificações congeladas.
 
-Não são pressupostos múltiplos participantes, avaliadores cegos, randomização, cálculo de poder estatístico ou testes estatísticos inferenciais. Caso alguma dessas decisões venha a integrar efetivamente o TCC, deverá ser documentada antes de sua aplicação; até lá, não faz parte da metodologia.
+## Unidades e níveis de análise
+
+- **Unidade de execução:** um cenário implementado sob uma abordagem de desenvolvimento.
+- **Total de unidades de execução:** `5 cenários × 3 abordagens = 15`.
+- **Registro observacional:** conjunto de evidências e medições gerado por uma unidade de execução.
+- **Nível por unidade de execução:** tempo de desenvolvimento, retrabalho e correção inicial das validações são coletados separadamente em cada uma das quinze unidades.
+- **Nível por abordagem completa:** reúso de código, aderência ao BDD e qualidade estrutural são consolidados somente após a conclusão dos cinco cenários da respectiva abordagem.
+
+Dados de níveis diferentes não podem ser agregados, promediados ou usados no mesmo cálculo sem uma regra explícita, aprovada antes da execução e registrada no protocolo. Em particular, as rubricas de abordagem completa não devem ser pontuadas após um cenário isolado.
+
+Não são pressupostos múltiplos participantes, avaliadores cegos, randomização de cenários ou participantes, cálculo de poder estatístico ou testes estatísticos inferenciais. A única randomização prevista é a pré-randomização da ordem entre GitHub Copilot e ChatGPT, realizada e registrada antes do congelamento, mantendo a condição manual em primeiro lugar. Qualquer outra decisão deverá ser documentada antes de sua aplicação; até lá, não faz parte da metodologia.
 
 ## Ambiente tecnológico
 
@@ -32,16 +42,16 @@ A API selecionada para o experimento final é a Swagger Petstore - OpenAPI 3.0, 
 
 ## Comparabilidade entre abordagens
 
-Os cinco cenários são funcionalmente distintos. Cada cenário, suas entradas, checks, materiais de apoio e critérios de conclusão devem ser aplicados de forma idêntica ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT. A diferença planejada dentro de cada cenário é a abordagem de desenvolvimento. Não se exige que operações HTTP diferentes tenham complexidade idêntica; exige-se comparabilidade entre abordagens para a mesma tarefa. Intervenções manuais e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
+Os cinco cenários são funcionalmente distintos. Cada cenário, suas entradas, verificações, materiais de apoio e critérios de conclusão devem ser aplicados de forma idêntica ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT. A diferença planejada dentro de cada cenário é a abordagem de desenvolvimento. Não se exige que operações HTTP diferentes tenham complexidade idêntica; exige-se comparabilidade entre abordagens para a mesma tarefa. Intervenções corretivas e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
 
-Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez checks por cenário na [matriz de validações](Matriz_de_Validacoes.md). O subconjunto final ainda deve ser congelado após revisão crítica de comparabilidade entre abordagens, independência, complexidade relativa, determinismo, limpeza e interferência pública.
+Os candidatos estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez verificações por cenário na [matriz de validações](Matriz_de_Validacoes.md). O subconjunto final ainda deve ser congelado após revisão crítica de comparabilidade entre abordagens, independência, complexidade relativa, determinismo, limpeza e interferência pública.
 
 ## Alternativas de ambiente
 
 1. **Instância pública `petstore3.swagger.io`:** facilita acesso, mas está sujeita a dados de terceiros, resets, indisponibilidade e divergência entre contrato e runtime.
 2. **Instância local ou conteinerizada controlada do projeto oficial:** permite estado conhecido, isolamento, repetição e limpeza controlada.
 
-Para o experimento final, recomenda-se a instância controlada, porque reduz interferência externa e resets do serviço. Esta recomendação não significa que um container tenha sido configurado ou iniciado neste repositório. A decisão final deve ser confrontada com o ambiente realmente usado nos registros preliminares.
+Para o experimento final, recomenda-se a instância controlada, porque reduz interferência externa e resets do serviço. Esta recomendação não significa que um container tenha sido configurado ou iniciado neste repositório. A escolha definitiva entre a instância pública e a instância controlada deve ser tomada exclusivamente com base nas evidências do [piloto de viabilidade Petstore](Piloto_de_Viabilidade.md), sem exigir comparação com o ambiente histórico da API veicular.
 
 Antes do experimento final, o [piloto de viabilidade](Piloto_de_Viabilidade.md) deve verificar disponibilidade, códigos de resposta, autenticação, persistência, limpeza, estabilidade do filtro e divergências do contrato. Seus valores não integram o experimento final.
 

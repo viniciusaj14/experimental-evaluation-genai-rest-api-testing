@@ -4,7 +4,7 @@
 
 Os cinco cenários abaixo são propostas baseadas no [contrato preservado](../api-specification/swagger-petstore-openapi.json) e no [inventário de endpoints](Inventario_de_Endpoints.md). Eles ainda requerem revisão e congelamento metodológico antes da implementação das três suítes finais. Nenhum cenário desta matriz representa execução ou resultado observado.
 
-Os cenários são funcionalmente distintos e não precisam ter complexidade idêntica entre operações HTTP. A exigência metodológica é que cada mesmo cenário seja aplicado com entradas, critérios e checks idênticos ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT, permitindo comparação entre abordagens.
+Os cenários são funcionalmente distintos e não precisam ter complexidade idêntica entre operações HTTP. A exigência metodológica é que cada mesmo cenário seja aplicado com entradas, critérios e verificações idênticos ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT, permitindo comparação entre abordagens.
 
 > **SEPARAÇÃO CONFIRMADA:** estes cenários Petstore não são os cinco cenários veiculares do piloto concluído. Eles pertencem somente ao futuro experimento final, que ainda não foi executado. É proibido mapear ou comparar numericamente os resultados históricos com esta matriz.
 
@@ -22,7 +22,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** `DELETE /pet/{petId}` após coleta das evidências; registrar impedimento se a limpeza não puder ser confirmada.
 - **Dependências:** nenhuma anterior; fornece dado somente para sua própria validação e limpeza.
 - **Complexidade relativa estimada:** média, considerando payload, schema, caso negativo e limpeza.
-- **Comparabilidade entre abordagens:** C01 deve usar os mesmos dados parametrizados, critérios e dez checks nas três abordagens; sua complexidade não é usada como padrão obrigatório para outras operações.
+- **Comparabilidade entre abordagens:** C01 deve usar os mesmos dados parametrizados, critérios e dez verificações nas três abordagens; sua complexidade não é usada como padrão obrigatório para outras operações.
 
 ## C02 — Recuperar um pet existente
 
@@ -36,7 +36,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** excluir o recurso exclusivo ao final.
 - **Dependências:** setup técnico por `POST /pet`, pertencente ao próprio cenário.
 - **Complexidade relativa estimada:** média, pois inclui setup, consulta, negativo e limpeza.
-- **Comparabilidade entre abordagens:** C02 deve ter setup, consulta, negativos, limpeza e dez checks idênticos nas três abordagens; não se afirma que sua complexidade seja igual à de C01–C05.
+- **Comparabilidade entre abordagens:** C02 deve ter setup, consulta, negativos, limpeza e dez verificações idênticas nas três abordagens; não se afirma que sua complexidade seja igual à de C01–C05.
 
 ## C03 — Atualizar um pet
 
@@ -50,7 +50,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** excluir o recurso após a validação; registrar interferência se a representação mudar externamente.
 - **Dependências:** setup técnico por `POST /pet` e, se necessário, confirmação por `GET /pet/{petId}`.
 - **Complexidade relativa estimada:** média.
-- **Comparabilidade entre abordagens:** C03 deve preservar o mesmo estado inicial, alterações e checks nas três abordagens; diferenças de complexidade em relação a GET ou DELETE são esperadas.
+- **Comparabilidade entre abordagens:** C03 deve preservar o mesmo estado inicial, alterações e verificações nas três abordagens; diferenças de complexidade em relação a GET ou DELETE são esperadas.
 
 ## C04 — Recuperar pets por status
 
@@ -64,7 +64,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** excluir o recurso criado para o cenário.
 - **Dependências:** setup técnico por `POST /pet`.
 - **Complexidade relativa estimada:** média-alta devido à interferência da coleção compartilhada.
-- **Comparabilidade entre abordagens:** C04 deve usar o mesmo status, preparação e checks nas três abordagens. Sua maior sensibilidade ao ambiente deve ser controlada e relatada, não tratada como complexidade idêntica aos demais cenários.
+- **Comparabilidade entre abordagens:** C04 deve usar o mesmo status, preparação e verificações nas três abordagens. Sua maior sensibilidade ao ambiente deve ser controlada e relatada, não tratada como complexidade idêntica aos demais cenários.
 
 ## C05 — Excluir um pet
 
@@ -78,7 +78,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Limpeza:** a operação principal já remove o recurso; executar verificação final e registrar se limpeza adicional foi necessária ou impedida.
 - **Dependências:** setup por `POST /pet` e confirmação por GET.
 - **Complexidade relativa estimada:** média.
-- **Comparabilidade entre abordagens:** C05 deve repetir setup, exclusão, confirmação e checks de forma idêntica nas três abordagens; não se presume equivalência de complexidade com criação, atualização ou filtro.
+- **Comparabilidade entre abordagens:** C05 deve repetir setup, exclusão, confirmação e verificações de forma idêntica nas três abordagens; não se presume equivalência de complexidade com criação, atualização ou filtro.
 
 ## Revisão crítica
 
@@ -89,7 +89,7 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 | Reprodutibilidade | Parcialmente atendida | Contrato local é estável, mas o serviço público não; registrar data, disponibilidade e divergências. |
 | Complexidade comparável | Plausível, pendente de piloto/revisão | Não usar contagem bruta de chamadas como único indicador; setup e limpeza variam. |
 | Validação determinística | Forte em C01, C02, C03 e C05; mais fraca em C04 | C04 não deve validar tamanho ou ordem global; somente contrato, status e identidade criada pela execução. |
-| Interferência pública | Presente em todos; maior em C04 | Identificadores únicos, janela curta e classificação explícita de checks impedidos. |
+| Interferência pública | Presente em todos; maior em C04 | Identificadores únicos, janela curta e classificação explícita de verificações impedidas. |
 | Limpeza | Planejada | DELETE pode falhar por interferência ou indisponibilidade; a falha deve ser registrada separadamente. |
 | Adequação ao BDD | Atendida no nível de intenção | A redação final Given/When/Then ainda deve ser congelada sem acoplar steps a detalhes técnicos desnecessários. |
 

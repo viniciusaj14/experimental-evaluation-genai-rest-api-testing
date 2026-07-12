@@ -34,6 +34,9 @@
 - `docs/pt-BR/Matriz_de_Validacoes.md`
 - `docs/pt-BR/Metodologia.md`
 - `docs/pt-BR/Metricas.md`
+- `docs/pt-BR/Plano_de_Controle_Experimental.md`
+- `docs/pt-BR/Plano_de_Execucao.md`
+- `docs/pt-BR/Checklist_Pre_Execucao.md`
 - `docs/pt-BR/Piloto_de_Viabilidade.md`
 - `docs/pt-BR/Protocolo_Experimental.md`
 - `docs/pt-BR/Questoes_de_Pesquisa.md`
@@ -60,6 +63,12 @@
 7. A página de status das traduções em inglês não explicava a separação piloto/final.
 8. As questões de pesquisa ainda usavam o termo genérico “cobertura” sem vinculá-lo à decisão pendente da métrica final.
 9. A documentação global precisava de uma regra única: conteúdo orientado ao futuro pertence à Fase 2, salvo identificação explícita como material do piloto.
+10. A unidade de execução, o registro observacional e os níveis de análise ainda não estavam definidos de forma uniforme.
+11. A definição operacional de retrabalho excluía indevidamente correções originadas de sugestões ou respostas das ferramentas assistidas.
+12. O checklist pós-execução misturava medições por cenário com rubricas que só podem ser consolidadas após a abordagem completa.
+13. A ordem fixa GitHub Copilot seguida de ChatGPT confundia condição de ferramenta com posição, aprendizagem e fadiga.
+14. A seleção do ambiente Petstore ainda mencionava comparação desnecessária com o ambiente histórico veicular não preservado.
+15. Permaneciam termos ingleses para “verificação” em documentos científicos em português fora de comandos ou artefatos exatos.
 
 ## Correções realizadas
 
@@ -68,23 +77,31 @@
 - adicionados status do repositório em inglês e português;
 - uniformizada a expressão “cinco cenários funcionalmente distintos, aplicados de forma idêntica às três abordagens”;
 - afirmada a adoção da Swagger Petstore OpenAPI 3 no experimento final, com ligação para `Selecao_da_API.md`;
-- corrigido o resumo de retrabalho para correções manuais individuais após a primeira versão executável;
+- corrigido o retrabalho para intervenções corretivas após a primeira versão executável, independentemente da origem, com registro separado da origem;
 - diferenciada qualidade estrutural qualitativa do piloto e avaliação quantitativa planejada para a Fase 2;
 - adicionada ao guia de reprodutibilidade a justificativa explícita da separação entre fases;
 - atualizados `CHANGELOG.md`, `docs/en/README.md`, questões de pesquisa e templates de prompts;
 - mantidas separadas as árvores de dados do piloto e do experimento final;
 - preservada a regra de não combinação numérica entre fases.
+- definida a unidade de execução como um cenário sob uma abordagem, totalizando quinze unidades, e o registro observacional como suas evidências e medições;
+- separado o nível por unidade — tempo, retrabalho e correção inicial — do nível por abordagem completa — reúso, aderência ao BDD e qualidade estrutural — sem agregação implícita;
+- dividido o checklist em pós-cenário e pós-abordagem, proibindo pontuação de rubricas após cenário isolado;
+- mantida a condição manual em primeiro lugar e adotada pré-randomização de GitHub Copilot e ChatGPT antes do congelamento, com preservação do registro e proibição de sorteio após resultados;
+- vinculada a escolha entre ambiente Petstore público e controlado exclusivamente ao piloto de viabilidade Petstore;
+- padronizado o uso de “verificação/verificações” nos documentos científicos em português, preservando comandos e artefatos exatos.
 
 ## Decisões ainda pendentes
 
 - escolha final entre ambiente Petstore público e instância controlada;
 - congelamento do subconjunto de endpoints e dos cinco cenários;
-- congelamento dos cinquenta checks e do tratamento de impedidos;
+- congelamento das cinquenta verificações e do tratamento de impedidos;
 - aprovação da fórmula de retrabalho para a Fase 2;
 - definição do numerador e denominador da correção inicial/validação final;
 - congelamento das rubricas de reúso, aderência ao BDD e qualidade estrutural;
 - congelamento dos textos das tarefas, prompts e regras de interação;
 - registro das versões e identificadores efetivamente observados durante a futura execução.
+- execução e preservação, antes do congelamento, da pré-randomização da ordem entre GitHub Copilot e ChatGPT;
+- aprovação de regra explícita para qualquer consolidação que venha a relacionar métricas de unidade de execução e de abordagem completa;
 
 ## Confirmação de integridade científica
 

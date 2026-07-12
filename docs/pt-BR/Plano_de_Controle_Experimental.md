@@ -19,9 +19,9 @@ Definir como reduzir vieses e preservar comparabilidade entre desenvolvimento ma
 | Estado da IDE | Reiniciar antes de cada abordagem e aguardar indexação fora do tempo medido. | Timestamp de preparação. |
 | Contrato da API | Usar a mesma especificação normativa preservada. | Path e checksum OpenAPI. |
 | Cenários | Usar os mesmos cinco cenários congelados em C01–C05. | Versão/checksum da matriz. |
-| Checks | Usar a mesma matriz congelada de cinquenta checks. | Versão/checksum da matriz. |
+| Verificações | Usar a mesma matriz congelada de cinquenta verificações. | Versão/checksum da matriz. |
 | Pesquisador/executor | Manter o mesmo executor nas três abordagens. | Identificação no log. |
-| Ordem | Manual, GitHub Copilot e ChatGPT; C01–C05 em cada condição. | Sequência registrada. |
+| Ordem | Manual primeiro; GitHub Copilot e ChatGPT em ordem pré-randomizada antes do congelamento; C01–C05 em cada condição. | Método e resultado da randomização preservados. |
 | Dados | Usar identificadores únicos e dados independentes por abordagem/cenário. | Registro de setup e limpeza. |
 | Ambiente de execução | Usar a alternativa Petstore congelada após o piloto de viabilidade. | Base URL/configuração sem segredos. |
 | Regras operacionais | Aplicar o mesmo plano de tempo, retrabalho, interrupção e evidência. | Checklists e logs. |
@@ -41,7 +41,7 @@ As diferenças inerentes às ferramentas fazem parte da variável independente. 
 As seis métricas são:
 
 1. tempo ativo de desenvolvimento;
-2. retrabalho, medido por ajustes manuais após a primeira versão executável conforme fórmula aprovada;
+2. retrabalho, medido por intervenções corretivas após a primeira versão executável, com origem registrada separadamente;
 3. correção inicial das validações conforme numerador e denominador congelados;
 4. percentual de reúso de código conforme rubrica congelada;
 5. cenários aderentes ao BDD e percentual conforme rubrica congelada;
@@ -55,13 +55,13 @@ O instrumento, a fórmula e o tratamento de dados ausentes de cada métrica deve
 
 **Risco:** o executor pode aprender sobre domínio, cenários ou estrutura ao avançar pelas condições.
 
-**Mitigação:** fixar a ordem previamente; executar cada abordagem a partir do mesmo baseline; proibir cópia ou consulta a implementações anteriores; congelar materiais; registrar experiência acumulada como ameaça; analisar resultados sem afirmar que a ordem eliminou o efeito.
+**Mitigação:** manter a condição manual primeiro; pré-randomizar a ordem entre GitHub Copilot e ChatGPT antes do congelamento e preservar método e resultado; executar cada abordagem a partir do mesmo baseline; proibir cópia ou consulta a implementações anteriores; congelar materiais; registrar experiência acumulada como ameaça. Nunca randomizar depois de observar resultado final e não afirmar que a randomização parcial eliminou o efeito.
 
 ### Fadiga do pesquisador
 
 **Risco:** cansaço pode aumentar tempo, erros ou retrabalho nas condições posteriores.
 
-**Mitigação:** planejar sessões e pausas antes da execução; não iniciar cenário quando o executor declarar incapacidade de manter atenção; registrar horários e pausas; aplicar a mesma política de descanso; não ocultar a associação entre ordem fixa e fadiga.
+**Mitigação:** planejar sessões e pausas antes da execução; não iniciar cenário quando o executor declarar incapacidade de manter atenção; registrar horários e pausas; aplicar a mesma política de descanso; considerar a posição sorteada das condições assistidas e não afirmar que a pré-randomização parcial eliminou a fadiga.
 
 ### Cache e estado da IDE
 
@@ -71,9 +71,9 @@ O instrumento, a fórmula e o tratamento de dados ausentes de cada métrica deve
 
 ### Instabilidade da API
 
-**Risco:** indisponibilidade, reset, persistência inconsistente ou mudança de comportamento pode alterar checks e tempos.
+**Risco:** indisponibilidade, reset, persistência inconsistente ou mudança de comportamento pode alterar verificações e tempos.
 
-**Mitigação:** concluir o piloto de viabilidade; preferir instância controlada; congelar ambiente; usar dados isolados; registrar saúde antes de cada cenário; pausar apenas em indisponibilidade comprovada; classificar checks impedidos sem aprovação presumida.
+**Mitigação:** concluir o piloto de viabilidade; preferir instância controlada; congelar ambiente; usar dados isolados; registrar saúde antes de cada cenário; pausar apenas em indisponibilidade comprovada; classificar verificações impedidas sem aprovação presumida.
 
 ### Ambiente público compartilhado
 
@@ -122,7 +122,7 @@ Reiniciar com novo identificador quando ocorrer:
 - uso do cenário, prompt, abordagem ou baseline incorreto;
 - contaminação por código de outra abordagem;
 - assistência não permitida na condição manual;
-- alteração não autorizada de ferramenta, dependência, contrato, cenário, check ou oráculo;
+- alteração não autorizada de ferramenta, dependência, contrato, cenário, verificação ou oráculo;
 - corrupção de dados que impeça distinguir comportamento da solução e interferência externa;
 - interrupção irrecuperável que impeça preservar o estado metodológico.
 

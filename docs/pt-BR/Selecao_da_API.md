@@ -54,7 +54,7 @@ Os principais riscos são:
 
 Uma instância controlada do projeto oficial permite preparar estado conhecido, isolar dados, repetir cenários e executar limpeza com menor interferência externa. Por essas razões, ela é a alternativa recomendada para o experimento final. Este repositório ainda não configura nem inicia essa instância.
 
-A escolha definitiva deve considerar o [piloto de viabilidade](Piloto_de_Viabilidade.md) e os registros do experimento preliminar. Se o ambiente preliminar não corresponder ao ambiente final, essa diferença deve ser relatada e não corrigida retroativamente.
+A escolha definitiva entre o ambiente Petstore público e o controlado deve ser baseada no [piloto de viabilidade](Piloto_de_Viabilidade.md). O ambiente histórico da API veicular não é critério de seleção para a Fase 2 e não deve ser reconstruído ou comparado por inferência.
 
 ## Decisões ainda pendentes
 

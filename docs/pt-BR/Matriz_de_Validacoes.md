@@ -2,18 +2,18 @@
 
 ## Regras da matriz
 
-Esta matriz define **exatamente cinquenta checks planejados**, dez para cada cenário candidato. Ela não contém resultados observados. Os critérios derivam do [contrato OpenAPI preservado](../api-specification/swagger-petstore-openapi.json) e dos requisitos da [matriz de cenários](Matriz_de_Cenarios.md).
+Esta matriz define **exatamente cinquenta verificações planejadas**, dez para cada cenário candidato. Ela não contém resultados observados. Os critérios derivam do [contrato OpenAPI preservado](../api-specification/swagger-petstore-openapi.json) e dos requisitos da [matriz de cenários](Matriz_de_Cenarios.md).
 
-> **SEPARAÇÃO CONFIRMADA:** estes cinquenta checks Petstore não são os cinquenta checks usados no piloto veicular. Esta matriz aplica-se somente ao futuro experimento final, ainda não executado. Nenhum percentual ou contagem pode combinar dados do piloto e do experimento final.
+> **SEPARAÇÃO CONFIRMADA:** estas cinquenta verificações Petstore não são as cinquenta verificações usadas no piloto veicular. Esta matriz aplica-se somente ao futuro experimento final, ainda não executado. Nenhum percentual ou contagem pode combinar dados do piloto e do experimento final.
 
-Todos os cinquenta checks permanecem no estudo. Para checks que dependem do serviço público, a indisponibilidade, interferência externa ou divergência que impeça uma conclusão deve ser registrada como **impedida**, com evidência. Um check impedido nunca é removido, presumido, convertido em aprovação ou contado como atendido. O relatório deve separar atendidos, não atendidos e impedidos, mantendo denominador planejado igual a 50 no total e a 10 por cenário.
+Todas as cinquenta verificações permanecem no estudo. Para verificações que dependem do serviço público, a indisponibilidade, interferência externa ou divergência que impeça uma conclusão deve ser registrada como **impedida**, com evidência. Uma verificação impedida nunca é removida, presumida, convertida em aprovação ou contada como atendida. O relatório deve separar itens atendidos, não atendidos e impedidos, mantendo denominador planejado igual a 50 no total e a 10 por cenário.
 
 Na coluna de impedimento:
 
 - **E1 — estático:** validável no contrato ou artefato local; indisponibilidade pública não impede a análise estática;
 - **E2 — público:** registrar como impedida, anexar evidência técnica e não contar como aprovada se o ambiente impedir a execução determinística.
 
-## Categorias explícitas de checks
+## Categorias explícitas de verificações
 
 - **Validação funcional executável:** comportamento observável por requisição e resposta, como status, representação, filtro ou estado posterior.
 - **Conformidade de implementação/contrato:** construção da requisição, tipos, campos, schemas e limites de assertions definidos pelo contrato ou pelo desenho.
@@ -23,7 +23,7 @@ Na coluna de impedimento:
 
 ## C01 — Criação
 
-| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de check | Obrigatória | Se o ambiente público impedir |
+| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de verificação | Obrigatória | Se o ambiente público impedir |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | V01 | C01 | Contrato da requisição | Método e path correspondem a `POST /pet` (`addPet`). | Requisição registrada e referência OpenAPI. | Conformidade de implementação/contrato | Sim | E1 para contrato; E2 para envio. |
 | V02 | C01 | Representação | Request body é JSON compatível com schema `Pet`. | Payload e validação contra schema. | Conformidade de implementação/contrato | Sim | E1 para schema; E2 para envio. |
@@ -38,7 +38,7 @@ Na coluna de impedimento:
 
 ## C02 — Consulta por ID
 
-| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de check | Obrigatória | Se o ambiente público impedir |
+| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de verificação | Obrigatória | Se o ambiente público impedir |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | V11 | C02 | Contrato da requisição | Método e path correspondem a `GET /pet/{petId}` (`getPetById`). | Requisição e referência OpenAPI. | Conformidade de implementação/contrato | Sim | E1 para contrato; E2 para envio. |
 | V12 | C02 | Parâmetro | `petId` é obrigatório, inteiro `int64` e usa o ID exclusivo preparado. | Path efetivo e registro do setup. | Conformidade de implementação/contrato | Sim | E1/E2. |
@@ -53,7 +53,7 @@ Na coluna de impedimento:
 
 ## C03 — Atualização
 
-| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de check | Obrigatória | Se o ambiente público impedir |
+| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de verificação | Obrigatória | Se o ambiente público impedir |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | V21 | C03 | Contrato da requisição | Método e path correspondem a `PUT /pet` (`updatePet`). | Requisição e referência OpenAPI. | Conformidade de implementação/contrato | Sim | E1 para contrato; E2 para envio. |
 | V22 | C03 | Request body | Body JSON obrigatório é compatível com schema `Pet`. | Payload e validação de schema. | Conformidade de implementação/contrato | Sim | E1/E2. |
@@ -68,7 +68,7 @@ Na coluna de impedimento:
 
 ## C04 — Filtro por status
 
-| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de check | Obrigatória | Se o ambiente público impedir |
+| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de verificação | Obrigatória | Se o ambiente público impedir |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | V31 | C04 | Contrato da requisição | Método e path correspondem a `GET /pet/findByStatus` (`findPetsByStatus`). | Requisição e referência OpenAPI. | Conformidade de implementação/contrato | Sim | E1 para contrato; E2 para envio. |
 | V32 | C04 | Parâmetro | Query `status` é fornecida e pertence ao enum permitido. | URL/query registrada. | Conformidade de implementação/contrato | Sim | E1/E2. |
@@ -83,7 +83,7 @@ Na coluna de impedimento:
 
 ## C05 — Exclusão
 
-| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de check | Obrigatória | Se o ambiente público impedir |
+| ID | Cenário | Categoria | Critério/resultado esperado | Evidência exigida | Tipo de verificação | Obrigatória | Se o ambiente público impedir |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | V41 | C05 | Contrato da requisição | Método e path correspondem a `DELETE /pet/{petId}` (`deletePet`). | Requisição e referência OpenAPI. | Conformidade de implementação/contrato | Sim | E1 para contrato; E2 para envio. |
 | V42 | C05 | Parâmetro | `petId` obrigatório é inteiro `int64` e identifica somente o recurso do cenário. | Path e registro do setup. | Conformidade de implementação/contrato | Sim | E1/E2. |
@@ -116,4 +116,4 @@ Na coluna de impedimento:
 | Controles experimentais | 7 |
 | **Total** | **50** |
 
-Essa distribuição descreve o planejamento atual e deve ser conferida com os registros preliminares. Ela não implica que as três categorias tenham o mesmo significado métrico ou possam compor automaticamente uma única taxa.
+Essa distribuição descreve o planejamento atual do futuro experimento final e deve ser aprovada antes do congelamento. Ela não corresponde às verificações históricas do piloto veicular e não implica que as três categorias tenham o mesmo significado métrico ou possam compor automaticamente uma única taxa.

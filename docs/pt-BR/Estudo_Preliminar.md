@@ -54,4 +54,4 @@ As definições confirmadas e os limites de interpretação estão em [`Metricas
 
 ## Consequência metodológica
 
-O piloto contribui como evidência de viabilidade e aprendizado metodológico, mas não constitui a execução do protocolo final Petstore. A Swagger Petstore, seus cinco cenários candidatos e seus cinquenta checks definem um novo protocolo que deverá ser congelado e executado novamente.
+O piloto contribui como evidência de viabilidade e aprendizado metodológico, mas não constitui a execução do protocolo final Petstore. A Swagger Petstore, seus cinco cenários candidatos e suas cinquenta verificações definem um novo protocolo que deverá ser congelado e executado novamente.

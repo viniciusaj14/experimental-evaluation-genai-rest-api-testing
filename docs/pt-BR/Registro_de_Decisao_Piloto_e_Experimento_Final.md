@@ -18,7 +18,7 @@ A Swagger Petstore oferece contrato OpenAPI oficial que pode ser preservado por 
 
 ## Por que o experimento final deve ser reexecutado
 
-Swagger Petstore, endpoints, payloads e checks diferem do domínio veicular registrado no piloto. A comparação final somente será metodologicamente válida se as três abordagens executarem novamente o mesmo protocolo Petstore após congelamento de ambiente, cenários, validações e métricas.
+Swagger Petstore, endpoints, payloads e verificações diferem do domínio veicular registrado no piloto. A comparação final somente será metodologicamente válida se as três abordagens executarem novamente o mesmo protocolo Petstore após congelamento de ambiente, cenários, validações e métricas.
 
 ## Proibições
 
@@ -47,7 +47,7 @@ O piloto de viabilidade Petstore também deve ser identificado como piloto e nã
 ## Decisões ainda pendentes para o experimento final
 
 - ambiente Petstore público ou controlado, com recomendação atual pela instância controlada;
-- congelamento dos cinco cenários e cinquenta checks;
+- congelamento dos cinco cenários e cinquenta verificações;
 - oráculos negativos e autenticação efetiva;
 - definição final das rubricas;
 - aprovação formal das fórmulas que serão mantidas ou alteradas em relação ao piloto.

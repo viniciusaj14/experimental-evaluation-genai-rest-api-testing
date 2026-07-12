@@ -4,7 +4,11 @@
 
 As definições históricas abaixo pertencem ao **estudo piloto preliminar da API veicular**. O futuro experimento final da Swagger Petstore ainda não foi executado. Fórmulas e instrumentos somente poderão ser reutilizados no experimento final se forem formalmente aprovados antes da execução.
 
-Os cinquenta checks propostos para Petstore não são os mesmos checks usados no piloto. Nenhum cálculo pode combinar dados das duas fases.
+As cinquenta verificações propostas para Petstore não são as mesmas verificações usadas no piloto. Nenhum cálculo pode combinar dados das duas fases.
+
+## Níveis de coleta e análise do experimento final
+
+Uma unidade de execução corresponde a um cenário implementado sob uma abordagem, totalizando `5 × 3 = 15` unidades. Tempo de desenvolvimento, retrabalho e correção inicial das validações são coletados por unidade de execução. Reúso de código, aderência ao BDD e qualidade estrutural são consolidados por abordagem completa, somente depois dos cinco cenários. Não agregar métricas entre esses níveis sem regra explícita aprovada antes da execução.
 
 ## 1. Tempo ativo de desenvolvimento
 
@@ -34,7 +38,14 @@ A regra de início, pausa, retomada, término e unidade deverá ser congelada an
 
 ### Experimento final Petstore
 
-A mesma fórmula somente poderá ser preservada se for formalmente aprovada antes da execução. A aprovação deverá confirmar que “ajuste” mantém a mesma unidade operacional e que o denominador corresponde ao conjunto de validações definido para o experimento final. Não é permitido recalcular o piloto com categorias Petstore.
+- **Definição operacional:** número de intervenções corretivas logicamente identificáveis aplicadas após a primeira versão executável para resolver um critério não atendido.
+- **Independência da origem:** conta igualmente quando a mudança é escrita manualmente, sugerida e aceita do GitHub Copilot ou gerada pelo ChatGPT e aplicada; a origem deve ser registrada separadamente.
+- **Inclusão:** correção efetivamente aplicada e vinculada a critério, evidência e reexecução.
+- **Exclusão:** sugestão não aplicada, alteração anterior à primeira versão executável, formatação sem efeito funcional e refatoração sem finalidade corretiva.
+- **Regra de continuidade:** múltiplas edições contíguas para a mesma correção antes da próxima execução contam como um ajuste.
+- **Unidade:** contagem de ajustes por unidade de execução; consolidações posteriores devem preservar a rastreabilidade às unidades.
+
+A fórmula histórica somente poderá ser preservada se for formalmente aprovada antes da execução e se seu denominador corresponder ao conjunto de verificações definido para o experimento final. Não é permitido recalcular o piloto com categorias Petstore.
 
 ## 3. Correção inicial das validações
 
@@ -50,7 +61,7 @@ Essa métrica **não é** cobertura de código-fonte, cobertura de branches, cob
 
 ### Experimento final Petstore
 
-A [matriz Petstore](Matriz_de_Validacoes.md) contém validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais. Essas categorias não devem ser agregadas automaticamente na fórmula histórica do piloto. Antes da execução final, deve-se decidir quais checks representam correção inicial, qual é o denominador e como checks impedidos serão relatados.
+A [matriz Petstore](Matriz_de_Validacoes.md) contém validações funcionais executáveis, conformidade de implementação/contrato e controles experimentais. Essas categorias não devem ser agregadas automaticamente na fórmula histórica do piloto. Antes da execução final, deve-se decidir quais verificações representam correção inicial, qual é o denominador e como verificações impedidas serão relatadas.
 
 ## 4. Reúso de código
 
@@ -95,6 +106,6 @@ A [`Rubrica_Qualidade_Estrutural.md`](instrumentos/Rubrica_Qualidade_Estrutural.
 
 - manter dados do piloto em `datasets/pilot/` e dados finais em `datasets/final-experiment/`;
 - não transferir valores entre as fases;
-- não reinterpretar os cinquenta checks veiculares como os cinquenta checks Petstore;
-- registrar checks Petstore impedidos separadamente, sem aprovação presumida;
+- não reinterpretar as cinquenta verificações veiculares como as cinquenta verificações Petstore;
+- registrar verificações Petstore impedidas separadamente, sem aprovação presumida;
 - publicar fórmulas finais somente após aprovação prévia e rastreável.

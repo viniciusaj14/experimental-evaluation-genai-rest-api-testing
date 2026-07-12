@@ -27,7 +27,7 @@ Os datasets experimentais e as análises consolidadas ainda não foram publicado
 - adota Swagger Petstore OpenAPI 3;
 - exige protocolo congelado antes da execução;
 - utiliza cinco cenários BDD funcionalmente distintos, aplicados de forma idêntica às três abordagens;
-- planeja cinquenta checks de validação;
+- planeja cinquenta verificações de validação;
 - aplica o mesmo protocolo ao desenvolvimento manual, GitHub Copilot e ChatGPT.
 
 Toda documentação orientada ao futuro refere-se à Fase 2, salvo quando identificada explicitamente como material do piloto.
@@ -84,7 +84,7 @@ As definições históricas e decisões para a Fase 2 estão em [`docs/pt-BR/Met
 
 Cada abordagem deve implementar os mesmos cinco cenários e ser submetida às mesmas verificações planejadas para cada cenário. A comparabilidade é exigida entre as três abordagens dentro de um mesmo cenário; não se presume complexidade idêntica entre operações HTTP funcionalmente diferentes. Requisitos, materiais, ambiente e critérios de conclusão devem permanecer iguais entre abordagens, exceto pela forma de desenvolvimento que define cada condição.
 
-O estudo piloto utilizou cinco cenários veiculares confirmados: consulta de marcas, consulta de modelos por marca, consulta de ano/modelo, consulta de detalhes de veículo e consulta com parâmetro inválido. O nome oficial, URL, contrato e paths exatos da API histórica não foram preservados e não devem ser inferidos. Os cenários e checks Petstore constituem um protocolo novo e não podem ser associados retroativamente aos resultados do piloto.
+O estudo piloto utilizou cinco cenários veiculares confirmados: consulta de marcas, consulta de modelos por marca, consulta de ano/modelo, consulta de detalhes de veículo e consulta com parâmetro inválido. O nome oficial, URL, contrato e paths exatos da API histórica não foram preservados e não devem ser inferidos. Os cenários e verificações Petstore constituem um protocolo novo e não podem ser associados retroativamente aos resultados do piloto.
 
 A execução operacional do protocolo final é regida pelo [Plano de Execução](docs/pt-BR/Plano_de_Execucao.md), pelo [Checklist de Execução](docs/pt-BR/Checklist_Pre_Execucao.md) e pelo [Plano de Controle Experimental](docs/pt-BR/Plano_de_Controle_Experimental.md).
 

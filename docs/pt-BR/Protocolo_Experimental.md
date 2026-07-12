@@ -15,6 +15,16 @@ Orientar a futura comparação controlada e auditável entre três abordagens de
 
 O objeto do estudo é a Swagger Petstore - OpenAPI 3.0. O subconjunto final de endpoints e os detalhes executáveis dos cinco cenários ainda dependem da revisão das matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md).
 
+## Unidades e níveis de análise
+
+- **Unidade de execução:** um cenário implementado sob uma abordagem de desenvolvimento.
+- **Total de unidades de execução:** `5 cenários × 3 abordagens = 15`.
+- **Registro observacional:** evidências e medições produzidas por uma unidade de execução.
+- **Coleta por unidade de execução:** tempo de desenvolvimento, retrabalho e correção inicial das validações.
+- **Consolidação por abordagem completa:** reúso de código, aderência ao BDD e qualidade estrutural, avaliados somente depois que os cinco cenários da abordagem estiverem concluídos.
+
+Não se permite agregar dados entre o nível da unidade de execução e o nível da abordagem completa sem regra explícita aprovada e congelada antes da execução.
+
 ## Unidade de comparação
 
 Cada abordagem deve produzir uma implementação dos mesmos cinco cenários e ser submetida às mesmas verificações planejadas para cada cenário. A comparabilidade é estabelecida entre manual, GitHub Copilot e ChatGPT dentro de cada cenário. Não se pressupõe que criação, consulta, atualização, filtro e exclusão tenham complexidade idêntica entre si. Requisitos, materiais de entrada, critérios de conclusão e ambiente devem ser iguais entre abordagens, exceto pela forma de desenvolvimento que caracteriza cada condição.
@@ -39,19 +49,21 @@ Antes da execução, devem ser registrados:
 - os instrumentos de avaliação de reúso de código, aderência ao BDD e qualidade estrutural;
 - as versões e identificadores de ferramentas efetivamente observados;
 - os critérios para registrar retrabalho e tratar impedimentos ou falhas técnicas.
+- o registro da pré-randomização que define a ordem de GitHub Copilot e ChatGPT após a condição manual.
 
 Decisões ainda pendentes devem permanecer identificadas como pendentes e ser resolvidas antes da coleta correspondente.
 
 ## Procedimento
 
 1. Registrar a abordagem, o commit, o ambiente e os materiais de entrada.
-2. Implementar os cinco cenários conforme as regras da abordagem.
-3. Registrar o tempo de desenvolvimento e o retrabalho de acordo com os registros originais e com a definição que ainda será confirmada em `Metricas.md`.
-4. Preservar os prompts e as interações permitidas no idioma exato em que ocorreram.
-5. Aplicar as mesmas cinquenta verificações à implementação concluída.
-6. Avaliar reúso de código, aderência ao BDD e qualidade estrutural com os instrumentos definidos previamente.
-7. Armazenar os registros originais em `datasets/final-experiment/raw/`, sem sobrescrita.
-8. Documentar correções, exclusões, impedimentos e qualquer desvio do protocolo em `EXPERIMENT_LOG.md`.
+2. Executar primeiro a condição manual e, depois, GitHub Copilot e ChatGPT na ordem pré-randomizada e preservada antes do congelamento.
+3. Implementar os cinco cenários conforme as regras da abordagem, produzindo um registro observacional por unidade de execução.
+4. Registrar tempo de desenvolvimento, retrabalho e correção inicial das validações por unidade de execução, conforme `Metricas.md`.
+5. Preservar os prompts e as interações permitidas no idioma exato em que ocorreram.
+6. Aplicar as dez verificações correspondentes durante cada unidade de execução, totalizando cinquenta por abordagem, sem apagar o estado da primeira execução.
+7. Somente após os cinco cenários de uma abordagem, avaliar reúso de código, aderência ao BDD e qualidade estrutural com os instrumentos definidos previamente.
+8. Armazenar os registros originais em `datasets/final-experiment/raw/`, sem sobrescrita.
+9. Documentar correções, exclusões, impedimentos e qualquer desvio do protocolo em `EXPERIMENT_LOG.md`.
 
 A [matriz de rastreabilidade](Matriz_de_Rastreabilidade.md) conecta objetivo, questões, API, cenários, validações, métricas e futuros resultados.
 
