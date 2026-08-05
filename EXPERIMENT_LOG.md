@@ -59,3 +59,15 @@ O piloto preliminar possui execuções e resultados, mas seus registros não est
 ## Decisão produzida pelo piloto
 
 Recomenda-se o ambiente controlado para o futuro experimento final, sujeito à aceitação formal da imagem fixada por digest, da emulação de arquitetura e dos riscos residuais. Autenticação e segundo `DELETE` não devem ser usados como oráculos. O relatório completo está em `docs/pt-BR/Relatorio_do_Piloto_de_Viabilidade.md`.
+
+## Revisão pré-experimental do protocolo — v1.1
+
+- **Data:** 13 de julho de 2026
+- **Experimento final iniciado:** não
+- **Unidades finais executadas:** 0 de 15
+- **Observação de treino:** payload de criação sem `name` retornou HTTP `200`
+- **Observação de viabilidade:** JSON sintaticamente malformado com `Content-Type: application/json` retornou HTTP `400`
+- **Tratamento dos dados:** dados de treino são proibidos nas métricas do experimento final
+- **Nova versão aplicável:** `1.1`
+- **Novo commit-base:** `d626e1b95f979e33a3e41d6d4489b5b3ad54191f`
+- **Tag proposta:** `protocol-v1.1` — não criada
