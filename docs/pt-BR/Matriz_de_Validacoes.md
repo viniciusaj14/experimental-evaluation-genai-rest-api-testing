@@ -34,7 +34,9 @@ Na coluna de impedimento:
 | V07 | C01 | Contrato de resposta | Resposta positiva JSON é compatível com schema `Pet`. | Body e relatório de validação de schema. | Validação funcional executável | Sim | E2. |
 | V08 | C01 | Identidade | Representação retornada mantém o identificador exclusivo solicitado pelo cenário. | Payload, body e comparação. | Validação funcional executável | Sim | E2. |
 | V09 | C01 | Persistência do cenário | O recurso criado pode ser consultado pelo identificador exclusivo antes da limpeza. | Requisição GET e evidência do mesmo ID. | Controle experimental | Sim | E2. |
-| V10 | C01 | Negativo | Payload que viole um requisito obrigatório é rejeitado por código documentado para entrada/validação (`400` ou `422`), conforme caso final congelado. | Payload inválido, status e regra do oráculo. | Validação funcional executável | Sim | E2. |
+| V10 | C01 | Negativo | Corpo enviado com `Content-Type: application/json`, mas sintaticamente malformado, recebe código `400`. | Corpo bruto enviado, header `Content-Type`, status, body da resposta e timestamp. | Validação funcional executável | Sim | E2. |
+
+> **Nota metodológica sobre V10:** antes de qualquer unidade do experimento final, um treino fora da coleta oficial mostrou HTTP `200` para criação sem `name`, enquanto um teste de viabilidade com JSON sintaticamente malformado e `Content-Type: application/json` retornou HTTP `400`. A versão 1.1 substitui somente o caso negativo de C01/V10. Os dados de treino não integram as métricas, e a cardinalidade permanece em cinquenta verificações.
 
 ## C02 — Consulta por ID
 

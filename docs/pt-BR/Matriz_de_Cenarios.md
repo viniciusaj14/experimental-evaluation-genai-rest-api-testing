@@ -16,13 +16,19 @@ Os valores entre `<...>` são marcadores de dados a serem gerados por execução
 - **Endpoint e método:** `POST /pet` (`addPet`).
 - **Precondições:** serviço acessível; estratégia de identificador exclusivo disponível; contrato local íntegro.
 - **Dados de requisição:** JSON conforme schema `Pet`, com `id=<id-exclusivo>`, `name=<nome-exclusivo>`, `photoUrls=[<url-controlada>]` e `status=<status-permitido>`.
-- **Comportamento esperado:** para payload válido, resposta `200` com representação compatível com `Pet`; entradas inválidas devem ser avaliadas apenas contra os códigos documentados `400` e `422`, conforme o caso congelado posteriormente.
-- **Aspectos positivos e negativos:** criação válida; rejeição de payload que viole requisito explícito do schema.
+- **Comportamento esperado:** para payload válido, resposta `200` com representação compatível com `Pet`; no caso negativo oficial, um corpo JSON sintaticamente malformado, enviado com `Content-Type: application/json`, deve receber resposta HTTP `400`.
+- **Aspectos positivos e negativos:** criação válida; rejeição de corpo JSON sintaticamente malformado.
 - **Isolamento:** identificador e campos textuais com prefixo exclusivo da execução; não reutilizar registros públicos existentes.
 - **Limpeza:** `DELETE /pet/{petId}` após coleta das evidências; registrar impedimento se a limpeza não puder ser confirmada.
 - **Dependências:** nenhuma anterior; fornece dado somente para sua própria validação e limpeza.
 - **Complexidade relativa estimada:** média, considerando payload, schema, caso negativo e limpeza.
 - **Comparabilidade entre abordagens:** C01 deve usar os mesmos dados parametrizados, critérios e dez verificações nas três abordagens; sua complexidade não é usada como padrão obrigatório para outras operações.
+
+### Decisão do caso negativo de C01
+
+Durante um treino realizado fora da coleta oficial, a instância controlada retornou HTTP `200` para um payload de criação sem o campo obrigatório `name`. Em outro teste de viabilidade, um corpo JSON sintaticamente malformado, enviado com `Content-Type: application/json`, retornou HTTP `400`.
+
+Essas observações de treino não integram o experimento final e são proibidas nas métricas experimentais. Como nenhuma das quinze unidades finais havia sido executada, a revisão foi realizada antes do início do experimento e fixou o JSON sintaticamente malformado como único caso negativo oficial de C01/V10 na versão 1.1.
 
 ## C02 — Recuperar um pet existente
 

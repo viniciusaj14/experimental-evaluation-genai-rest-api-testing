@@ -4,6 +4,8 @@
 
 Este documento define o procedimento operacional do experimento final controlado (Fase 2) com Swagger Petstore OpenAPI 3. Ele transforma o protocolo científico em uma sequência executável e auditável, sem alterar objetivo, questões de pesquisa, métricas, cenários ou verificações. O experimento final ainda não foi executado.
 
+Todas as quinze unidades do experimento final devem seguir o [`Protocolo_Congelado_v1.1.md`](Protocolo_Congelado_v1.1.md), que substitui a versão 1.0 como versão válida para execução. A versão 1.0 permanece preservada somente como histórico.
+
 O plano somente poderá ser usado após o congelamento do protocolo, dos prompts, dos cenários, da matriz de validações, das rubricas e do ambiente. O [checklist](Checklist_Pre_Execucao.md) e o [plano de controle experimental](Plano_de_Controle_Experimental.md) são partes obrigatórias da execução.
 
 ## Regras gerais de execução
@@ -86,6 +88,7 @@ Encerramento
 - confirmar abordagem, cenário e identificador da execução;
 - conferir estado Git limpo e origem no commit-base aplicável;
 - selecionar somente os requisitos, prompts e verificações congeladas do cenário;
+- para C01, confirmar que V10 usa exatamente um corpo JSON sintaticamente malformado com `Content-Type: application/json` e resposta esperada HTTP `400`;
 - preparar identificadores e dados isolados;
 - confirmar disponibilidade do ambiente e iniciar logs;
 - zerar o cronômetro sem iniciá-lo.
@@ -105,6 +108,8 @@ Executar a primeira versão capaz de iniciar o fluxo automatizado do cenário. R
 ### 5. Validação
 
 Aplicar as dez verificações congeladas do cenário, preservando categoria, estado, evidência e eventual impedimento. Não alterar o oráculo durante a execução.
+
+Para C01/V10, o caso negativo oficial é exclusivamente o envio de corpo JSON sintaticamente malformado com `Content-Type: application/json`, com resposta esperada HTTP `400`. A ausência de campo obrigatório, inclusive `name`, não deve ser usada como caso negativo oficial.
 
 ### 6. Correção
 
