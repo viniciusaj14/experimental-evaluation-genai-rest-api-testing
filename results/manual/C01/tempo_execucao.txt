@@ -1,0 +1,22 @@
+Cenário: C01 - Criar pet válido
+
+Abordagem: Desenvolvimento Manual
+
+Tempo total: 28 minutos e 02 segundos
+
+Início da gravação:
+Antes da implementação do arquivo PetSteps.java
+
+Fim da execução:
+Execução do TestRunner concluída com retorno "Process finished with exit code 0"
+
+Resultado:
+PASS
+
+Evidência:
+C01_execucao_manual.mov
+
+Observação:
+Durante a execução ocorreu erro de serialização JSON no Rest Assured.
+A correção aplicada foi utilizar ContentType.JSON.
+Após a correção o teste executou com sucesso.

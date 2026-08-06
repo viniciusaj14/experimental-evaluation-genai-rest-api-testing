@@ -71,3 +71,14 @@ Recomenda-se o ambiente controlado para o futuro experimento final, sujeito à a
 - **Nova versão aplicável:** `1.1`
 - **Novo commit-base:** `d626e1b95f979e33a3e41d6d4489b5b3ad54191f`
 - **Tag proposta:** `protocol-v1.1` — não criada
+
+## Execuções Experimentais
+
+| ID | Abordagem | Cenário | Tempo | Resultado |
+|---|---|---|---|---|
+| C01 | Manual | Criar um pet válido | 28m02s | PASS |
+
+Evidências:
+- Vídeo: results/manual/C01/C01_execucao_manual.mov
+- Resultado: results/manual/C01/resultado.txt
+- Tempo: results/manual/C01/tempo_execucao.txt
