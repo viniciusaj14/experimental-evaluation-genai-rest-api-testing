@@ -23,3 +23,8 @@ Feature: Gerenciamento de pets na Petstore API
     When eu enviar uma requisição DELETE para excluir o pet
     Then a API deve retornar status code 200 na exclusão
     And o pet não deve mais existir
+
+  Scenario: Consultar um pet inexistente
+    Given que não existe um pet com o identificador informado
+    When eu consultar o pet inexistente pelo identificador
+    Then a API deve retornar status code 404

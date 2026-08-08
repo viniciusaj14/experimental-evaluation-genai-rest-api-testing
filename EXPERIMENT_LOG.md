@@ -80,6 +80,7 @@ Recomenda-se o ambiente controlado para o futuro experimento final, sujeito à a
 | C02 | Manual | Consultar um pet existente | 16m23s | PASS |
 | C03 | Manual | Atualizar um pet existente | 1h00m55s | PASS |
 | C04 | Manual | Excluir um pet existente | 34m28s | PASS |
+| C05 | Manual | Consultar um pet inexistente | 08m09s | PASS |
 
 Evidências:
 
@@ -102,3 +103,8 @@ C04:
 - Vídeo: results/manual/C04/C04_execucao_manual.mov
 - Resultado: results/manual/C04/resultado.txt
 - Tempo: results/manual/C04/tempo_execucao.txt
+
+C05:
+- Vídeo: results/manual/C05/C05_execucao_manual.mov
+- Resultado: results/manual/C05/resultado.txt
+- Tempo: results/manual/C05/tempo_execucao.txt

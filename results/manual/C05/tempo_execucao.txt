@@ -1,0 +1,10 @@
+C05 - Tempo de Execução Manual
+
+Cenário:
+Consultar um pet inexistente
+
+Tempo:
+08 minutos e 09 segundos
+
+Resultado:
+PASS

@@ -17,6 +17,7 @@ public class PetSteps {
     private long petIdConsulta = 2002L;
     private long petIdAtualizacao = 3003L;
     private long petIdExclusao = 4004L;
+    private long petIdInexistente = 999999L;
 
     //Métodos do C01 aqui
 
@@ -242,5 +243,39 @@ public class PetSteps {
                 .get(ApiConfig.BASE_URL + "/pet/" + petIdExclusao);
 
         assertEquals(404, consulta.statusCode());
+    }
+
+    //Métodos do C05 aqui
+
+    @Given("que não existe um pet com o identificador informado")
+    public void queExisteUmPetComOIdentificadorInformado(){
+
+        Response consulta =
+                given()
+                        .when()
+                        .get(ApiConfig.BASE_URL + "/pet/" + petIdInexistente);
+
+        System.out.println("STATUS CONSULTA C05: " + consulta.statusCode());
+        System.out.println("BODY CONSULTA C05: " + consulta.body().asString());
+
+        assertEquals(404, consulta.statusCode());
+    }
+
+    @When("eu consultar o pet inexistente pelo identificador")
+    public void euConsultarOPetInexistentePeloIdentificador(){
+
+        response =
+                given()
+                        .when()
+                        .get(ApiConfig.BASE_URL + "/pet/" + petIdInexistente);
+
+        System.out.println("STATUS GET C05: " + response.statusCode());
+        System.out.println("BODY GET C05: " + response.body().asString());
+    }
+
+    @Then("a API deve retornar status code 404")
+    public void aAPIDeveRetornarStatus404(){
+
+        assertEquals(404, response.statusCode());
     }
 }
