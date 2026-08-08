@@ -79,6 +79,7 @@ Recomenda-se o ambiente controlado para o futuro experimento final, sujeito à a
 | C01 | Manual | Criar um pet válido | 28m02s | PASS |
 | C02 | Manual | Consultar um pet existente | 16m23s | PASS |
 | C03 | Manual | Atualizar um pet existente | 1h00m55s | PASS |
+| C04 | Manual | Excluir um pet existente | 34m28s | PASS |
 
 Evidências:
 
@@ -96,3 +97,8 @@ C03:
 - Vídeo: results/manual/C03/C03_execucao_manual.mov
 - Resultado: results/manual/C03/resultado.txt
 - Tempo: results/manual/C03/tempo_execucao.txt
+
+C04:
+- Vídeo: results/manual/C04/C04_execucao_manual.mov
+- Resultado: results/manual/C04/resultado.txt
+- Tempo: results/manual/C04/tempo_execucao.txt

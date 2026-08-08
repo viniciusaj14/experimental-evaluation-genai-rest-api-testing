@@ -1,0 +1,24 @@
+C04 - Execução Manual
+
+Status: PASS
+
+Cenário:
+Excluir um pet existente
+
+Implementação:
+Manual
+
+Tecnologias utilizadas:
+- Java 21
+- Rest Assured
+- Cucumber BDD
+- JUnit 5
+
+Resultado final:
+Process finished with exit code 0
+
+Evidência:
+C04_execucao_manual.mov
+
+Tempo registrado:
+34 minutos e 28 segundos

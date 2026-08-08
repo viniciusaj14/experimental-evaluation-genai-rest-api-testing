@@ -7,8 +7,6 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.http.ContentType;
 
-import java.sql.SQLOutput;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,6 +16,7 @@ public class PetSteps {
     private String petName = "pet-manual-vinicius";
     private long petIdConsulta = 2002L;
     private long petIdAtualizacao = 3003L;
+    private long petIdExclusao = 4004L;
 
     //Métodos do C01 aqui
 
@@ -185,5 +184,63 @@ public class PetSteps {
                 .delete(ApiConfig.BASE_URL + "/pet/" + petIdAtualizacao)
                 .then()
                 .statusCode(200);
+    }
+
+    //Métodos do C04 aqui
+
+    @Given("que existe um pet cadastrado para exclusão")
+    public void queExisteUmPetCadastradoParaExclusao() {
+
+        String body = """
+                        {
+                        "id":4004,
+                        "name":"pet-c04-exclusao",
+                        "photoUrls":[
+                        "https://example.com/pet.jpg"
+                        ],
+                        "status":"available"
+                        }
+                """;
+
+        response =
+                given()
+                        .contentType(ContentType.JSON)
+                        .body(body)
+                        .when()
+                        .post(ApiConfig.BASE_URL + "/pet");
+
+        System.out.println("STATUS CREATE C04: " + response.statusCode());
+        System.out.println("BODY CREATE C04: " + response.body().asString());
+
+        assertEquals(200, response.statusCode());
+    }
+
+    @When("eu enviar uma requisição DELETE para excluir o pet")
+    public void euEnviarUmaRequisicaoDELETEparaExcluirOPet() {
+
+        response =
+                given()
+                        .when()
+                        .delete(ApiConfig.BASE_URL + "/pet/" + petIdExclusao);
+
+        System.out.println("STATUS DELETE C04: " + response.statusCode());
+        System.out.println("BODY DELETE C04: " + response.body().asString());
+    }
+
+    @Then("a API deve retornar status code 200 na exclusão")
+    public void aAPIDeveRetornarStatusCode200NaExclusao(){
+
+        assertEquals(200, response.statusCode());
+    }
+
+    @Then("o pet não deve mais existir")
+    public void oPetNaoDeveMaisExistir(){
+
+        Response consulta =
+                given()
+                        .when()
+                .get(ApiConfig.BASE_URL + "/pet/" + petIdExclusao);
+
+        assertEquals(404, consulta.statusCode());
     }
 }

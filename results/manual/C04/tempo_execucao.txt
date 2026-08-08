@@ -1,0 +1,10 @@
+C04 - Tempo de Execução Manual
+
+Cenário:
+Excluir um pet existente
+
+Tempo:
+34 minutos e 28 segundos
+
+Resultado:
+PASS

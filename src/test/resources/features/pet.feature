@@ -17,3 +17,9 @@ Feature: Gerenciamento de pets na Petstore API
     When eu enviar uma requisição PUT para atualizar o pet
     Then a API deve retornar status code 200 na atualização
     And os dados do pet devem estar atualizados
+
+  Scenario: Excluir um pet existente
+    Given que existe um pet cadastrado para exclusão
+    When eu enviar uma requisição DELETE para excluir o pet
+    Then a API deve retornar status code 200 na exclusão
+    And o pet não deve mais existir
