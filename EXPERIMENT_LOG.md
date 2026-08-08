@@ -74,9 +74,10 @@ Recomenda-se o ambiente controlado para o futuro experimento final, sujeito à a
 
 ## Execuções Experimentais
 
-| ID | Abordagem | Cenário | Tempo | Resultado |
-|---|---|---|---|---|
+| ID | Abordagem | Cenário | Tempo  | Resultado |
+|---|---|---|--------|---|
 | C01 | Manual | Criar um pet válido | 28m02s | PASS |
+| C02 | Manual | Consultar um pet existente | 16m23s | PASS |
 
 Evidências:
 - Vídeo: results/manual/C01/C01_execucao_manual.mov

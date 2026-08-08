@@ -1,0 +1,16 @@
+Cenário: C02 - Consultar um pet existente
+
+Abordagem: Desenvolvimento Manual
+
+Tempo total: 16 minutos e 23 segundos
+
+Resultado:
+PASS
+
+Evidência:
+C02_execucao_manual.mov
+
+Observação:
+O cenário foi implementado manualmente utilizando Java, Rest Assured, Cucumber BDD e JUnit 5.
+Durante a execução ocorreu necessidade de ajuste no payload JSON utilizado na criação do pet.
+Após a correção, o teste foi executado com sucesso.
