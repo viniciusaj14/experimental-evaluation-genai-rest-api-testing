@@ -1,0 +1,11 @@
+Cenário: C03 - Atualizar um pet existente
+
+Abordagem: Desenvolvimento Manual
+
+Tempo total: 1h00m55s
+
+Resultado:
+PASS
+
+Evidência:
+C03_execucao_manual.mov

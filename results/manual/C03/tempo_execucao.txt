@@ -1,0 +1,29 @@
+C03 - Execução Manual
+
+Status: PASS
+
+Cenário:
+Atualizar um pet existente
+
+Implementação:
+Manual
+
+Tecnologias utilizadas:
+- Java 21
+- Rest Assured
+- Cucumber BDD
+- JUnit 5
+
+Resultado final:
+Process finished with exit code 0
+
+Evidência:
+C03_execucao_manual.mov
+
+Tempo registrado:
+1 hora, 00 minutos e 55 segundos
+
+Observação:
+O cenário foi implementado manualmente utilizando Behavior-Driven Development (BDD).
+Durante a implementação foram realizados ajustes nos steps do Cucumber e na estrutura do payload JSON utilizado na requisição PUT.
+Após as correções, a atualização do pet foi executada com sucesso.

@@ -11,3 +11,9 @@ Feature: Gerenciamento de pets na Petstore API
     When eu consultar o pet pelo seu identificador
     Then a API deve retornar status code 200 para a consulta
     And o identificador do pet consultado deve estar correto
+
+  Scenario: Atualizar um pet existente
+    Given que existe um pet cadastrado para atualização
+    When eu enviar uma requisição PUT para atualizar o pet
+    Then a API deve retornar status code 200 na atualização
+    And os dados do pet devem estar atualizados

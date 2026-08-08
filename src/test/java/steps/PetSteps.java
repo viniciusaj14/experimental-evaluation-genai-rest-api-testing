@@ -7,6 +7,8 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.http.ContentType;
 
+import java.sql.SQLOutput;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -15,6 +17,7 @@ public class PetSteps {
     private Response response;
     private String petName = "pet-manual-vinicius";
     private long petIdConsulta = 2002L;
+    private long petIdAtualizacao = 3003L;
 
     //Métodos do C01 aqui
 
@@ -104,6 +107,82 @@ public class PetSteps {
         given()
                 .when()
                 .delete(ApiConfig.BASE_URL + "/pet/" + petIdConsulta)
+                .then()
+                .statusCode(200);
+    }
+
+    //Métodos do C03 aqui
+
+    @Given("que existe um pet cadastrado para atualização")
+    public void queExisteUmPetCadastradoParaAtualizacao() {
+
+        String body = """
+                {
+                "id":3003,
+                "name":"pet-c03-original",
+                "photoUrls":[
+                "https://example.com/pet.jpg"
+                ],
+                "status":"available"
+                }
+                """;
+
+        given()
+                .contentType(ContentType.JSON)
+                .body(body)
+                .when()
+                .post(ApiConfig.BASE_URL + "/pet")
+                .then()
+                .statusCode(200);
+    }
+
+    @When("eu enviar uma requisição PUT para atualizar o pet")
+    public void euEnviarUmaRequisicaoPUTparaAtualizarOPet() {
+
+        String body = """
+                {
+                "id":3003,
+                "name":"pet-c03-atualizado",
+                "photoUrls":[
+                "https://example.com/pet.jpg"
+                ],
+                "status":"sold"
+                }
+                """;
+
+        response =
+                given()
+                        .contentType(ContentType.JSON)
+                        .body(body)
+                        .when()
+                        .put(ApiConfig.BASE_URL + "/pet");
+
+        System.out.println("STATUS UPDATE C03: " + response.statusCode());
+        System.out.println("BODY UPDATE C03: " + response.body().asString());
+    }
+
+    @Then("a API deve retornar status code 200 na atualização")
+    public void aAPIDeveRetornarStatusCode200NaAtualizacao() {
+
+        assertEquals(200, response.statusCode());
+    }
+
+    @Then("os dados do pet devem estar atualizados")
+    public void osDadosDoPetDevEstarAtualizados() {
+
+        assertEquals(
+                "pet-c03-atualizado",
+                response.jsonPath().getString("name")
+        );
+
+        assertEquals(
+                "sold",
+                response.jsonPath().getString("status")
+        );
+
+        given()
+                .when()
+                .delete(ApiConfig.BASE_URL + "/pet/" + petIdAtualizacao)
                 .then()
                 .statusCode(200);
     }
