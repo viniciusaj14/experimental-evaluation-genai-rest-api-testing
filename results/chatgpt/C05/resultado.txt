@@ -1,0 +1,14 @@
+ID do cenário:
+C05
+
+Abordagem:
+ChatGPT
+
+Cenário:
+Consultar um pet inexistente por GET /pet/{id}.
+
+Status:
+PASS
+
+Resultado:
+A API retornou HTTP 404 e informou que o pet não foi encontrado.

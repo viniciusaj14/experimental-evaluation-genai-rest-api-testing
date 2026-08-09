@@ -108,3 +108,43 @@ C05:
 - Vídeo: results/manual/C05/C05_execucao_manual.mov
 - Resultado: results/manual/C05/resultado.txt
 - Tempo: results/manual/C05/tempo_execucao.txt
+
+## Execuções Experimentais - ChatGPT
+
+| ID | Abordagem | Cenário | Tempo | Resultado |
+|---|---|---|---|---|
+| C01 | ChatGPT | Criar um pet válido | PENDENTE | PASS |
+| C02 | ChatGPT | Consultar pet pelo identificador | PENDENTE | PASS |
+| C03 | ChatGPT | Atualizar pet existente | PENDENTE | PASS |
+| C04 | ChatGPT | Excluir pet existente | PENDENTE | PASS |
+| C05 | ChatGPT | Consultar pet inexistente | PENDENTE | PASS |
+
+Evidências:
+
+C01:
+- Resultado: results/chatgpt/C01/resultado.txt
+- Tempo: results/chatgpt/C01/tempo_execucao.txt
+
+C02:
+- Resultado: results/chatgpt/C02/resultado.txt
+- Tempo: results/chatgpt/C02/tempo_execucao.txt
+
+C03:
+- Resultado: results/chatgpt/C03/resultado.txt
+- Tempo: results/chatgpt/C03/tempo_execucao.txt
+
+C04:
+- Resultado: results/chatgpt/C04/resultado.txt
+- Tempo: results/chatgpt/C04/tempo_execucao.txt
+
+C05:
+- Resultado: results/chatgpt/C05/resultado.txt
+- Tempo: results/chatgpt/C05/tempo_execucao.txt
+
+Execução técnica:
+- Comando: `mvn -Dtest=chatgpt.runner.ChatGPTTestRunner test`
+- Ambiente observado: OpenJDK 21.0.6, Maven 3.9.11, Swagger Petstore controlada em `http://127.0.0.1:18080/api/v3`.
+- Primeira execução: C01–C04 aprovados; C05 apresentou erro de binding porque a barra de `application/json` não estava escapada na expressão Cucumber.
+- Ajuste: escape da barra na anotação do step de C05, sem mudança no comportamento ou no oráculo do cenário.
+- Reexecução: 5 cenários executados, 0 falhas, 0 erros e 0 ignorados; build concluído com sucesso.
+- Tempos experimentais: pendentes de informação posterior pelo pesquisador; o tempo interno do Maven não foi usado como métrica experimental.

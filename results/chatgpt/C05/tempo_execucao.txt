@@ -1,0 +1,8 @@
+ID do cenário:
+C05
+
+Abordagem:
+ChatGPT
+
+Tempo de execução:
+PENDENTE — a ser informado posteriormente pelo pesquisador.
