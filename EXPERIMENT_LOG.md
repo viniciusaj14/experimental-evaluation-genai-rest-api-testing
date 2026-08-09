@@ -72,82 +72,64 @@ Recomenda-se o ambiente controlado para o futuro experimento final, sujeito à a
 - **Novo commit-base:** `d626e1b95f979e33a3e41d6d4489b5b3ad54191f`
 - **Tag proposta:** `protocol-v1.1` — não criada
 
-## Execuções Experimentais
+## Execuções Experimentais - Manual
 
-| ID | Abordagem | Cenário | Tempo  | Resultado |
-|---|---|---|--------|---|
-| C01 | Manual | Criar um pet válido | 28m02s | PASS |
-| C02 | Manual | Consultar um pet existente | 16m23s | PASS |
-| C03 | Manual | Atualizar um pet existente | 1h00m55s | PASS |
-| C04 | Manual | Excluir um pet existente | 34m28s | PASS |
-| C05 | Manual | Consultar um pet inexistente | 08m09s | PASS |
+- **Abordagem:** desenvolvimento Manual.
+- **Execução:** a abordagem Manual foi executada utilizando o runner `runner.TestRunner` por meio da IDE IntelliJ IDEA.
+- **Ambiente experimental:**
+  - Sistema operacional: macOS;
+  - IDE: IntelliJ IDEA;
+  - Linguagem: Java;
+  - Framework de testes: Cucumber + JUnit;
+  - Biblioteca HTTP: Rest Assured;
+  - API: Swagger Petstore local.
+- **Limitação:** Não foi preservado um comando Maven específico para a execução Manual, pois a execução original ocorreu diretamente pelo runner da IDE.
+- **Observações:** os cinco cenários foram concluídos com `PASS`; ajustes observados durante C01–C03 permanecem descritos nos arquivos de tempo. Os registros manuais não foram normalizados retroativamente.
 
-Evidências:
+| ID | Cenário | Resultado esperado | Resultado obtido | Status |
+|---|---|---|---|---|
+| C01 | Criar um pet válido | HTTP 200 e nome retornado correspondente ao enviado. | Critérios atendidos conforme registro preservado. | PASS |
+| C02 | Consultar pet pelo identificador | HTTP 200 e ID retornado correspondente ao consultado. | Critérios atendidos conforme registro preservado. | PASS |
+| C03 | Atualizar pet existente | HTTP 200, nome e status atualizados. | Critérios atendidos conforme registro preservado. | PASS |
+| C04 | Excluir pet existente | HTTP 200 e pet indisponível após a exclusão. | Critérios atendidos conforme registro preservado. | PASS |
+| C05 | Consultar pet inexistente | GET `/pet/{id}` retorna HTTP 404. | Critérios atendidos conforme registro preservado. | PASS |
 
-C01:
-- Vídeo: results/manual/C01/C01_execucao_manual.mov
-- Resultado: results/manual/C01/resultado.txt
-- Tempo: results/manual/C01/tempo_execucao.txt
+Evidências documentais:
 
-C02:
-- Vídeo: results/manual/C02/C02_execucao_manual.mov
-- Resultado: results/manual/C02/resultado.txt
-- Tempo: results/manual/C02/tempo_execucao.txt
-
-C03:
-- Vídeo: results/manual/C03/C03_execucao_manual.mov
-- Resultado: results/manual/C03/resultado.txt
-- Tempo: results/manual/C03/tempo_execucao.txt
-
-C04:
-- Vídeo: results/manual/C04/C04_execucao_manual.mov
-- Resultado: results/manual/C04/resultado.txt
-- Tempo: results/manual/C04/tempo_execucao.txt
-
-C05:
-- Vídeo: results/manual/C05/C05_execucao_manual.mov
-- Resultado: results/manual/C05/resultado.txt
-- Tempo: results/manual/C05/tempo_execucao.txt
+| ID | Resultado | Tempo |
+|---|---|---|
+| C01 | `results/manual/C01/resultado.txt` | `results/manual/C01/tempo_execucao.txt` |
+| C02 | `results/manual/C02/resultado.tx` | `results/manual/C02/tempo_execucao.txt` |
+| C03 | `results/manual/C03/resultado.txt` | `results/manual/C03/tempo_execucao.txt` |
+| C04 | `results/manual/C04/resultado.txt` | `results/manual/C04/tempo_execucao.txt` |
+| C05 | `results/manual/C05/resultado.txt` | `results/manual/C05/tempo_execucao.txt` |
 
 ## Execuções Experimentais - ChatGPT
 
-| ID | Abordagem | Cenário | Tempo | Resultado |
+- **Abordagem:** implementação auxiliada por ChatGPT.
+- **Comando:** `mvn -Dtest=chatgpt.runner.ChatGPTTestRunner test`.
+- **Ambiente observado:** OpenJDK 21.0.6, Maven 3.9.11 e Swagger Petstore controlada em `http://127.0.0.1:18080/api/v3`.
+- **Limitações:** tempos de implementação ainda pendentes de preenchimento pelo pesquisador; tempos internos do Maven e dos testes não podem ser usados como métrica experimental.
+
+| ID | Cenário | Resultado esperado | Resultado obtido | Status |
 |---|---|---|---|---|
-| C01 | ChatGPT | Criar um pet válido | PENDENTE | PASS |
-| C02 | ChatGPT | Consultar pet pelo identificador | PENDENTE | PASS |
-| C03 | ChatGPT | Atualizar pet existente | PENDENTE | PASS |
-| C04 | ChatGPT | Excluir pet existente | PENDENTE | PASS |
-| C05 | ChatGPT | Consultar pet inexistente | PENDENTE | PASS |
+| C01 | Criar um pet válido | HTTP 200 e nome retornado correspondente ao enviado. | HTTP 200 e nome correspondente ao enviado. | PASS |
+| C02 | Consultar pet pelo identificador | HTTP 200 e ID retornado correspondente ao consultado. | HTTP 200 e ID correspondente ao consultado. | PASS |
+| C03 | Atualizar pet existente | HTTP 200, nome e status atualizados. | HTTP 200, mesmo ID, novo nome e status atualizado. | PASS |
+| C04 | Excluir pet existente | HTTP 200 e consulta posterior retorna HTTP 404. | HTTP 200 na exclusão e HTTP 404 na consulta posterior. | PASS |
+| C05 | Consultar pet inexistente por GET `/pet/{id}` | HTTP 404 e body `Pet not found`. | HTTP 404 e body `Pet not found`. | PASS |
 
-Evidências:
+Evidências documentais:
 
-C01:
-- Resultado: results/chatgpt/C01/resultado.txt
-- Tempo: results/chatgpt/C01/tempo_execucao.txt
+| ID | Resultado | Tempo |
+|---|---|---|
+| C01 | `results/chatgpt/C01/resultado.txt` | `results/chatgpt/C01/tempo_execucao.txt` |
+| C02 | `results/chatgpt/C02/resultado.txt` | `results/chatgpt/C02/tempo_execucao.txt` |
+| C03 | `results/chatgpt/C03/resultado.txt` | `results/chatgpt/C03/tempo_execucao.txt` |
+| C04 | `results/chatgpt/C04/resultado.txt` | `results/chatgpt/C04/tempo_execucao.txt` |
+| C05 | `results/chatgpt/C05/resultado.txt` | `results/chatgpt/C05/tempo_execucao.txt` |
 
-C02:
-- Resultado: results/chatgpt/C02/resultado.txt
-- Tempo: results/chatgpt/C02/tempo_execucao.txt
-
-C03:
-- Resultado: results/chatgpt/C03/resultado.txt
-- Tempo: results/chatgpt/C03/tempo_execucao.txt
-
-C04:
-- Resultado: results/chatgpt/C04/resultado.txt
-- Tempo: results/chatgpt/C04/tempo_execucao.txt
-
-C05:
-- Resultado: results/chatgpt/C05/resultado.txt
-- Tempo: results/chatgpt/C05/tempo_execucao.txt
-
-Execução técnica:
-- Comando: `mvn -Dtest=chatgpt.runner.ChatGPTTestRunner test`
-- Ambiente observado: OpenJDK 21.0.6, Maven 3.9.11, Swagger Petstore controlada em `http://127.0.0.1:18080/api/v3`.
-- Primeira execução: C01–C04 aprovados; C05 apresentou erro de binding porque a barra de `application/json` não estava escapada na expressão Cucumber.
-- Ajuste: escape da barra na anotação do step de C05, sem mudança no comportamento ou no oráculo do cenário.
-- Reexecução: 5 cenários executados, 0 falhas, 0 erros e 0 ignorados; build concluído com sucesso.
-- Resultado final:
+Resultado final:
 
 ```text
 Tests run: 5
@@ -157,4 +139,58 @@ Skipped: 0
 BUILD SUCCESS
 ```
 
-- Tempos experimentais: pendentes de informação posterior pelo pesquisador; o tempo interno do Maven não foi usado como métrica experimental.
+## Execuções Experimentais - GitHub Copilot
+
+- **Abordagem:** implementação auxiliada por GitHub Copilot.
+- **Comando:** `mvn -Dtest=copilot.runner.CopilotTestRunner test`.
+- **Ambiente observado:** OpenJDK 21.0.6, Maven 3.9.11 e Swagger Petstore controlada em `http://127.0.0.1:18080/api/v3`.
+- **Quantidade de testes executados:** 5.
+- **Limitações:** tempos de implementação ainda pendentes de preenchimento pelo pesquisador; tempos internos do Maven e dos testes não podem ser usados como métrica experimental.
+
+| ID | Cenário | Resultado esperado | Resultado obtido | Status |
+|---|---|---|---|---|
+| C01 | Criar um pet válido | HTTP 200 e nome retornado correspondente ao enviado. | HTTP 200 e nome correspondente ao enviado. | PASS |
+| C02 | Consultar pet pelo identificador | HTTP 200 e ID retornado correspondente ao consultado. | HTTP 200 e ID correspondente ao consultado. | PASS |
+| C03 | Atualizar pet existente | HTTP 200, nome e status atualizados. | HTTP 200, mesmo ID, novo nome e status atualizado. | PASS |
+| C04 | Excluir pet existente | HTTP 200 e consulta posterior retorna HTTP 404. | HTTP 200 na exclusão e HTTP 404 na consulta posterior. | PASS |
+| C05 | Consultar pet inexistente por GET `/pet/{id}` | HTTP 404 e body `Pet not found`. | HTTP 404 e body `Pet not found`. | PASS |
+
+Evidências documentais:
+
+| ID | Resultado | Tempo |
+|---|---|---|
+| C01 | `results/copilot/C01/resultado.txt` | `results/copilot/C01/tempo_execucao.txt` |
+| C02 | `results/copilot/C02/resultado.txt` | `results/copilot/C02/tempo_execucao.txt` |
+| C03 | `results/copilot/C03/resultado.txt` | `results/copilot/C03/tempo_execucao.txt` |
+| C04 | `results/copilot/C04/resultado.txt` | `results/copilot/C04/tempo_execucao.txt` |
+| C05 | `results/copilot/C05/resultado.txt` | `results/copilot/C05/tempo_execucao.txt` |
+
+Resultado final:
+
+```text
+Tests run: 5
+Failures: 0
+Errors: 0
+Skipped: 0
+BUILD SUCCESS
+```
+
+## Consolidação experimental para análise comparativa
+
+Os valores abaixo serão preenchidos posteriormente pelo pesquisador a partir dos registros experimentais preservados. `PENDENTE` não representa zero, ausência de esforço ou resultado automático.
+
+| Cenário | Manual | ChatGPT | GitHub Copilot |
+|--------|--------|---------|----------------|
+| C01 | PENDENTE | PENDENTE | PENDENTE |
+| C02 | PENDENTE | PENDENTE | PENDENTE |
+| C03 | PENDENTE | PENDENTE | PENDENTE |
+| C04 | PENDENTE | PENDENTE | PENDENTE |
+| C05 | PENDENTE | PENDENTE | PENDENTE |
+
+## Critérios de comparação
+
+- **Tempo de implementação:** esforço registrado pelo pesquisador desde o início da implementação até a validação final com resultado `PASS`, conforme as regras experimentais; não usar tempo interno do Maven ou dos testes automatizados.
+- **Taxa de sucesso da execução:** resultado observado das execuções planejadas, preservando falhas, erros, itens ignorados e reexecuções sem inferir valores ausentes.
+- **Necessidade de intervenção humana:** intervenções realizadas pelo pesquisador para interpretar, adaptar, aplicar ou corrigir a solução de cada abordagem.
+- **Quantidade de ajustes necessários:** ajustes registrados após a primeira versão executável, conforme a definição metodológica aplicável.
+- **Manutenção da qualidade dos testes BDD:** aderência dos cenários e implementações aos critérios BDD e às evidências previstas nos instrumentos do experimento.
