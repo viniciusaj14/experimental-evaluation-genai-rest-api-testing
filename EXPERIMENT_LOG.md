@@ -147,4 +147,14 @@ Execução técnica:
 - Primeira execução: C01–C04 aprovados; C05 apresentou erro de binding porque a barra de `application/json` não estava escapada na expressão Cucumber.
 - Ajuste: escape da barra na anotação do step de C05, sem mudança no comportamento ou no oráculo do cenário.
 - Reexecução: 5 cenários executados, 0 falhas, 0 erros e 0 ignorados; build concluído com sucesso.
+- Resultado final:
+
+```text
+Tests run: 5
+Failures: 0
+Errors: 0
+Skipped: 0
+BUILD SUCCESS
+```
+
 - Tempos experimentais: pendentes de informação posterior pelo pesquisador; o tempo interno do Maven não foi usado como métrica experimental.
