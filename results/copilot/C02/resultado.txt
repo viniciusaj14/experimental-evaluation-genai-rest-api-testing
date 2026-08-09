@@ -1,0 +1,14 @@
+ID do cenário:
+C02
+
+Abordagem:
+GitHub Copilot
+
+Cenário:
+Consultar um pet existente por GET /pet/{id} após criação controlada.
+
+Status:
+PASS
+
+Resultado:
+A API retornou HTTP 200 e o identificador retornado correspondeu ao identificador consultado.

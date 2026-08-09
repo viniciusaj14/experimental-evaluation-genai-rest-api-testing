@@ -1,0 +1,14 @@
+ID do cenário:
+C03
+
+Abordagem:
+GitHub Copilot
+
+Cenário:
+Atualizar nome e status de um pet existente por PUT /pet.
+
+Status:
+PASS
+
+Resultado:
+A API retornou HTTP 200 e devolveu o mesmo ID, o novo nome e o status atualizado.

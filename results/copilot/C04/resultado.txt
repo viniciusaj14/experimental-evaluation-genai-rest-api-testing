@@ -1,0 +1,14 @@
+ID do cenário:
+C04
+
+Abordagem:
+GitHub Copilot
+
+Cenário:
+Excluir um pet existente por DELETE /pet/{id}.
+
+Status:
+PASS
+
+Resultado:
+A exclusão retornou HTTP 200 e a consulta posterior do mesmo identificador retornou HTTP 404.

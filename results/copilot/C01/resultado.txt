@@ -1,0 +1,14 @@
+ID do cenário:
+C01
+
+Abordagem:
+GitHub Copilot
+
+Cenário:
+Criar um pet válido por POST /pet.
+
+Status:
+PASS
+
+Resultado:
+A API retornou HTTP 200 e o nome do pet retornado correspondeu ao nome enviado.

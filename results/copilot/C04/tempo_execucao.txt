@@ -1,0 +1,11 @@
+Cenário:
+C04 - Excluir um pet existente
+
+Abordagem:
+GitHub Copilot
+
+Tempo de implementação:
+PENDENTE
+
+Observação:
+Tempo deve ser preenchido posteriormente pelo pesquisador. Não utilizar tempo de execução Maven, tempo de teste automatizado ou qualquer métrica automática.
