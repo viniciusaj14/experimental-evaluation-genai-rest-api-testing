@@ -1,87 +1,80 @@
 # Metodologia
 
-> **Nota sobre a evolução deste documento:** este arquivo é um registro metodológico em evolução. Ele deverá ser revisado para refletir exclusivamente os procedimentos efetivamente realizados no estudo. A versão final da seção de Metodologia do TCC USP/ESALQ será redigida de forma impessoal e no tempo passado. Formulações prospectivas ou itens pendentes presentes aqui não devem ser interpretados como procedimentos já executados.
+## Natureza e objetivo do estudo
 
-> **ALERTA DE CONSISTÊNCIA METODOLÓGICA:** a revisão histórica confirmou que o estudo preliminar usou uma API pública não identificada do domínio veicular, e não a Swagger Petstore. Por isso, o estudo concluído é classificado como piloto. O protocolo Petstore é novo, ainda não foi executado e deverá ser executado novamente após congelamento. Os registros originais do piloto devem ser preservados sem mapeamento retrospectivo.
+O estudo Petstore é relatado como uma **avaliação exploratória** de três abordagens para implementação de testes automatizados de API REST com Behavior-Driven Development (BDD): desenvolvimento Manual, desenvolvimento auxiliado por GitHub Copilot e desenvolvimento auxiliado por ChatGPT.
+
+O objetivo analítico compatível com os dados disponíveis é descrever a implementação e a executabilidade do mesmo subconjunto de cinco cenários nas três abordagens. O estudo não estabelece superioridade de produtividade ou qualidade quando tempos, retrabalho, verificações ou rubricas necessários para essas comparações não estão preservados.
 
 ## Fases do estudo
 
-1. **Piloto preliminar concluído:** comparação das três abordagens em cinco cenários de uma API veicular pública cuja identidade não foi preservada. Ver [`Estudo_Preliminar.md`](Estudo_Preliminar.md).
-2. **Piloto de viabilidade Petstore concluído:** verificação técnica dos ambientes público e controlado, contrato, autenticação, persistência, limpeza e filtro, executada em 12 de julho de 2026. Suas observações não integram o experimento final. Ver [`Relatorio_do_Piloto_de_Viabilidade.md`](Relatorio_do_Piloto_de_Viabilidade.md).
-3. **Experimento final Petstore futuro:** nova execução das três abordagens após congelamento do protocolo, ainda não realizada.
+1. **Piloto preliminar:** comparação das três abordagens em cinco cenários de uma API veicular pública cuja identidade e cujo contrato não foram preservados. Seus resultados não são combinados numericamente com a fase Petstore.
+2. **Piloto de viabilidade Petstore:** verificação técnica dos ambientes público e controlado, executada em 12 de julho de 2026. Suas observações de viabilidade não integram as métricas da execução observada.
+3. **Avaliação exploratória Petstore:** implementação, nas três abordagens, de um subconjunto observacional de cinco cenários registrado em `results/`.
 
-A separação e sua justificativa estão formalizadas no [`Registro_de_Decisao_Piloto_e_Experimento_Final.md`](Registro_de_Decisao_Piloto_e_Experimento_Final.md).
+A separação histórica entre as fases está documentada em [`Registro_de_Decisao_Piloto_e_Experimento_Final.md`](Registro_de_Decisao_Piloto_e_Experimento_Final.md). Os desvios identificados após a execução estão em [`Registro_de_Desvios_e_Limitacoes_da_Execucao_Final.md`](Registro_de_Desvios_e_Limitacoes_da_Execucao_Final.md).
 
-## Governança operacional
+## Planejamento e protocolo de referência
 
-A execução do experimento final é regida pelo [Plano de Execução](Plano_de_Execucao.md), pelo [Checklist de Execução](Checklist_Pre_Execucao.md) e pelo [Plano de Controle Experimental](Plano_de_Controle_Experimental.md). Esses documentos estabelecem, respectivamente, a sequência operacional, as verificações objetivas antes e depois de cada execução e os controles contra vieses e desvios, sem alterar o delineamento, os cenários, as validações ou as métricas definidos neste registro metodológico.
+O protocolo v1.1 foi congelado antes das execuções e permanece preservado como registro histórico do planejamento. Ele previa cinco cenários normativos, cinquenta verificações por abordagem, seis métricas e a ordem Manual → GitHub Copilot → ChatGPT.
 
-O delineamento e seus artefatos normativos foram formalmente congelados, antes da execução, no [`Protocolo_Congelado_v1.0.md`](Protocolo_Congelado_v1.0.md).
+A preservação do protocolo não significa que ele tenha sido executado integralmente. Nenhuma regra, cenário ou resultado histórico foi reescrito retrospectivamente para fazer coincidir planejamento e execução.
 
-## Delineamento do estudo
+## Objeto e ambiente tecnológico
 
-O experimento final realizará uma nova comparação entre desenvolvimento manual, GitHub Copilot e ChatGPT na automação de testes de API REST com Behavior-Driven Development (BDD). Cada abordagem implementará os mesmos cinco cenários Petstore e será avaliada pelas mesmas cinquenta verificações congeladas.
+A fase exploratória utilizou a Swagger Petstore OpenAPI 3.0. O contrato preservado está em [`docs/api-specification/swagger-petstore-openapi.json`](../api-specification/swagger-petstore-openapi.json), e a configuração do serviço controlado está em `datasets/petstore-feasibility-pilot/config/docker-compose.yml`.
 
-## Unidades e níveis de análise
+Os artefatos utilizam Java 21, Maven, REST Assured, Cucumber e JUnit. A execução Manual original foi registrada por meio de `runner.TestRunner` na IntelliJ IDEA. As execuções ChatGPT e GitHub Copilot têm comandos específicos documentados no `EXPERIMENT_LOG.md`. Versões ou identificadores não preservados não são inferidos.
 
-- **Unidade de execução:** um cenário implementado sob uma abordagem de desenvolvimento.
-- **Total de unidades de execução:** `5 cenários × 3 abordagens = 15`.
-- **Registro observacional:** conjunto de evidências e medições gerado por uma unidade de execução.
-- **Nível por unidade de execução:** tempo de desenvolvimento, retrabalho e correção inicial das validações são coletados separadamente em cada uma das quinze unidades.
-- **Nível por abordagem completa:** reúso de código, aderência ao BDD e qualidade estrutural são consolidados somente após a conclusão dos cinco cenários da respectiva abordagem.
+## Subconjunto de cenários executado
 
-Dados de níveis diferentes não podem ser agregados, promediados ou usados no mesmo cálculo sem uma regra explícita, aprovada antes da execução e registrada no protocolo. Em particular, as rubricas de abordagem completa não devem ser pontuadas após um cenário isolado.
+O conjunto efetivamente observado foi aplicado nas três abordagens:
 
-Não são pressupostos múltiplos participantes, avaliadores cegos, randomização de cenários ou participantes, cálculo de poder estatístico ou testes estatísticos inferenciais. A única randomização prevista é a pré-randomização da ordem entre GitHub Copilot e ChatGPT, realizada e registrada antes do congelamento, mantendo a condição manual em primeiro lugar. Qualquer outra decisão deverá ser documentada antes de sua aplicação; até lá, não faz parte da metodologia.
+| ID | Cenário observado |
+|---|---|
+| C01 | Criar um pet válido. |
+| C02 | Consultar um pet pelo identificador. |
+| C03 | Atualizar um pet existente. |
+| C04 | Excluir um pet existente e verificar sua indisponibilidade. |
+| C05 | Consultar um pet inexistente e esperar HTTP 404. |
 
-## Ambiente tecnológico
+Esse conjunto totaliza quinze unidades cenário-abordagem. Os arquivos de resultado preservam `PASS` para as cinco unidades de cada abordagem.
 
-O protocolo final prevê Java 21, Maven, REST Assured, Cucumber, JUnit 5 e IntelliJ IDEA. O ambiente confirmado do piloto está descrito separadamente em `Estudo_Preliminar.md` e não deve receber ferramentas ou versões por inferência. O ambiente efetivamente usado na execução final deve ser registrado no log experimental.
+O subconjunto observado não equivale aos cinco cenários normativos do protocolo v1.1: o caso negativo C01/V10 não possui evidência consolidada, C04 substituiu a consulta por status pela exclusão e C05 substituiu a exclusão pela consulta de pet inexistente.
 
-## Objeto de estudo
+## Unidade e alcance da análise
 
-A API selecionada para o experimento final é a Swagger Petstore - OpenAPI 3.0, uma aplicação de demonstração oficial do ecossistema Swagger e não desenvolvida por esta pesquisa. A [seleção](Selecao_da_API.md) e o [inventário de endpoints](Inventario_de_Endpoints.md) são fundamentados na [especificação oficial preservada](../api-specification/swagger-petstore-openapi.json). A cópia local fixa o contrato metodológico, mas não elimina mudanças, resets ou interferência de dados no ambiente público. Ela não corresponde à API veicular usada no piloto.
+A unidade documental observada é um cenário sob uma abordagem. A equivalência do subconjunto implementado entre as três abordagens permite descrever seus status e a executabilidade atual das suítes.
 
-## Comparabilidade entre abordagens
+Os quinze registros `PASS` não demonstram, isoladamente:
 
-Os cinco cenários são funcionalmente distintos. Cada cenário, suas entradas, verificações, materiais de apoio e critérios de conclusão devem ser aplicados de forma idêntica ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT. A diferença planejada dentro de cada cenário é a abordagem de desenvolvimento. Não se exige que operações HTTP diferentes tenham complexidade idêntica; exige-se comparabilidade entre abordagens para a mesma tarefa. Intervenções corretivas e desvios devem ser registrados para não serem confundidos com efeitos da abordagem.
+- aplicação das cinquenta verificações V01–V50;
+- correção inicial conforme a matriz normativa;
+- reúso de código;
+- aderência ao BDD segundo rubrica;
+- qualidade estrutural segundo rubrica;
+- produtividade ou retrabalho comparáveis.
 
-Os cinco cenários estão documentados na [matriz de cenários](Matriz_de_Cenarios.md), com dez verificações por cenário na [matriz de validações](Matriz_de_Validacoes.md), e foram congelados na versão 1.0 após revisão de comparabilidade entre abordagens, independência, complexidade relativa, determinismo, limpeza e interferência pública.
+## Dados e análise
 
-## Alternativas de ambiente
+Os arquivos em `results/manual`, `results/chatgpt` e `results/copilot` são preservados como registros existentes e não foram normalizados retrospectivamente. Os tempos Manual registrados aguardam validação para consolidação; os tempos ChatGPT e GitHub Copilot permanecem `PENDENTE`. Duração do Maven ou dos testes automatizados não é usada como tempo de implementação.
 
-1. **Instância pública `petstore3.swagger.io`:** facilita acesso, mas está sujeita a dados de terceiros, resets, indisponibilidade e divergência entre contrato e runtime.
-2. **Instância local ou conteinerizada controlada do projeto oficial:** permite estado conhecido, isolamento, repetição e limpeza controlada.
+Não foram localizados registros completos de V01–V50, consolidações das rubricas, timestamps por unidade, contagens completas de ajustes, commits por cenário ou interações completas com as ferramentas assistidas. Ausência de registro não é tratada como zero, aprovação ou ausência de intervenção.
 
-O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) avaliou as duas alternativas e fundamentou a seleção da instância controlada: o ciclo funcional foi observado nos dois ambientes, enquanto a instância fixada por digest permite isolamento e reduz interferência externa. O protocolo versão 1.0 congela a imagem `linux/amd64` no host ARM com os riscos residuais documentados. Não se exige comparação com o ambiente histórico da API veicular.
+A análise permitida é descritiva e limitada aos status e artefatos efetivamente preservados. Não são produzidas métricas, pontuações ou comparações quantitativas sem evidência correspondente, e não são combinados dados do piloto veicular, do piloto de viabilidade e da avaliação exploratória Petstore.
 
-O piloto observou disponibilidade, códigos de resposta, autenticação permissiva, persistência na janela de coleta, limpeza, duas amostras estáveis do filtro e igualdade entre os contratos servidos e a cópia normativa. Essas observações não integram métricas do experimento final.
+## Limitações e adaptações metodológicas
 
-## Coleta de dados
+1. A execução Petstore é caracterizada como avaliação exploratória de um subconjunto de cinco cenários, e não como execução integral do protocolo v1.1.
+2. C01/V10, C04 e C05 apresentam divergências entre planejamento e execução.
+3. A ordem prevista não é auditável com os registros temporais disponíveis.
+4. Tempos de implementação das abordagens assistidas e contagens completas de retrabalho não estão disponíveis.
+5. As cinquenta verificações e as rubricas de reúso, aderência ao BDD e qualidade estrutural não foram consolidadas.
+6. Parte das versões de ferramentas, prompts, interações, commits e evidências audiovisuais não está disponível no repositório versionado.
+7. Os resultados permitem conclusões apenas sobre o subconjunto, ambiente e artefatos observados; não sustentam generalização ampla sobre as ferramentas.
 
-A coleta abrange:
-
-- marcações de início, pausa, retomada e término do desenvolvimento;
-- ocorrências de retrabalho;
-- resultado individual das cinquenta verificações;
-- artefatos necessários para medir reúso de código;
-- avaliação de aderência ao BDD;
-- avaliação de qualidade estrutural;
-- código-fonte, commits, prompts e interações permitidas;
-- ambiente, versões efetivamente observadas e desvios.
-
-Registros publicados do piloto devem permanecer em `datasets/pilot/raw/`, com transformações em `datasets/pilot/processed/`. O futuro experimento final deve usar `datasets/final-experiment/raw/` e `datasets/final-experiment/processed/`. As árvores não podem ser combinadas, e dados brutos não podem ser alterados.
-
-## Métricas
-
-As definições históricas do piloto e as decisões requeridas para o experimento final estão em `Metricas.md`. A qualidade estrutural foi apenas discutida qualitativamente no piloto; não há pontuação numérica objetiva consolidada confirmada. Os templates de [reúso de código](instrumentos/Rubrica_Reuso_de_Codigo.md), [aderência ao BDD](instrumentos/Rubrica_Aderencia_BDD.md) e [qualidade estrutural](instrumentos/Rubrica_Qualidade_Estrutural.md) aplicam-se ao experimento final somente após congelamento, sem reavaliação retroativa do piloto.
-
-## Análise
-
-A análise do piloto e a análise do futuro experimento final devem ser apresentadas separadamente. No piloto, qualidade estrutural permanece qualitativa. No experimento final, somente fórmulas e rubricas aprovadas antes da execução poderão produzir valores. Não serão introduzidas métricas não coletadas, testes estatísticos não previstos ou comparações numéricas entre as fases.
+Essas adaptações modificam somente a interpretação documental. O protocolo congelado, o código, as features, os runners e os resultados experimentais permanecem preservados.
 
 ## Relato
 
-O relato deve apresentar todos os valores coletados, registros indisponíveis, impedimentos, correções e desvios relevantes. Nenhum resultado, versão, API, endpoint ou procedimento deve ser reconstruído por suposição.
-
-O piloto preliminar foi executado e possui resultados, mas seus dados e valores consolidados não estão publicados neste repositório. O piloto de viabilidade Petstore foi concluído e documentado; o experimento final Petstore ainda não foi executado. Os relatos e datasets das três fases permanecem separados.
+O texto do TCC deve distinguir o planejamento v1.1 da avaliação exploratória executada, apresentar as divergências e ausências de evidência e limitar suas conclusões ao subconjunto observado. Nenhum tempo, métrica, resultado, versão ou procedimento ausente pode ser reconstruído por suposição.

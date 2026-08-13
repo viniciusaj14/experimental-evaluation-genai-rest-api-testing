@@ -1,12 +1,14 @@
 # Matriz de Cenários Candidatos
 
+> **Nota de adequação posterior:** esta matriz preserva o conjunto normativo planejado e posteriormente congelado na v1.1. O subconjunto observado não coincide integralmente com ela: C01/V10 não foi consolidado, e C04/C05 foram implementados com outras finalidades. A divergência não modifica retrospectivamente esta matriz.
+
 ## Status
 
 Os cinco cenários abaixo são propostas baseadas no [contrato preservado](../api-specification/swagger-petstore-openapi.json) e no [inventário de endpoints](Inventario_de_Endpoints.md). Eles ainda requerem revisão e congelamento metodológico antes da implementação das três suítes finais. Nenhum cenário desta matriz representa execução ou resultado observado.
 
 Os cenários são funcionalmente distintos e não precisam ter complexidade idêntica entre operações HTTP. A exigência metodológica é que cada mesmo cenário seja aplicado com entradas, critérios e verificações idênticos ao desenvolvimento manual, ao GitHub Copilot e ao ChatGPT, permitindo comparação entre abordagens.
 
-> **SEPARAÇÃO CONFIRMADA:** estes cenários Petstore não são os cinco cenários veiculares do piloto concluído. Eles pertencem somente ao futuro experimento final, que ainda não foi executado. É proibido mapear ou comparar numericamente os resultados históricos com esta matriz.
+> **SEPARAÇÃO CONFIRMADA:** estes cenários Petstore não são os cinco cenários veiculares do piloto concluído. Na data de elaboração da matriz, a execução Petstore ainda não havia ocorrido. É proibido mapear ou comparar numericamente os resultados históricos com esta matriz.
 
 Os valores entre `<...>` são marcadores de dados a serem gerados por execução; não são valores reais nem exemplos de respostas da API.
 

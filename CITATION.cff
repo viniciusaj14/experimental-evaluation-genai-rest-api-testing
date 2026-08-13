@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it using this metadata. No DOI has been issued yet."
-title: "Experimental Evaluation of Generative Artificial Intelligence for REST API Test Automation Using Behavior-Driven Development (BDD)"
+title: "Exploratory Evaluation of Generative Artificial Intelligence in REST API Test Automation Using Behavior-Driven Development (BDD)"
 type: software
 authors:
   - given-names: "Vinícius Alves"

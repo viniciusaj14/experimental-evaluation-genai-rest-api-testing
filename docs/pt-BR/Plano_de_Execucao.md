@@ -1,8 +1,10 @@
 # Plano de Execução
 
+> **Nota de adequação posterior:** este plano registra o procedimento previsto antes da coleta. Os registros existentes não comprovam que todas as suas etapas foram seguidas; a fase Petstore é relatada como avaliação exploratória do subconjunto efetivamente implementado. Esta nota não altera o plano histórico nem o protocolo v1.1.
+
 ## Finalidade
 
-Este documento define o procedimento operacional do experimento final controlado (Fase 2) com Swagger Petstore OpenAPI 3. Ele transforma o protocolo científico em uma sequência executável e auditável, sem alterar objetivo, questões de pesquisa, métricas, cenários ou verificações. O experimento final ainda não foi executado.
+Este documento define o procedimento operacional planejado para a Fase 2 com Swagger Petstore OpenAPI 3. Ele transforma o protocolo científico em uma sequência executável e auditável, sem alterar objetivo, questões de pesquisa, métricas, cenários ou verificações. Na data de elaboração deste plano, a execução ainda não havia ocorrido.
 
 Todas as quinze unidades do experimento final devem seguir o [`Protocolo_Congelado_v1.1.md`](Protocolo_Congelado_v1.1.md), que substitui a versão 1.0 como versão válida para execução. A versão 1.0 permanece preservada somente como histórico.
 

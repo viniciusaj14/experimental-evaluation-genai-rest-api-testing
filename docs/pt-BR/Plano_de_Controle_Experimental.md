@@ -1,5 +1,7 @@
 # Plano de Controle Experimental
 
+> **Nota de adequação posterior:** os controles abaixo representam o desenho planejado. A documentação disponível não permite confirmar sua aplicação integral na execução observada; controles sem evidência são tratados como não auditáveis, e não como atendidos.
+
 ## Finalidade
 
 Definir como reduzir vieses e preservar comparabilidade entre desenvolvimento manual, GitHub Copilot e ChatGPT no futuro experimento final Petstore. Este plano complementa o `Protocolo_Experimental.md`, o `Plano_de_Execucao.md` e o `Checklist_Pre_Execucao.md` sem alterar as métricas ou os cenários.

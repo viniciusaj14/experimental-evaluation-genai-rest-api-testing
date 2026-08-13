@@ -1,10 +1,12 @@
 # Matriz de Validações Planejadas
 
+> **Nota de adequação posterior:** esta matriz permanece como instrumento normativo planejado. Não há evidência consolidada de execução das cinquenta verificações na avaliação exploratória Petstore; os quinze status `PASS` por cenário não podem ser reinterpretados como cinquenta verificações atendidas.
+
 ## Regras da matriz
 
 Esta matriz define **exatamente cinquenta verificações planejadas**, dez para cada cenário candidato. Ela não contém resultados observados. Os critérios derivam do [contrato OpenAPI preservado](../api-specification/swagger-petstore-openapi.json) e dos requisitos da [matriz de cenários](Matriz_de_Cenarios.md).
 
-> **SEPARAÇÃO CONFIRMADA:** estas cinquenta verificações Petstore não são as cinquenta verificações usadas no piloto veicular. Esta matriz aplica-se somente ao futuro experimento final, ainda não executado. Nenhum percentual ou contagem pode combinar dados do piloto e do experimento final.
+> **SEPARAÇÃO CONFIRMADA:** estas cinquenta verificações Petstore não são as cinquenta verificações usadas no piloto veicular. Na data de elaboração da matriz, a execução Petstore ainda não havia ocorrido. Nenhum percentual ou contagem pode combinar dados do piloto e da fase Petstore.
 
 Todas as cinquenta verificações permanecem no estudo. Para verificações que dependem do serviço público, a indisponibilidade, interferência externa ou divergência que impeça uma conclusão deve ser registrada como **impedida**, com evidência. Uma verificação impedida nunca é removida, presumida, convertida em aprovação ou contada como atendida. O relatório deve separar itens atendidos, não atendidos e impedidos, mantendo denominador planejado igual a 50 no total e a 10 por cenário.
 

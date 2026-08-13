@@ -1,5 +1,7 @@
 # Matriz de Rastreabilidade
 
+> **Nota de adequação posterior:** a matriz original abaixo preserva a rastreabilidade planejada. Ela não deve ser lida como comprovação de execução. O estado observacional posterior é resumido após a tabela.
+
 ## Finalidade
 
 Conectar decisões e artefatos desde o objetivo da pesquisa até os futuros resultados, sem antecipar valores observados. A matriz deve ser atualizada quando os cenários e instrumentos forem congelados e quando artefatos forem efetivamente publicados.
@@ -24,6 +26,15 @@ Conectar decisões e artefatos desde o objetivo da pesquisa até os futuros resu
 | Métricas finais | Fórmulas e rubricas a congelar antes da nova execução | Comparação Petstore das três abordagens | [`Metricas.md`](Metricas.md), [`instrumentos/`](instrumentos/) | Aprovação pendente |
 | Experimento final | Nova execução Petstore das três abordagens | Resultados finais separados do piloto | `datasets/final-experiment/` e `results/` | Não executado |
 
+## Estado observacional posterior
+
+| Elemento | Evidência disponível | Alcance permitido |
+|---|---|---|
+| Subconjunto Petstore | Cinco resultados por abordagem em `results/` | Descrição exploratória de quinze status cenário-abordagem |
+| Protocolo v1.1 | Documento congelado e matrizes normativas | Referência histórica de planejamento; execução integral não demonstrada |
+| Produtividade | Tempos assistidos pendentes e retrabalho incompleto | Comparação quantitativa não disponível |
+| Qualidade | V01–V50 e rubricas não consolidados | Comparação de qualidade não disponível |
+
 ## Fluxo resumido
 
 ```text
@@ -36,4 +47,4 @@ Objetivo da pesquisa
             → futuros artefatos consolidados e respostas às questões
 ```
 
-Nenhum valor experimental é apresentado nesta matriz.
+Nenhum valor métrico experimental é calculado nesta matriz. O resumo posterior apenas referencia a existência e o alcance dos artefatos preservados.

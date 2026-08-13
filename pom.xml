@@ -7,8 +7,8 @@
     <groupId>io.github.viniciusaj14</groupId>
     <artifactId>experimental-evaluation-genai-rest-api-testing</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-    <name>Experimental Evaluation of Generative Artificial Intelligence for REST API Test Automation Using Behavior-Driven Development (BDD)</name>
-    <description>Comparison of manual development, GitHub Copilot, and ChatGPT for REST API test automation using Behavior-Driven Development (BDD).</description>
+    <name>Exploratory Evaluation of Generative Artificial Intelligence in REST API Test Automation Using Behavior-Driven Development (BDD)</name>
+    <description>Exploratory study of manual development, GitHub Copilot, and ChatGPT for REST API test automation using Behavior-Driven Development (BDD).</description>
 
     <properties>
         <maven.compiler.release>21</maven.compiler.release>

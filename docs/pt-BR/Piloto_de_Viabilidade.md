@@ -65,4 +65,4 @@ O piloto é concluído somente quando houver informação suficiente para decidi
 - oráculos ajustados antes do congelamento, sem alterar o contrato preservado;
 - separação inequívoca entre dados do piloto e dados do experimento final.
 
-Com base nas observações registradas, a recomendação explícita é usar a instância controlada no experimento final. A decisão reduz interferência externa, mas exige congelar a imagem por digest, registrar a emulação `linux/amd64` no host ARM e não usar autenticação nem segundo `DELETE` como oráculos. O experimento final continua não executado.
+Com base nas observações registradas, a recomendação explícita foi usar a instância controlada na fase Petstore planejada. A decisão reduzia interferência externa, mas exigia congelar a imagem por digest, registrar a emulação `linux/amd64` no host ARM e não usar autenticação nem segundo `DELETE` como oráculos. Na data do piloto, essa fase ainda não havia sido executada.

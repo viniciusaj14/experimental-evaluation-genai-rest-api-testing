@@ -1,8 +1,10 @@
 # Protocolo do Experimento Final Petstore
 
+> **Nota de adequação posterior:** este documento preserva o planejamento prospectivo que originou o protocolo v1.1. Os artefatos posteriormente observados correspondem a uma avaliação exploratória de cinco cenários e não demonstram execução integral deste protocolo. O estado executado está descrito em [`Metodologia.md`](Metodologia.md) e no [`Registro de Desvios`](Registro_de_Desvios_e_Limitacoes_da_Execucao_Final.md).
+
 ## Objetivo
 
-Orientar a futura comparação controlada e auditável entre três abordagens de desenvolvimento de testes automatizados da Swagger Petstore com Behavior-Driven Development (BDD): desenvolvimento manual, desenvolvimento assistido pelo GitHub Copilot e desenvolvimento assistido pelo ChatGPT. Este protocolo ainda não foi executado.
+Orientar a comparação controlada e auditável planejada entre três abordagens de desenvolvimento de testes automatizados da Swagger Petstore com Behavior-Driven Development (BDD): desenvolvimento manual, desenvolvimento assistido pelo GitHub Copilot e desenvolvimento assistido pelo ChatGPT. Na data de elaboração, este protocolo ainda não havia sido executado.
 
 ## Escopo confirmado
 
@@ -73,4 +75,4 @@ Transformações documentadas podem gerar arquivos em `datasets/final-experiment
 
 ## Status dos resultados e artefatos
 
-O piloto veicular possui resultados históricos e é documentado separadamente. O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) foi concluído e recomenda o ambiente controlado; o experimento final Petstore ainda não foi executado. Permanecem pendentes: aceitação formal da configuração controlada e de seus riscos, revisão do subconjunto de operações, congelamento das matrizes, aprovação das fórmulas e consolidação dos instrumentos de avaliação.
+O piloto veicular possui resultados históricos e é documentado separadamente. O [piloto de viabilidade Petstore](Relatorio_do_Piloto_de_Viabilidade.md) foi concluído e recomendou o ambiente controlado; na data deste registro, o experimento Petstore ainda não havia sido executado. Naquele momento permaneciam pendentes: aceitação formal da configuração controlada e de seus riscos, revisão do subconjunto de operações, congelamento das matrizes, aprovação das fórmulas e consolidação dos instrumentos de avaliação.

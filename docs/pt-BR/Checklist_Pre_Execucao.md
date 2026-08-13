@@ -1,5 +1,7 @@
 # Checklist de Execução
 
+> **Nota de adequação posterior:** este checklist é o instrumento planejado para execução integral do protocolo. Não foram localizados registros preenchidos que comprovem sua aplicação completa às unidades observadas. A ausência não é convertida em conformidade presumida.
+
 ## Uso
 
 Aplicar as seções prévia e pós-cenário a cada unidade de execução definida no `Plano_de_Execucao.md`. Aplicar a seção pós-abordagem somente depois das cinco unidades da respectiva abordagem. Marcar um item somente após verificação objetiva. Item não aplicável exige justificativa no `EXPERIMENT_LOG.md`; item obrigatório não atendido impede o início ou o encerramento.

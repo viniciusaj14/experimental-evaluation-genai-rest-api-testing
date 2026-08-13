@@ -1,29 +1,45 @@
 # Ameaças à Validade
 
+## Escopo da avaliação
+
+A fase Petstore é interpretada como avaliação exploratória do subconjunto de cinco cenários efetivamente implementado nas abordagens Manual, GitHub Copilot e ChatGPT. As ameaças abaixo limitam o alcance das conclusões e impedem tratar os artefatos como execução integral do protocolo v1.1.
+
 ## Validade de constructo
 
-As métricas do piloto operacionalizam dimensões de produtividade e qualidade, mas não esgotam esses conceitos. Tempo ativo e ajustes representam esforço; correção inicial, reúso e aderência BDD representam dimensões específicas da qualidade. Qualidade estrutural foi discutida qualitativamente, sem pontuação objetiva consolidada confirmada. No experimento final, definições e rubricas devem ser congeladas antes da execução.
+As dimensões originalmente planejadas — produtividade, retrabalho, correção inicial, reúso, aderência ao BDD e qualidade estrutural — não foram integralmente operacionalizadas nos registros disponíveis. Tempos das abordagens assistidas permanecem pendentes, contagens completas de ajustes não foram preservadas e V01–V50 e rubricas não foram consolidados.
+
+Consequentemente, os status `PASS` representam somente o resultado registrado dos cenários implementados. Eles não constituem medidas das seis métricas planejadas e não sustentam inferência de produtividade ou qualidade global.
 
 ## Validade interna
 
-Diferenças de entrada, configuração ou aplicação das verificações podem afetar a comparação. Embora os cinco cenários sejam funcionalmente distintos, cada cenário, seus materiais e seus critérios devem ser aplicados de forma idêntica às três abordagens. Alterações corretivas, impedimentos e desvios precisam ser registrados. Variações inerentes ao GitHub Copilot e ao ChatGPT devem ser reconhecidas, sem atribuir automaticamente toda diferença observada à abordagem.
+O protocolo v1.1 previa C01/V10, C04 como consulta por status e C05 como exclusão. A execução observada não consolidou C01/V10, utilizou C04 para exclusão e C05 para consulta de pet inexistente. Essa divergência impede atribuir os resultados à aplicação integral do tratamento planejado.
 
-A revisão histórica confirmou divergência entre o piloto veicular e o protocolo Petstore. O principal risco retrospectivo é atribuir ao piloto uma API, contrato, endpoints, prompts ou artefatos que não foram preservados, ou recalcular seus valores com verificações Petstore. A mitigação é classificá-lo como piloto, preservar seus registros originais e reexecutar o experimento final sob o protocolo Petstore congelado.
+Também não foram preservados timestamps, commits e registros de interação suficientes para auditar a ordem Manual → GitHub Copilot → ChatGPT, o isolamento entre condições, todas as intervenções humanas ou a influência de aprendizagem e fadiga. Diferenças observadas não podem ser atribuídas exclusivamente à abordagem de desenvolvimento.
 
 ## Validade externa
 
-Os resultados do piloto estão vinculados à API veicular não identificada e aos cinco cenários históricos. Os futuros resultados finais estarão vinculados à Swagger Petstore, aos novos cenários, verificações, ferramentas e contexto do TCC. Não se deve generalizar automaticamente entre as duas fases nem para outras APIs, tarefas, IDEs, Large Language Models (LLMs) ou contextos profissionais.
+Os resultados estão vinculados a uma única API de demonstração, um ambiente local controlado, cinco cenários e uma implementação por abordagem. Ferramentas assistidas por IA podem mudar e produzir respostas diferentes. Portanto, os achados não devem ser generalizados automaticamente para outras APIs, equipes, tarefas, IDEs, versões de modelos ou contextos profissionais.
+
+O piloto veicular utilizou outra API e permanece uma fase histórica separada. Seus dados não podem ser combinados com os registros Petstore.
 
 ## Validade de conclusão
 
-Comparações com poucas implementações e tarefas específicas sustentam apenas conclusões compatíveis com a fase observada. Piloto e experimento final devem ter análises separadas, sem combinação numérica. Não serão presumidos testes inferenciais, significância estatística ou poder estatístico.
+Com os dados disponíveis, a conclusão admissível é descritiva: existem quinze registros cenário-abordagem com `PASS` para o subconjunto observado, e as suítes atuais demonstraram executabilidade em validação técnica posterior.
+
+Não estão disponíveis bases para comparação quantitativa de produtividade, retrabalho ou qualidade, aplicação das cinquenta verificações, testes inferenciais, significância estatística ou afirmação de superioridade entre abordagens. Dados ausentes não são tratados como zero ou como evidência favorável.
 
 ## Reprodutibilidade
 
-Ferramentas assistidas por IA podem mudar e produzir respostas diferentes. Devem ser preservados, quando permitido, prompts no idioma original, interações, datas, configurações, identificadores observados, commits e artefatos. Versões desconhecidas não devem ser reconstruídas por suposição.
+Os runners e comandos das abordagens assistidas permitem reexecutar tecnicamente as suítes atuais. A execução Manual original ocorreu pela IntelliJ IDEA e não preservou comando Maven específico. Reexecuções técnicas posteriores não reproduzem o esforço de implementação nem integram a coleta oficial.
 
-O piloto de viabilidade confirmou ciclos equivalentes de criação, leitura, atualização, filtro e limpeza nos ambientes público e controlado durante janelas curtas. O ambiente público continua sujeito a interferência de terceiros, resets e indisponibilidade fora dessas janelas. Nos dois runtimes, a autenticação declarada no contrato não foi exigida; por isso, ela não deve ser usada como oráculo. A instância controlada reduz interferência externa e é recomendada, mas a imagem `linux/amd64` exigiu emulação no host ARM e registrou warnings de SLF4J e depreciação do `jetty-runner`.
+A reprodutibilidade científica é reduzida pela ausência ou indisponibilidade de parte dos timestamps, versões de ferramentas, prompts e interações, commits por unidade, dados brutos/processados, rubricas e vídeos Manual no conteúdo versionado. Essas evidências não podem ser reconstruídas retrospectivamente.
 
-## Decisões pendentes
+## Limitações e adaptações metodológicas
 
-A Swagger Petstore - OpenAPI 3.0 está selecionada e o ambiente controlado é recomendado pelo piloto, ainda sujeito à aceitação formal da configuração e dos riscos antes do congelamento. Permanecem pendentes o subconjunto de operações, o congelamento dos cinco cenários e cinquenta verificações e os instrumentos finais. A fórmula histórica de retrabalho foi identificada, mas sua reutilização no experimento final exige aprovação prévia. A qualidade estrutural do piloto não possui pontuação numérica consolidada confirmada.
+- O protocolo v1.1 permanece como planejamento histórico, sem alegação de execução integral.
+- O objeto analisado foi restringido documentalmente ao subconjunto de cinco cenários comum às três abordagens.
+- A análise foi limitada a executabilidade, status e artefatos preservados.
+- Métricas e avaliações sem evidência correspondente foram excluídas das conclusões, sem substituição por dados automáticos.
+- Divergências, registros ausentes e impossibilidade de auditar a ordem devem ser declarados no texto do TCC.
+
+Essas adaptações aumentam a transparência do relato, mas não eliminam as ameaças nem recuperam evidências ausentes.

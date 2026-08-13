@@ -1,12 +1,14 @@
 # Registro de Decisão — Piloto e Experimento Final
 
+> **Nota de adequação posterior:** os itens abaixo registram a decisão prospectiva tomada à época. Posteriormente foram produzidos artefatos Petstore para um subconjunto exploratório de cinco cenários. Eles permanecem separados do piloto veicular, mas não são tratados como execução integral do protocolo v1.1.
+
 ## Decisão
 
 Separar formalmente:
 
 1. o **estudo piloto preliminar concluído**, realizado com uma API pública de dados abertos do domínio veicular não identificada nos registros preservados;
 2. o **piloto de viabilidade Petstore concluído**, destinado apenas a validar ambiente e contrato, sem produzir métricas do experimento final;
-3. o **experimento final Petstore futuro**, ainda não executado.
+3. o **experimento Petstore planejado**, ainda não executado na data desta decisão.
 
 ## Por que os resultados preliminares são classificados como piloto
 

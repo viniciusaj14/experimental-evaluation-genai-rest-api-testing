@@ -1,8 +1,10 @@
 # Métricas
 
+> **Nota de adequação posterior:** as métricas abaixo preservam definições históricas e planejamento. A avaliação exploratória Petstore não possui dados suficientes para calcular integralmente essas métricas; nenhum valor ausente deve ser inferido. Consulte [`Metodologia.md`](Metodologia.md) para o alcance analítico atual.
+
 ## Separação entre fases
 
-As definições históricas abaixo pertencem ao **estudo piloto preliminar da API veicular**. O futuro experimento final da Swagger Petstore ainda não foi executado. Fórmulas e instrumentos somente poderão ser reutilizados no experimento final se forem formalmente aprovados antes da execução.
+As definições históricas abaixo pertencem ao **estudo piloto preliminar da API veicular**. Na data de elaboração deste planejamento, a fase Swagger Petstore ainda não havia sido executada. Fórmulas e instrumentos somente poderiam ser reutilizados se formalmente aprovados antes da execução.
 
 As cinquenta verificações propostas para Petstore não são as mesmas verificações usadas no piloto. Nenhum cálculo pode combinar dados das duas fases.
 

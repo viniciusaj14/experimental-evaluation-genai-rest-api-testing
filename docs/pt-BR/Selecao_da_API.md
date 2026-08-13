@@ -1,6 +1,8 @@
 # Seleção da API
 
-> **Escopo temporal:** a Swagger Petstore foi selecionada exclusivamente para o futuro experimento final. O estudo piloto concluído utilizou outra API pública do domínio veicular, cuja identidade não foi preservada. Nenhum dado ou resultado histórico pode ser atribuído à Petstore.
+> **Nota de adequação posterior:** este documento preserva a decisão tomada durante o planejamento. A Swagger Petstore foi posteriormente usada na avaliação exploratória registrada no repositório; isso não implica execução integral do protocolo v1.1.
+
+> **Escopo temporal:** a Swagger Petstore foi selecionada para a fase Petstore então planejada. O estudo piloto concluído utilizou outra API pública do domínio veicular, cuja identidade não foi preservada. Nenhum dado ou resultado histórico pode ser atribuído à Petstore.
 
 ## API selecionada
 
@@ -58,4 +60,4 @@ A recomendação pelo ambiente controlado baseia-se exclusivamente no [piloto de
 
 ## Decisões ainda pendentes
 
-A API está formalmente selecionada para o experimento final, que ainda não foi executado. O subconjunto final de operações e os detalhes dos cinco cenários permanecem em revisão metodológica nas matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md). A adoção desses candidatos não deve ser confundida com o piloto veicular, execução Petstore concluída ou publicação de resultados.
+Na data desta decisão, a API estava formalmente selecionada para uma fase ainda não executada. O subconjunto de operações e os detalhes dos cinco cenários permaneciam em revisão metodológica nas matrizes de [endpoints](Inventario_de_Endpoints.md), [cenários](Matriz_de_Cenarios.md) e [validações](Matriz_de_Validacoes.md). A adoção desses candidatos não deve ser confundida com o piloto veicular nem com os artefatos exploratórios produzidos posteriormente.

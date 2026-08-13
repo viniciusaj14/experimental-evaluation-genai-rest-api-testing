@@ -1,4 +1,4 @@
-# Experimental Evaluation of Generative Artificial Intelligence for REST API Test Automation Using Behavior-Driven Development (BDD)
+# Exploratory Evaluation of Generative Artificial Intelligence in REST API Test Automation Using Behavior-Driven Development (BDD)
 
 [English](README.md) | [Português (Brasil)](README.pt-BR.md)
 
@@ -8,9 +8,9 @@ Scientific repository for the USP/ESALQ MBA capstone study comparing manual deve
 
 The preliminary pilot study has been completed using a different public REST API in the vehicle domain.
 
-The Swagger Petstore protocol documented in this repository defines the final controlled experiment, which has not yet been executed. Experimental design version 1.0 is formally frozen in [`docs/pt-BR/Protocolo_Congelado_v1.0.md`](docs/pt-BR/Protocolo_Congelado_v1.0.md).
+The Swagger Petstore controlled experiment was designed under protocol version 1.1, formally frozen in [`docs/pt-BR/Protocolo_Congelado_v1.1.md`](docs/pt-BR/Protocolo_Congelado_v1.1.md). The repository now contains execution records for Manual, ChatGPT, and GitHub Copilot, with documented deviations and missing evidence that limit protocol-level claims.
 
-Experimental datasets and consolidated analyses have not yet been published.
+Scenario result files have been published in the repository. Final raw/processed datasets and a complete metric analysis have not been published.
 
 ## Study phases
 
@@ -22,38 +22,45 @@ Experimental datasets and consolidated analyses have not yet been published.
 - used to refine metrics, protocol, and evaluation instruments;
 - results are not directly comparable with the final experiment.
 
-### Phase 2 — Final controlled experiment
+### Phase 2 — Exploratory Petstore study
 
 - adopts Swagger Petstore OpenAPI 3;
-- uses the formally frozen protocol version 1.0;
-- uses five functionally distinct BDD scenarios applied identically across the three development approaches;
-- plans fifty validation checks;
-- applies the same protocol to manual development, GitHub Copilot, and ChatGPT.
+- uses the formally frozen protocol version 1.1 as the historical planning reference;
+- planned five BDD scenarios and fifty validation checks;
+- executed an observational subset of five scenarios per approach, applied equivalently across Manual, GitHub Copilot, and ChatGPT;
+- is not a complete execution of protocol v1.1 because C01/V10 was not consolidated and the executed C04/C05 differ from the frozen matrix.
 
-All future-oriented documentation refers to Phase 2 unless explicitly identified as pilot material.
+Documents written prospectively for Phase 2 are preserved as historical planning records; later adequacy notes explain their relationship to the observed subset.
 
 ## Repository status
 
-- Scientific protocol version 1.0 frozen
+- Scientific protocol version 1.1 frozen; version 1.0 preserved as history
 - Preliminary pilot completed
-- Final controlled experiment pending
-- Experimental artifacts not yet published
-- Dataset publication pending
+- Manual, ChatGPT, and GitHub Copilot scenario results documented
+- Execution deviations and evidence gaps formally disclosed
+- Implementation-time consolidation and final-dataset publication pending
 - DOI pending
 
-## Research objective
+The current status and limitations are documented in:
 
-The study evaluates productivity and quality across three development approaches:
+- [`EXPERIMENT_LOG.md`](EXPERIMENT_LOG.md);
+- [`docs/pt-BR/Relatorio_Validacao_Final_Experimento.md`](docs/pt-BR/Relatorio_Validacao_Final_Experimento.md);
+- [`docs/pt-BR/Registro_de_Desvios_e_Limitacoes_da_Execucao_Final.md`](docs/pt-BR/Registro_de_Desvios_e_Limitacoes_da_Execucao_Final.md);
+- [`docs/pt-BR/Dicionario_de_Dados_Resultados_Experimentais.md`](docs/pt-BR/Dicionario_de_Dados_Resultados_Experimentais.md).
+
+## Exploratory research objective
+
+The study explores the implementation and executability of five REST API test scenarios using BDD across three development approaches:
 
 1. manual development without generative AI assistance;
 2. development assisted by GitHub Copilot;
 3. development assisted by ChatGPT.
 
-The five BDD scenarios are functionally distinct. Each same scenario and its planned checks are applied identically to manual development, GitHub Copilot, and ChatGPT. Comparability is required across approaches for a given scenario; identical complexity across different HTTP operations is neither assumed nor required.
+Only preserved results and evidence are described. The study does not establish productivity or quality superiority when implementation times, complete rework records, the fifty checks, or the corresponding rubrics are unavailable.
 
 ## Research questions
 
-The main research question asks how manual development, GitHub Copilot, and ChatGPT compare in productivity and quality when automating REST API tests with BDD.
+The original research questions ask how manual development, GitHub Copilot, and ChatGPT compare in productivity and quality. Available evidence does not answer them completely; the exploratory analysis is limited to executability and preserved status records for the observed subset.
 
 The auxiliary questions compare:
 
@@ -64,13 +71,13 @@ The authoritative wording is maintained in Brazilian Portuguese in [`docs/pt-BR/
 
 ## Experimental design
 
-The same requirements, five scenarios, fifty planned validation checks, environment, and completion criteria apply across the three approaches. The planned difference is the development approach itself. Source artifacts, prompts and permitted interactions, timing records, rework records, validation evidence, and deviations provide traceability.
+The observed artifacts implement the same five-scenario set across the three approaches: valid creation, lookup by identifier, update, deletion, and lookup of a nonexistent pet. This supports a descriptive comparison of those scenario statuses. It does not demonstrate application of the fifty checks or full conformance with the normative v1.1 scenarios.
 
-The final experiment adopts **Swagger Petstore OpenAPI 3**. See [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The endpoint subset and executable scenario details are frozen by protocol version 1.0.
+The Petstore phase uses **Swagger Petstore OpenAPI 3**. See [`docs/pt-BR/Selecao_da_API.md`](docs/pt-BR/Selecao_da_API.md). Its official JSON contract is preserved at [`docs/api-specification/swagger-petstore-openapi.json`](docs/api-specification/swagger-petstore-openapi.json), with source, retrieval date, declared versions, and checksum documented in [`docs/api-specification/README.md`](docs/api-specification/README.md). The normative endpoint subset and scenario details are frozen by protocol version 1.1; differences in the executed artifacts are recorded as deviations, not retroactive protocol changes.
 
 The historical review confirmed that the pilot used five vehicle-domain scenarios: brand query, model-by-brand query, year/model query, vehicle-detail query, and invalid-parameter query. Its official API name, URL, contract, and exact endpoint paths were not preserved and must not be inferred. The Petstore scenarios and checks are a new protocol and cannot be mapped retroactively to pilot results.
 
-Operational execution of the final protocol is governed by the [Execution Plan](docs/pt-BR/Plano_de_Execucao.md), [Pre-execution Checklist](docs/pt-BR/Checklist_Pre_Execucao.md), and [Experimental Control Plan](docs/pt-BR/Plano_de_Controle_Experimental.md).
+The planned operational procedure is preserved in the [Execution Plan](docs/pt-BR/Plano_de_Execucao.md), [Pre-execution Checklist](docs/pt-BR/Checklist_Pre_Execucao.md), and [Experimental Control Plan](docs/pt-BR/Plano_de_Controle_Experimental.md). Their existence does not prove complete application.
 
 Detailed scientific documentation is maintained in Brazilian Portuguese, consistently with the USP/ESALQ capstone text:
 
@@ -97,16 +104,25 @@ Full English translations will be created only after the protocol is frozen. See
 
 | Dimension | Metric | Study interpretation |
 | --- | --- | --- |
-| Productivity | Development time | Pilot: active development time; final unit and timing rules frozen in protocol v1.0 |
+| Productivity | Development time | Pilot: active development time; final unit and timing rules frozen in protocol v1.1 |
 | Productivity | Rework | Number of individual manual corrections performed after the first executable version, as defined in the pilot study |
-| Quality | Initial validation correctness | Pilot: validations correct in the first execution; final Petstore scope frozen in protocol v1.0 |
+| Quality | Initial validation correctness | Pilot: validations correct in the first execution; final Petstore scope frozen in protocol v1.1 |
 | Quality | Code reuse | Pilot recorded a percentage without a preserved calculation procedure; final rubric requires freezing |
 | Quality | BDD adherence | Pilot recorded adherent scenarios out of five and a percentage; final rubric requires freezing |
 | Quality | Structural quality | Qualitatively assessed in the preliminary pilot and planned for quantitative assessment in the final experiment using the documented evaluation rubric |
 
 Historical definitions, formulas, limitations, and decisions required for the final experiment are documented in [`docs/pt-BR/Metricas.md`](docs/pt-BR/Metricas.md). Pilot and final-experiment measurements must remain separate.
 
-Structured rubric templates are available under [`docs/pt-BR/instrumentos/`](docs/pt-BR/instrumentos/). They contain no invented final criteria or scores and must be completed from the instruments actually used in the study.
+Structured rubric templates are available under [`docs/pt-BR/instrumentos/`](docs/pt-BR/instrumentos/). They contain no final consolidation and are not applied retrospectively to the results.
+
+## Methodological limitations and adaptations
+
+- Protocol v1.1 remains preserved as the historical plan and was not rewritten to match the results.
+- The observed execution is documented as an exploratory evaluation of a five-scenario subset, not as complete protocol execution.
+- C01/V10 has no consolidated evidence, and the executed C04 and C05 differ from the frozen matrix.
+- The fifteen `PASS` records support only the recorded success of the five scenarios actually implemented under each approach.
+- ChatGPT/Copilot times, V01–V50 evidence, rubrics, structured final datasets, and part of the traceability remain unavailable or pending and are not inferred.
+- No quantitative productivity, rework, or quality conclusion is reported without the corresponding data.
 
 ## Technology stack
 
@@ -116,8 +132,31 @@ Structured rubric templates are available under [`docs/pt-BR/instrumentos/`](doc
 - Cucumber
 - JUnit 5
 - IntelliJ IDEA
+- Swagger Petstore OpenAPI 3
+- Docker with Docker Compose
 
 The Maven project is configured in [`pom.xml`](pom.xml). Exact versions or identifiers not already confirmed must be recorded as actually observed during the experiment and must not be reconstructed by assumption.
+
+## Quick technical execution
+
+Prerequisites: Java 21, Maven, and Docker with Docker Compose.
+
+Start the controlled service and confirm that the contract is available:
+
+```bash
+docker compose -f datasets/petstore-feasibility-pilot/config/docker-compose.yml up -d
+curl -i http://127.0.0.1:18080/api/v3/openapi.json
+```
+
+Run each suite separately:
+
+```bash
+mvn -Dtest=runner.TestRunner test
+mvn -Dtest=chatgpt.runner.ChatGPTTestRunner test
+mvn -Dtest=copilot.runner.CopilotTestRunner test
+```
+
+These commands check the current executability of the suites. They do not reproduce implementation time, tool interactions, or the original experimental collection. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for the complete procedure and its limitations.
 
 ## Repository structure
 
@@ -134,7 +173,7 @@ The Maven project is configured in [`pom.xml`](pom.xml). Exact versions or ident
 ├── datasets/
 │   ├── pilot/                 # Reserved raw and processed pilot-data areas
 │   └── final-experiment/      # Reserved raw and processed final-data areas
-├── results/                   # Location reserved for published result artifacts
+├── results/                   # Preserved Manual, ChatGPT, and GitHub Copilot result records
 ├── EXPERIMENT_LOG.md          # Experiment-record structure and publication status
 ├── REPRODUCIBILITY.md         # Reproduction and provenance guidance
 ├── CITATION.cff               # Citation metadata
@@ -147,13 +186,9 @@ Prompts, instructions, context, responses, and interaction histories must remain
 
 ## Reproducibility and data availability
 
-Follow [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), preserve original observations without modification when they are published, and record transformations, corrections, exclusions, and deviations. The basic project check is:
+Follow [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), preserve original observations without modification, and record transformations, corrections, exclusions, and deviations. The approach-specific validation commands and the limits of reproducing the original Manual execution are documented there.
 
-```bash
-mvn test
-```
-
-Pilot results exist, but their data and consolidated values are not published in this repository. The final Petstore experiment has not yet been executed. Future data availability will be documented subject to legal, ethical, licensing, privacy, and repository-size constraints, with pilot and final artifacts kept separate.
+Textual scenario results are present for all three approaches. ChatGPT and GitHub Copilot implementation times, the V01–V50 evidence, rubric consolidations, and raw/processed final datasets remain unavailable or pending. Manual video evidence is referenced by historical results but is not included in the versioned repository. Pilot and final artifacts must remain separate.
 
 ## Citation and DOI status
 
